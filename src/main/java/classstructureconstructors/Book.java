@@ -5,9 +5,10 @@ public class Book {
     private String tittle;
     private int regNumber;
 
-    public Book(String author, String tittle) {
+    public Book(String author, String tittle, int regNumber) {
         this.author = author;
         this.tittle = tittle;
+        this.regNumber = regNumber;
     }
 
     public void register(int regNumber) {

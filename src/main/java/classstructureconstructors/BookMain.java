@@ -17,8 +17,7 @@ public class BookMain {
         System.out.println("RegNumber: ");
         int regNumber = scanner.nextInt();
 
-        Book book = new Book(autor, tittle);
-        book.register(18543);
+        Book book = new Book(autor, tittle, regNumber);
 
         System.out.println("Author: " + book.getAuthor());
         System.out.println("Tittle: " + book.getTittle());
