@@ -13,5 +13,6 @@ public class Calculator {
 
         System.out.println(firstNumber + " + " + secondNumber);
         System.out.println(firstNumber + secondNumber);
+
     }
 }
