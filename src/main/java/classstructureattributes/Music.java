@@ -27,6 +27,5 @@ public class Music {
         song.length = 40;
 
         System.out.println(song.band + "-" + song.title + "(" + song.length + "perc)");
-
     }
 }
