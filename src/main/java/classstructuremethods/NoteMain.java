@@ -9,7 +9,7 @@ public class NoteMain {
 
         System.out.println("Please give your name: ");
         String name = scanner.nextLine();
-        note.setName(name);
+        note.setName(name);                // Ezt puskázni kellett.
 
         System.out.println("Select topic: ");
         String topic = scanner.nextLine();

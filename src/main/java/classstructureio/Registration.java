@@ -14,6 +14,5 @@ public class Registration {
         System.out.println("Name: " + name);
         System.out.println("E-mail: " + eMail);
 
-
     }
 }

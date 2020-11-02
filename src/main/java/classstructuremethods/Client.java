@@ -32,7 +32,6 @@ public class Client {
     }
 
 
-
     public void changeAddress(String newAddress) {
         address = newAddress;
     }
