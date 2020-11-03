@@ -3,13 +3,12 @@ package classsctructureintegrate;
 public class Product {
     private String name;
     private int price;
-    private int newPrice;
-    private int decreasePerCent;
-    private int increasePercent;
+    private int perCent;
 
-    public Product(String name, int price) {
+    public Product(String name, int price, int perCent) {
         this.name = name;
         this.price = price;
+        this.perCent = perCent;
     }
 
     public String getName() {
@@ -20,11 +19,16 @@ public class Product {
         return price;
     }
 
-    public int decreasePrice(int decreasePerCent) {
-        return int newPrice = (100 - decreasePerCent) / 100 * price;
+    public int getPerCent() {
+        return perCent;
     }
 
-    public void increasePrice(int increasePercent) {
-        return int newPrice = (100 + decreasePerCent) / 100 * price;
+    public void decreasePrice(int price, int perCent) {
+        this.price = (100 + perCent) / 100 * price;
     }
+
+    public void increasePrice(int price, int perCent) {
+        this.price = (100 + perCent) / 100 * price;
+    }
+
 }
