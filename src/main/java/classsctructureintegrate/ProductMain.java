@@ -20,11 +20,9 @@ public class ProductMain {
         System.out.println(product.getName());
         System.out.println(product.getPrice());
         System.out.println(product.getPerCent() + " %");
+        product.decreasePrice();
 
         System.out.println("Akció: " + perCent + " % kedvezmény minden " + product.getName() + " árából!");
-
-        product.decreasePrice(price, perCent);
-
         System.out.println("Akciós ár: " + price);
     }
 }

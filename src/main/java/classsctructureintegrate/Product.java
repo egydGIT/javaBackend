@@ -23,12 +23,12 @@ public class Product {
         return perCent;
     }
 
-    public void decreasePrice(int price, int perCent) {
-        this.price = (100 + perCent) / 100 * price;
+    public void decreasePrice() {
+        price = (100 - perCent) / 100 * price;
     }
 
     public void increasePrice(int price, int perCent) {
-        this.price = (100 + perCent) / 100 * price;
+        price = (100 + perCent) / 100 * price;
     }
 
 }
