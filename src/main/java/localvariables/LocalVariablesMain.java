@@ -25,7 +25,7 @@ public class LocalVariablesMain {
 
         String out = "Kívül";
         {
-            System.out.println(out);    // Igen. Globalscpe.
+            System.out.println(out);    // Igen. Globalscope.
         }
 
 
