@@ -30,5 +30,4 @@ public class Product {
     public void increasePrice(int price, int perCent) {
         price = (100 + perCent) / 100 * price;
     }
-
 }

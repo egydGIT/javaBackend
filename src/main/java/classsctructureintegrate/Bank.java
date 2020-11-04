@@ -24,6 +24,7 @@ public class Bank {
 
         bankaccount2.deposit(amount);
         System.out.println(bankaccount2.getInfo());
+
 /*
         System.out.println("");
 
@@ -39,5 +40,6 @@ public class Bank {
         bankaccount2.deposit(amount);
         System.out.println(bankaccount2.getInfo());
 */
+
     }
 }

@@ -25,6 +25,7 @@ public class BankAccount {
         return owner + " (" + accountNumber + ") : " + balance + " Ft";
     }
 
+
 }
 
 

@@ -24,6 +24,7 @@ public class ProductMain {
 
         System.out.println("Akció: " + perCent + " % kedvezmény minden " + product.getName() + " árából!");
         System.out.println("Akciós ár: " + price);
+
     }
 }
 
