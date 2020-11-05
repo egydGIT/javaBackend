@@ -1,5 +1,7 @@
 package week02;
 
+import java.util.Scanner;
+
 public class Phone {
     private String type;
     private int mem;
@@ -25,13 +27,24 @@ public class Phone {
         this.mem = mem;
     }
 
-    public static void main(String[] args) {
-        Phone pnone1 = new Phone("iPhone", 4823);
-        Phone phone2 = new Phone("xiaomi", 5896);
 
-        System.out.println( "Details Phone 1: " + pnone1.getType() + " " + pnone1.getMem() );
-        System.out.println( "Details Phone 2: " + phone2.getType() + " " + phone2.getMem() );
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Please give your mobile type: " );
+        String type = scanner.nextLine();
+
+        System.out.println("Please give your mobile mem number: " );
+        int mem = scanner.nextInt();
+
+        Phone phone = new Phone(type, mem);
+        // Phone phone2 = new Phone("xiaomi", 5896);
+
+        System.out.println( "Phone type: " +  phone.getType());
+        System.out.println( "Phone mem number: " + phone.getMem());
 
     }
+
+
 
 }
