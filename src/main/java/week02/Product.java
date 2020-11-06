@@ -12,14 +12,9 @@ public class Product {
         this.code = code;
     }
 
-    public void areTheyEqual(String compare, String compareWith) {
-        compare.equals(compareWith); {
-            if (true) {
-                System.out.println("A két termék megegyezik.");
-            }
-        }
-    }
+    /*
 
+    */
 
     public String getName() {
         return name;
@@ -31,7 +26,6 @@ public class Product {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Product product = new Product();
 
         String name1 = "laptop 0123";
         String name2 = "laptop 4567";
@@ -46,12 +40,28 @@ public class Product {
 
         System.out.println("Compare: ");
         String compare = scanner.nextLine();
+        // Product compare = new Product(compare);
 
         System.out.println("Compare with: ");
         String compareWith = scanner.nextLine();
+        // Product compareWith = new Product(compareWith);
 
-        // product.areTheyEqual();
 
+        /*
+        public boolean areTheyEqual(compare) {
+            return compare.equals(compareWith);
+        }
+
+
+        public void areTheyEqual(String compare, String compareWith) {
+            compare.equals(compareWith); {
+                if (true) {
+                    System.out.println("A két termék megegyezik.");
+                }
+            }
+        }
+
+         */
 
 
     }
