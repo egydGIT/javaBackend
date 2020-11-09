@@ -6,8 +6,10 @@ public class LocalVariablesMain {
         // System.out.println(b);    // Nem. Ahhoz, hogy használni tudjunk egy lokális változót, értéket kell neki adni. Nincs alapértelmezett értékük.
         b = false;
 
-        int i = 2;
-        // i j egy sorban nem lehet definiálni. - ?
+        int a = 2;
+        int i = 3, j = 4;            // i j egy sorban lehet két értéket definiálni !!
+        // System.out.println(j);
+
         int k = i;
 
         // String s;
