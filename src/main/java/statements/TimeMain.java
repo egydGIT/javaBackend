@@ -29,16 +29,17 @@ public class TimeMain {
 
         int allSeconds1 = time1.getInSeconds();
         System.out.println(allSeconds1);
+
         int allSeconds2 = time2.getInSeconds();
         System.out.println(allSeconds2);
 
-/*
+        // Miért nem működik?
         if (allSeconds1 < allSeconds2) {
                 System.out.println("Az első dátum korábbi.");
             } else {
                 System.out.println("Az első dátum későbbi.");
             }
         }
-*/
+
     }
 }

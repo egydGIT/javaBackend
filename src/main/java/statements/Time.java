@@ -19,4 +19,9 @@ public class Time {
         return (60 * hour + minute) * 60 + second;
     }
 
+    //  Én if-fel akarom megoldani, de nem működik.
+    // A 'solutions' megoldást nem értem.
+
+
+
 }
