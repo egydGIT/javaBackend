@@ -1,6 +1,6 @@
 package javaapi;
 
-import packages.greetings.Greeter; 
+import packages.greetings.Greeter;
 import java.lang.String;                        // de ezt nem kell külön importálni.
 
 public class Upper {
