@@ -20,4 +20,13 @@ public class UserValidator {
         return  (password1.equals(password2)) && (password1.length() >= 8);         // ? "A jelszó megadása sikeres" : "A jelszó megadása sikertelen.";
     }
 
+    public boolean isValidEmail(String email) {
+        int addressSignInEmail = email.indexOf('@');
+        String dotPlaceInEmail = email.substring(addressSignInEmail + 1);
+        int dotInEmail = email.indexOf('.');
+        return addressSignInEmail > 0
+                && dotInEmail > 0
+                && dotInEmail < dotPlaceInEmail.length() - 1;
+    }
+
 }

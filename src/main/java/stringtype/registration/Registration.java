@@ -15,10 +15,14 @@ public class Registration {
         System.out.println("Jelszó még egyszer: ");
         String password2 = scanner.nextLine();
 
+        System.out.println("E-mail: ");
+        String email = scanner.nextLine();
+
         UserValidator user1 = new UserValidator(username, password1, password2);
 
         System.out.println( user1.isValidUsername(username) ? "A felhasználónév megadása sikeres." : "A felhasználónév megadása kötelező.");
         System.out.println( user1.isValidPassword(password1, password2) ? "A jelszó megadása sikeres" : "A jelszó megadása sikertelen.");
+        System.out.println( user1.isValidEmail(email) ? "Az email megadása sikeres" : "Az email megadása sikertelen.");
 
     }
 }
