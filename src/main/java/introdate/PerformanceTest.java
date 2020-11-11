@@ -1,13 +1,16 @@
 package introdate;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.Month;
 
 public class PerformanceTest {
     public static void main(String[] args) {
         String artistName = "Queen";
-        String performanceDate = "1989-06-02";
-        String startTime = "18:00";
-        String endTime = "20:00";
+        LocalDate performanceDate = LocalDate.of(1989, 06, 02);
+        LocalTime startTime = LocalTime.of(18, 00);
+        LocalTime endTime = LocalTime.of(20, 00);
 
         Performance performance1 = new Performance(artistName, performanceDate, startTime, endTime);
 

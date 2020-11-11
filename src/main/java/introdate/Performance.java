@@ -1,39 +1,34 @@
 package introdate;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class Performance {
     private String artistName;
-    private String performanceDate;
-    private String startTime;
-    private String endTime;
+    private LocalDate performanceDate;
+    private LocalTime startTime;
+    private LocalTime endTime;
 
-    public Performance(String artistName, String performanceDate, String startTime, String endTime) {
+    public Performance(String artistName, LocalDate performanceDate, LocalTime startTime, LocalTime endTime) {
         this.artistName = artistName;
         this.performanceDate = performanceDate;
         this.startTime = startTime;
         this.endTime = endTime;
     }
 
-    /*
-    public String getInfo() {
-        return
-    }
-    */
-
     public String getArtistName() {
         return artistName;
     }
 
-    public String getPerformanceDate() {
+    public LocalDate getPerformanceDate() {
         return performanceDate;
     }
 
-    public String getStartTime() {
+    public LocalTime getStartTime() {
         return startTime;
     }
 
-    public String getEndTime() {
+    public LocalTime getEndTime() {
         return endTime;
     }
 }
