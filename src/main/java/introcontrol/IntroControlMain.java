@@ -52,5 +52,7 @@ public class IntroControlMain {
         System.out.println("printOddNumber");
         introControl.printOddNumber(31);
         System.out.println("");
+        introControl.printOddNumber(30);
+        System.out.println("");
     }
 }
