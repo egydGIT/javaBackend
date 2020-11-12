@@ -30,7 +30,7 @@ public class ArrayOfArraysMain {
                 multiplicationTable[k][i] = k * i;
                 if (k * i < 10 ){
                     System.out.print((multiplicationTable[k][i] = k * i) + "  ");
-                } else if (k * i < 100) {
+                } else if (k * i < 101) {
                     System.out.print((multiplicationTable[k][i] = k * i) + " ");
                 }
             }
