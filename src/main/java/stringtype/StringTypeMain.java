@@ -24,13 +24,12 @@ public class StringTypeMain {
         String abc = "Abcde";
         System.out.println("String hossza: " + abc.length());
 
-        String subString1 = abc.substring(0, 1);                     // ez nem jó metódus, de mennem kell
+        String subString1 = abc.substring(0, 1);
         String subString2 = abc.substring(2, 3);
         System.out.println(subString1 + ", " + subString2);
 
         String subString3 = abc.substring(0, 3);
         System.out.println(subString3);
-
 
     }
 }
