@@ -10,12 +10,16 @@ public class Books {
         books.add(bookTitle);
     }
 
-/*
-    public void findAllByPrefix(String prefix) {
-        books.contains(prefix);
+    public List<String> findAllByPrefix(String prefix) {
+        // books.contains(prefix);
+        List<String> prefixFind = new ArrayList<>();                  // Létrehoztam egy 2. listát, amibe elmentem azt az elemet, amit talál
+        for (String book : books) {                                   // a ciklus, ami végiglépked az 1. listán.
+            if (book.equals(prefix)) {                                // Ha: a for-each ciklus változója, ami lépked az 1. listán megegyezik/tartalmazza...
+                prefixFind.add(book);                                 // Akkor adja hozzá a 2. listához.
+            }
+        }
+        return prefixFind;                                            // Térjen vissza a 2. listával (ami elvileg csak a feltételben meghat. egyező elemeket tartalmazza
     }
-
- */
 
     public List<String> getTitles() {
         return books;
@@ -26,7 +30,11 @@ public class Books {
 
         books.add("Négyszögletű kerekerdő");
         books.add("Neuroanatómia");
-        System.out.println(books.getTitles());
+        books.add("Négyzetes függvény zérushelyeinek meghatározása");
+        System.out.println("Kilistázás: " + books.getTitles());
+
+        books.findAllByPrefix("Négy");
+        System.out.println("Keresés eredménye: " + books.getTitles());           // De!   A teljes listát visszaadja.
 
     }
 }
