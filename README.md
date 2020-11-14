@@ -40,7 +40,7 @@ Bonyolultabb típusok
 - .arrays - Tömbök kezelése
 - .arraylist - Lista
 - .debug - Debug
-- finalmodifier - Konstans értékek használata
+- .finalmodifier - Konstans értékek használata
 - math - Math és Random osztály
 
 
