@@ -14,29 +14,29 @@ Eszközkészlet
 
 Java osztályok
 
-- classstructureio - Kiírás és beolvasás konzolról
-- classstructureattributes - Objektumok és attribútumok
-- classstructuremethods - Metódusok
-- classstructureconstructors - Konstruktorok
-- classstructureintegrate - UML, példányok konzol íráskor/olvasáskor
+-  classstructureio - Kiírás és beolvasás konzolról
+-  classstructureattributes - Objektumok és attribútumok
+-  classstructuremethods - Metódusok
+-  classstructureconstructors - Konstruktorok
+-  .classstructureintegrate - UML, példányok konzol íráskor/olvasáskor
 
 A nyelv építőkövei
 
-- conventions - Kódolási konvenciók
+- .conventions - Kódolási konvenciók
 - localvariables - Literálok és lokális változók
-- statements - Kifejezések és utasítások
+- .statements - Kifejezések és utasítások
 - packages - Csomagok
 - javaapi - Java API
-- distjar - JAR állomány
+- .distjar - JAR állomány
 - stringtype - Szöveges típus
-- introdate - Dátum és időkezelés alapok
+- .introdate - Dátum és időkezelés alapok
 - introcontrol - Bevezetés a vezérlési szerkezetekbe
 
 Bonyolultabb típusok
 
-- array - Tömbök
-- cmdarguments - Parancssori paraméterek
-- arrayofarrays - Tömbök tömbje
+- .array - Tömbök
+- .cmdarguments - Parancssori paraméterek
+- .arrayofarrays - Tömbök tömbje
 - arrays - Tömbök kezelése
 - arraylist - Lista
 - debug - Debug
