@@ -3,6 +3,7 @@
 Learning Java step by step with Learning360.
 
 Bevezetés a nyelvi eszközökbe
+
 Eszközkészlet
 
 - background - Java történeti háttér
@@ -53,6 +54,7 @@ Bevezetés az osztályok és objektumok világába
 
 
 A Java nyelv részletes megismerése
+
 Típusok és operátorok
 
 - literals - Literálok
@@ -91,6 +93,7 @@ Programozási tételek és egyéb algoritmusok
 
 
 Objektumorientáltság
+
 Attribútumok és metódusok
 
 - immutable - Immutable objektumok
@@ -134,4 +137,6 @@ Haladó OO elvek
 - polymorphism - Polimorfizmus
 - virtualmethod - Dinamikus kötés
 - isahasa - is-a has-a kapcsolatok
+
+... 
 
