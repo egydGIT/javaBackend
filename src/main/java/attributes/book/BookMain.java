@@ -1,4 +1,6 @@
-package attribute.book;
+package attributes.book;
+
+import attributes.book.Book;
 
 public class BookMain {
     public static void main(String[] args) {
