@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Bill {
-    List<Item> items = new ArrayList<>();
+    private List<Item> items = new ArrayList<>();
 
     public void addItem(Item item) {
         items.add(item);
@@ -17,21 +17,17 @@ public class Bill {
         }
         return sum;
     }
-/*
-    @Override
-    public String toString() {
-        return "Bill{" +
-                "items=" + items +
-                '}';
-    }
-
- */
 
     public List<Item> getItems() {                          // Nem sikerül kiiratni...
         return items;
     }
 
 /*
+    @Override
+    public String toString() {
+        return "Items: " + items;
+    }
+
     public Item getItems() {
         for (int j = 0; j < items.size(); j++) {
             System.out.println(items.get(j).toString());

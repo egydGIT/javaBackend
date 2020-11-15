@@ -2,10 +2,12 @@ package attributes.bill;
 
 public class BillMain {
     public static void main(String[] args) {
-        Item item = new Item("laptop", 12, 325_000.0);
-        Item item1 = new Item("hűtőpad",5, 5_000.0);
-        System.out.println(item.getProduct());
-        System.out.println(item1.getProduct());
+        Item item = new Item("laptop", 1, 325_000.0);
+        Item item1 = new Item("hűtőpad",2, 5_000.0);
+
+        System.out.println("Számla");
+        System.out.println(item.getProduct() + " " + item.getPrice());
+        System.out.println(item1.getProduct() + " " + item1.getPrice());
 
         Bill bill = new Bill();
         bill.addItem(item);
@@ -13,8 +15,7 @@ public class BillMain {
 
         // System.out.println(bill.getItems());                 // Nem sikerül kiiratni..
 
-        System.out.println(bill.calculateTotalPrice());
-
+        System.out.println("Fizetendő: " + bill.calculateTotalPrice());
 
 
     }
