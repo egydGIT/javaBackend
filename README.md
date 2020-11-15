@@ -43,6 +43,52 @@ Bonyolultabb típusok
 - .finalmodifier - Konstans értékek használata
 - ..math - Math és Random osztály
 
+Bevezetés az osztályok és objektumok világába
+
+- objects - Objektumok
+- attributes - Bevezetés az attribútumok használatába
+- introconstructors - Bevezetés a konstruktorok használatába
+- intromethods - Bevezetés a metódusok használatába
+- references - Referenciák
+
+
+A Java nyelv részletes megismerése
+Típusok és operátorok
+
+- literals - Literálok
+- primitivetypes - Egyszerű típusok
+- enumtype - Felsorolásos típus
+- operators - Operátorok
+- typeconversion - Típuskonverzió
+- numbers - Egész és lebegőpontos számok
+
+Vezérlési szerkezetek
+
+- introjunit - Unit tesztelés JUnittal
+- junit5 - JUnit 5
+- controlselection - Vezérlési szerkezetek és az elágazás
+- controliteration - Ciklusok
+- controladvanced - Haladó vezérlési szerkezetek
+- introexception - Bevezetés a kivételkezelésbe
+
+String, StringBuilder
+
+- stringbasic - String alapok
+- stringconcat - Konkatenáció
+- stringmethods - Főbb String metódusok
+- stringbuilder - StringBuilder
+- stringscanner - Scanner
+- filescanner - Fájl olvasása Scannerrel
+- formatlocaleprintf - printf
+
+Programozási tételek és egyéb algoritmusok
+
+- algorithmssum - Összegzés tétele
+- algorithmscount - Számlálás tétele
+- algorithmsmax - Szélsőérték keresés tétele
+- algorithmsdecision - Eldöntés tétele
+- recursion - Rekurzió
+
 
 Objektumorientáltság
 Attribútumok és metódusok
