@@ -46,9 +46,9 @@ Bonyolultabb típusok
 
 Bevezetés az osztályok és objektumok világába
 
-- objects - Objektumok
-- attributes - Bevezetés az attribútumok használatába
-- introconstructors - Bevezetés a konstruktorok használatába
+- .objects - Objektumok
+- .attributes - Bevezetés az attribútumok használatába
+- .introconstructors - Bevezetés a konstruktorok használatába
 - intromethods - Bevezetés a metódusok használatába
 - references - Referenciák
 
