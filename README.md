@@ -41,7 +41,7 @@ Bonyolultabb típusok
 - .arraylist - Lista
 - .debug - Debug
 - .finalmodifier - Konstans értékek használata
-- math - Math és Random osztály
+- ..math - Math és Random osztály
 
 
 Objektumorientáltság
