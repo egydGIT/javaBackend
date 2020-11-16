@@ -1,4 +1,4 @@
-package Intromethods.todo;
+package intromethods.todo;
 
 import java.util.Arrays;
 

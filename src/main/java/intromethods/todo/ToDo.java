@@ -1,4 +1,4 @@
-package Intromethods.todo;
+package intromethods.todo;
 
 public class ToDo {
     private String caption;
