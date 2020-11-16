@@ -19,38 +19,38 @@ Java osztályok
 -  .classstructureattributes - Objektumok és attribútumok
 -  .classstructuremethods - Metódusok
 -  .classstructureconstructors - Konstruktorok
--  classstructureintegrate - UML, példányok konzol íráskor/olvasáskor
+-  ,classstructureintegrate - UML, példányok konzol íráskor/olvasáskor
 
 A nyelv építőkövei
 
 - conventions - Kódolási konvenciók
 - .localvariables - Literálok és lokális változók
-- statements - Kifejezések és utasítások
+- ,statements - Kifejezések és utasítások
 - .packages - Csomagok
 - .javaapi - Java API
 - distjar - JAR állomány
 - .stringtype - Szöveges típus
-- introdate - Dátum és időkezelés alapok
-- introcontrol - Bevezetés a vezérlési szerkezetekbe
+- ,introdate - Dátum és időkezelés alapok
+- ,introcontrol - Bevezetés a vezérlési szerkezetekbe
 
 Bonyolultabb típusok
 
-- array - Tömbök
+- ,array - Tömbök
 - cmdarguments - Parancssori paraméterek
-- arrayofarrays - Tömbök tömbje
+- ,arrayofarrays - Tömbök tömbje
 - .arrays - Tömbök kezelése
 - .arraylist - Lista
-- .debug - Debug
+- ,debug - Debug
 - .finalmodifier - Konstans értékek használata
-- ..math - Math és Random osztály
+- .,math - Math és Random osztály
 
 Bevezetés az osztályok és objektumok világába
 
 - .objects - Objektumok
-- .attributes - Bevezetés az attribútumok használatába
+- ,attributes - Bevezetés az attribútumok használatába
 - .introconstructors - Bevezetés a konstruktorok használatába
-- intromethods - Bevezetés a metódusok használatába
-- references - Referenciák
+- .intromethods - Bevezetés a metódusok használatába
+- ,references - Referenciák
 
 
 A Java nyelv részletes megismerése
