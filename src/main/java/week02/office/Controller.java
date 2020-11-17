@@ -122,15 +122,3 @@ public class Controller {
 
 }
 
-/*
-} else if (choosenMenu.contains("2")) {
-            return
-        } else if (choosenMenu.contains("3")) {
-            return
-        } else if (choosenMenu.contains("4")) {
-            return
-        } else if (choosenMenu.contains("5")) {
-            return
-        } else if (choosenMenu.contains("6")) {
-            return
- */

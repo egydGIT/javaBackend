@@ -56,7 +56,7 @@ public class Office {
         // System.out.println("5. Keresés pontos név alapján: ");
         for (MeetingRoom meetingRoom : meetingRooms) {
             if (meetingRoom.equals(answerMeetingRoomName)) {
-                System.out.println(meetingRoom.getName());
+                System.out.println(meetingRoom.getName());                              // ........nem ír ki
             }
         }
     }
@@ -65,7 +65,7 @@ public class Office {
         // System.out.println("6. Keresés névtöredék alapján: ");
         for (int i = 0; i < meetingRooms.size(); i++) {
             if (meetingRooms.contains(answerMeetingRoomNamePrefix.toLowerCase())) {
-                System.out.println(meetingRooms.get(i).toString());
+                System.out.println(meetingRooms.get(i).toString());                     // ........nem ír ki
             }
         }
     }
