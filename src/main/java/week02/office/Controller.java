@@ -90,7 +90,7 @@ public class Controller {
             System.out.println("Kérem adja meg a keresett tárgyaló pontos nevét! ");
             String answerMeetingRoomName = scanner.nextLine();
 
-            office.printMeetingRoomsWithName(answerMeetingRoomName);
+            office.printMeetingRoomsWithName(office.getMeetingRooms(), answerMeetingRoomName);
         }
 
         if (prefix.contains("6")){
@@ -98,7 +98,7 @@ public class Controller {
             System.out.println("Kérem adja meg a keresett tárgyaló nevének egy részét! ");
             String answerMeetingRoomNamePrefix = scanner.nextLine();
 
-            office.printMeetingRoomsContains(answerMeetingRoomNamePrefix);
+            office.printMeetingRoomsContains(office.getMeetingRooms(), answerMeetingRoomNamePrefix);
         }
 
         if (prefix.contains("7")) {
