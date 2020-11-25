@@ -46,6 +46,14 @@ public class DataLoss {
 
     public static void main(String[] args) {
         new DataLoss().dataLoss();                  // metódus hívás
+
+        // Original: 16777217 in binary: 1000000000000000000000001
+        // Converted: 16777216 in binary: 1000000000000000000000000
+        // Original: 16777219 in binary: 1000000000000000000000011
+        // Converted: 16777220 in binary: 1000000000000000000000100
+        // Original: 16777221 in binary: 1000000000000000000000101
+        // Converted: 16777220 in binary: 1000000000000000000000100
+
     }
 
 }
