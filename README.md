@@ -57,12 +57,12 @@ A Java nyelv részletes megismerése
 
 Típusok és operátorok
 
-- literals - Literálok
+- .literals - Literálok
 - primitivetypes - Egyszerű típusok
-- enumtype - Felsorolásos típus
-- operators - Operátorok
-- typeconversion - Típuskonverzió
-- numbers - Egész és lebegőpontos számok
+- ,enumtype - Felsorolásos típus
+- .operators - Operátorok
+- .typeconversion - Típuskonverzió
+- .numbers - Egész és lebegőpontos számok
 
 Vezérlési szerkezetek
 
