@@ -11,13 +11,19 @@ public class Operators {
         }
     }
 
-
+/*
     public String multiplyByPowerOfTwo(int number, int numberOfMultiplyWithTwo) {
         String result = Integer.toBinaryString(number << numberOfMultiplyWithTwo);
         return result;
     }
 
+ */
 
+    public int multiplyByPowerOfTwo(int number, int numberOfMultiplyWithTwo) {
+        String result = Integer.toBinaryString(number << numberOfMultiplyWithTwo);
+        int result2 = Integer.parseInt(result, 2);
+        return result2;
+    }
 
 
 }

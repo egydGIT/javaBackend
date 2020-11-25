@@ -36,7 +36,8 @@ public class OperatorsMain {
         System.out.println(Integer.parseInt("1101000", 2));     // 104 -> szorzás 2 a harmadikonnal
 
 
-        System.out.println(Integer.parseInt(operators.multiplyByPowerOfTwo(6, 3), 2));
+        // System.out.println(Integer.parseInt(operators.multiplyByPowerOfTwo(6, 3), 2));
 
+        System.out.println(operators.multiplyByPowerOfTwo(8, 3));  // Elvárt: 8*2*2*2 = 64
     }
 }
