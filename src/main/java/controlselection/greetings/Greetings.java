@@ -1,4 +1,4 @@
-package controlselection;
+package controlselection.greetings;
 
 import java.time.LocalTime;
 
