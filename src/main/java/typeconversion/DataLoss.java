@@ -1,7 +1,8 @@
 package typeconversion;
 
 public class DataLoss {
-    public void dataLoss(long number) {
+/*
+    public void dataLoss(long number) {                                 // Explicit konverziók + adatvesztés
         System.out.println(number);
         // System.out.println(Integer.toBinaryString(number));
 
@@ -17,6 +18,34 @@ public class DataLoss {
     public static void main(String[] args) {
         DataLoss dataLoss = new DataLoss();
 
-        dataLoss.dataLoss(1_489_279_436);
+        dataLoss.dataLoss(1_489_279_436);               // 1489279436
+                                                        // 1.48927949E9
+                                                        // 1489279488
     }
+
+ */
+
+
+    // Solutions-ból CP:
+    public static final int MAX_NUMBER_OF_LOSS = 3;       // oszt-hoz tartozó konstans deklarálása
+
+    public void dataLoss() {
+        long original = 0;                                          // long tipusú változó definiálása
+        for (long counter = 0; counter < MAX_NUMBER_OF_LOSS; ) {    // for ciklus fejléc, végigiterál a konstans értékén
+            long converted = (long) (float) original;               // vátozó kétszeri explicit konverziója
+            if (converted != original) {                            // ha a változó konvertálás után nem egyezik meg
+                                                                         // kezdeti értékével
+                System.out.println("Original: " + original + " in binary: " + Long.toBinaryString(original));
+                System.out.println("Converted: " + converted + " in binary: " + Long.toBinaryString(converted));
+                                                    // írja ki: eredeti és konvertált számot + bináris reprezentációit
+                counter++;                          // ???.............
+            }
+            original++;                             // ciklusváltozó növelése posztfix / egy operandusú operátorral
+        }
+    }
+
+    public static void main(String[] args) {
+        new DataLoss().dataLoss();                  // metódus hívás
+    }
+
 }
