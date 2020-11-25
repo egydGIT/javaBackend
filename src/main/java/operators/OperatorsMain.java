@@ -29,5 +29,14 @@ public class OperatorsMain {
         System.out.println(Integer.toBinaryString(13 << 1));        // 11010
         System.out.println(Integer.parseInt("11010", 2));         // 26 -> szorzás 2-vel
 
+        System.out.println(Integer.toBinaryString(13 << 2));        // 110100
+        System.out.println(Integer.parseInt("110100", 2));      // 52 -> szorzás 2 a másodikonnal
+
+        System.out.println(Integer.toBinaryString(13 << 3));        // 1101000
+        System.out.println(Integer.parseInt("1101000", 2));     // 104 -> szorzás 2 a harmadikonnal
+
+
+        System.out.println(Integer.parseInt(operators.multiplyByPowerOfTwo(6, 3), 2));
+
     }
 }

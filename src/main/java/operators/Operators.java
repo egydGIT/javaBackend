@@ -12,4 +12,12 @@ public class Operators {
     }
 
 
+    public String multiplyByPowerOfTwo(int number, int numberOfMultiplyWithTwo) {
+        String result = Integer.toBinaryString(number << numberOfMultiplyWithTwo);
+        return result;
+    }
+
+
+
+
 }
