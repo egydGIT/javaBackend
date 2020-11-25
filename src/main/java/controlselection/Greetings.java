@@ -33,7 +33,7 @@ public class Greetings {
         if (allMinuteUntilNow >= halfPastSixPm && allMinuteUntilNow < eightPm ) {
             System.out.println("Jó estét!");
         }
-        if (allMinuteUntilNow >= eightPm && allMinuteUntilNow < fiveClock ) {
+        if (allMinuteUntilNow >= eightPm || allMinuteUntilNow < fiveClock ) {
             System.out.println("Jó éjt! Menj aludni! :-)  ");
         }
         return allMinuteUntilNow;
