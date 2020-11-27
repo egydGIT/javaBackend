@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Student {
 
-    private List<Mark> marks = new ArrayList<>();           // read only ?
+    private List<Mark> marks = new ArrayList<>();                       // read only ?
 
     private String name;
 
@@ -15,26 +15,49 @@ public class Student {
 
     public void grading(Mark mark) {
         // érdemjegy rögzítése
+
+        marks.add(mark);
     }
 
-    public double calculateAverage() {
+/*
+    public double calculateAverage(List<Mark> marks) {
         // teljes átlag számolása
+        // az összes tantárgy összes érdemjegyének átlaga
     }
+
+ */
 
     public double calculateSubjectAverage(Subject subject) {
         // tantárgyhoz tartozó átlag számítása
+
+        int sum = 0;                                                    // összegzés algoritmumusa
+        for (Mark mark : marks) {
+            sum += mark.getMarkType().getValue();
+        }
+        return sum / marks.size();
     }
 
     public String getName() {
         return name;
     }
 
-    public boolean equals(Object ) {
-        // ??
+    public void setName(String name) {
+        this.name = name;
     }
+/*
+    public boolean equals(Object) {
+        // ??
 
+        return true;
+    }
+ */
     private boolean isEmpty(String str) {
         // megvizsgálja, van-e üres v null értékű String paraméter
+
+        if ("".equals(str) || str == null) {
+            System.out.println("isEmpty");
+        }
+        return true;
     }
 
     @Override                                                // tesztesetekben a végleges formátum

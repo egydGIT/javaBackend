@@ -12,7 +12,9 @@ public class Subject {
         return subjectName;
     }
 
-    public boolean equals(Object ) {
-        // ??
+    public boolean equals(Object rnd) {
+        // nem tudom mit csinál
+
+        return true;
     }
 }
