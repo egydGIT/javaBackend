@@ -69,13 +69,24 @@ public class ConcatName {
 
         return nameString;
     }
-/*
+
     public String concatNameHungarianStyle() {
-        // ugyanez, csak más a sorrend
-        // konkatenáció: + operátorral vagy .concat() metódussal
+        String nameString;
+        if (isEmpty(givenName) || isEmpty(familyName)) {
+            throw new IllegalArgumentException("Family name and given name must be filled!");
+        } else {
+            nameString = title.getTitleString().trim() + ". " + familyName.trim();
+        }
+        if (isEmpty(middleName)) {
+            nameString = nameString + " " + givenName.trim();
+        }
+        else {
+            nameString = nameString + " " + givenName.trim() + " " + middleName.trim() ;
+        }
+        return nameString;
     }
 
- */
+
 
     public Title getTitle() {
         return title;
@@ -102,11 +113,14 @@ public class ConcatName {
     public static void main(String[] args) {
         ConcatName concatName1 = new ConcatName(Title.DR, "Brown", "James", "Jack");
         System.out.println(concatName1.concatNameWesternStyle());
+        System.out.println(concatName1.concatNameHungarianStyle());
 
         ConcatName concatName2 = new ConcatName(MRS, "  Smith   ", "", "    Judith");
         System.out.println(concatName2.concatNameWesternStyle());
+        System.out.println(concatName2.concatNameHungarianStyle());
 
         ConcatName concatName3 = new ConcatName(MR, "Brown", "", "");
-        System.out.println(concatName3.concatNameWesternStyle());
+        // System.out.println(concatName3.concatNameWesternStyle());
+        System.out.println(concatName3.concatNameHungarianStyle());
     }
 }
