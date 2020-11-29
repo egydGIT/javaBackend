@@ -20,15 +20,15 @@ public class Vet {
         return false;
     }
 
-    public boolean add(Pet newPet) {
+    public void add(Pet newPet) {
         for (int i = 0; i < drBrownPets.size(); i++) {
-            if (equals(newPet)) {      // (drBrownPets.get(i).getRegNumber().equals(newPet.getRegNumber())
+            if (areEqual(newPet)) {      // (drBrownPets.get(i).getRegNumber().equals(newPet.getRegNumber())
                 break;
             }
         }
         System.out.println("New pet has been added.");
         drBrownPets.add(newPet);
-        return true;
+        return;
     }
 
     public static List<Pet> getDrBrownPets() {
