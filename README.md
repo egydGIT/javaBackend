@@ -3,7 +3,6 @@
 Learning Java step by step with Learning360.
 
 Jelmagyarázat:
- -      mappában lévő feladatok:  nincs kész
  -  . - mappában lévő feladatok:  összes kész
  -  , - mappában lévő feladatok:  van köztük hiányos, javítandó v CP
 
