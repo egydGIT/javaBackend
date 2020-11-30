@@ -34,7 +34,8 @@ public class StringScanner {
         if (isEmpty(text) || word == null || "".equals(word)) {                // hibakezelés
             throw new IllegalArgumentException("Incorrect parameter string!"); // ha text üres v. szó null v üres String
         }
-        try (Scanner sc = new Scanner(text)) {             // try(??) fejlécében Scanner példányosítás, paraméter text
+        try (Scanner sc = new Scanner(text)) {             // try(Scannert zárja le, meghívja a close() met-t
+                                                                    // fejlécében Scanner példányosítás, paraméter text
             StringBuilder sb = new StringBuilder();        // StringBuilder példányosítás, mert ez mutable
             while (sc.hasNextLine()) {                     // amíg: van következő sor, visszatérési érték boolean
                 String line = sc.nextLine();               // line változónak adja értékül a beolvasott sort
