@@ -80,10 +80,10 @@ Vezérlési szerkezetek
 
 String, StringBuilder
 
-- stringbasic - String alapok
-- stringconcat - Konkatenáció
-- stringmethods - Főbb String metódusok
-- stringbuilder - StringBuilder
+- ,stringbasic - String alapok
+- .stringconcat - Konkatenáció
+- ,stringmethods - Főbb String metódusok
+- ,stringbuilder - StringBuilder
 - stringscanner - Scanner
 - filescanner - Fájl olvasása Scannerrel
 - formatlocaleprintf - printf
