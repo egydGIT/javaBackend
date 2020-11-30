@@ -29,12 +29,23 @@ public class StringScanner {
         }
         return sum;
     }
-/*
+
     public String filterLinesWithWordOccurrences(String text, String word) {
-
-    }
-
- */
+        if (isEmpty(text) || word == null || "".equals(word)) {                // hibakezelés
+            throw new IllegalArgumentException("Incorrect parameter string!"); // ha text üres v. szó null v üres String
+        }
+        try (Scanner sc = new Scanner(text)) {             // try(??) fejlécében Scanner példányosítás, paraméter text
+            StringBuilder sb = new StringBuilder();        // StringBuilder példányosítás, mert ez mutable
+            while (sc.hasNextLine()) {                     // amíg: van következő sor, visszatérési érték boolean
+                String line = sc.nextLine();               // line változónak adja értékül a beolvasott sort
+                if (line.contains(word)) {                 // ha: ez a sor tartalmazza a keresett szót
+                    sb.append(line);                       // StrinBuilder véáltozóhoz adja hozzá az aktuális sort
+                    sb.append("\n");                       // és az Entert
+                }
+            }
+            return sb.toString().trim();                // met. térjen vissza a S.Builder végső, ciklus utáni értékével
+        }                                               // SB csak toString met-sal íratható ki konzolra
+    }                                                   // trim() whitespace-t vágja le(?)
 
     private boolean isEmpty(String str) {
         return str == null || "".equals(str.trim());
@@ -46,5 +57,6 @@ public class StringScanner {
 
         System.out.println(stringScanner.readAndSumValues("12 13 14 15 16 17 18"));
         System.out.println(stringScanner.readAndSumValues("12, 13, 14, 15, 16, 17, 18", ", "));
+
     }
 }
