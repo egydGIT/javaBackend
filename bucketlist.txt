@@ -1,2 +1,2 @@
 bucketlist.txt
--> tarining-solutions/src
+-> training-solutions/src

@@ -1,2 +1,2 @@
 bucketlist.txt
--> tarining-solutions/src/main/java/filescanner/bucketlist
+-> training-solutions/src/main/java/filescanner/bucketlist

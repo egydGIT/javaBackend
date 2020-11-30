@@ -1,0 +1,2 @@
+bucketlist.txt
+-> training-solutions/src/main/resources/filescanner/bucketlist

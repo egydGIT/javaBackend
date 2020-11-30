@@ -1,2 +1,0 @@
-bucketlist.txt
--> tarining-solutions/src/main/resources/filescanner/bucketlist
