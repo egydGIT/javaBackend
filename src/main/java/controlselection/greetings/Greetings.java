@@ -34,8 +34,9 @@ public class Greetings {
             System.out.println("Jó estét!");
         }
         if (allMinuteUntilNow >= eightPm || allMinuteUntilNow < fiveClock ) {
-            System.out.println("Jó éjt! Menj aludni! :-)  ");
+            System.out.println("Jó éjt! Menj aludni! :-) ");
         }
+        System.out.println("Ez a mai nap " + allMinuteUntilNow + ". perce! ");
         return allMinuteUntilNow;
     }
 

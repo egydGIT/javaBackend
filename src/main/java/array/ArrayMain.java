@@ -30,6 +30,12 @@ public class ArrayMain {
             result[i] *= basic;
             System.out.print(result[i] + " ");          // Konzol: 2 0 0 0 0          Miért?
         }
+
+        System.out.println();
+        for(int r : result) {
+            System.out.print(r + " ");
+        }
+
 /*
         System.out.println("");
         for ( int i = 0; i < 5; i++) {

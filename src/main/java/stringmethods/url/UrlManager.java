@@ -6,7 +6,7 @@ public class UrlManager {
     private String host;
     private String path;
     private String query;
-
+/*
     public UrlManager(String url) {
 
     }
@@ -28,10 +28,12 @@ public class UrlManager {
     }
 
     public boolean hasProperty(String key) {
-        
+
     }
 
     public String getProperty(String key) {
 
     }
+
+ */
 }

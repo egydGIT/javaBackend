@@ -34,7 +34,7 @@ public class IntroControl {
         }
     }
 
-    public int calculateConsumption(int prev, int next) {           // Értem :-) !
+    public int calculateConsumption(int prev, int next) {
         if (prev <= next) {
             return next - prev;
         } else {

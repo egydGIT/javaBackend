@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Books {
-    ArrayList<String> books = new ArrayList<>();
+    private List<String> books = new ArrayList<>();
 
     public void add(String bookTitle) {
         books.add(bookTitle);
@@ -12,13 +12,13 @@ public class Books {
 
     public List<String> findAllByPrefix(String prefix) {
         // books.contains(prefix);
-        List<String> prefixFind = new ArrayList<>();                  // Létrehoztam egy 2. listát, amibe elmentem azt az elemet, amit talál
-        for (String book : books) {                                   // a ciklus, ami végiglépked az 1. listán.
-            if (book.equals(prefix)) {                                // Ha: a for-each ciklus változója, ami lépked az 1. listán megegyezik/tartalmazza...
-                prefixFind.add(book);                                 // Akkor adja hozzá a 2. listához.
+        List<String> prefixFind = new ArrayList<>();            // Létrehoztam egy 2. listát, amibe elmentem azt az elemet, amit talál
+        for (String book : books) {                             // a ciklus, ami végiglépked az 1. listán.
+            if (book.equals(prefix)) {                          // Ha: a for-each ciklus változója, ami lépked az 1. listán megegyezik/tartalmazza...
+                prefixFind.add(book);                           // Akkor adja hozzá a 2. listához.
             }
         }
-        return prefixFind;                                            // Térjen vissza a 2. listával (ami elvileg csak a feltételben meghat. egyező elemeket tartalmazza
+        return prefixFind;                                      // Térjen vissza a 2. listával (ami elvileg csak a feltételben meghat. egyező elemeket tartalmazza
     }
 
     public List<String> getTitles() {

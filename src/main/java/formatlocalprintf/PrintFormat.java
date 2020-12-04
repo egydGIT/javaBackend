@@ -36,4 +36,7 @@ public class PrintFormat {
 
         return String.format(new Locale("hu", "HU"), formatString, i, j, k);
     }
+
+
+    
 }

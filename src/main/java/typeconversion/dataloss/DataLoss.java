@@ -1,4 +1,4 @@
-package typeconversion;
+package typeconversion.dataloss;
 
 public class DataLoss {
 /*

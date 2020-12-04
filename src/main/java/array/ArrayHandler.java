@@ -45,7 +45,7 @@ public class ArrayHandler {
         System.out.println("Hanyadik elem a 9: " + array.find(source, 9 ) + ".");
 
         System.out.println("A tömb összes eleme: ");
-        for (int item: source) {
+        for (int item : source) {
             System.out.print(item + ", ");
         }
 

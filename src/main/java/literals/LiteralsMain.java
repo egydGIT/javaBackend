@@ -47,6 +47,7 @@ public class LiteralsMain {
         System.out.println(Integer.toString(-2, 2));   // -10
 
         System.out.println(Integer.toBinaryString(1));      // 1
+        System.out.println(Integer.toBinaryString(2));     //
         System.out.println(Integer.toBinaryString(-2));     // 11111111111111111111111111111110  // kettes komplemens
 
 

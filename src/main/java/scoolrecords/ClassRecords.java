@@ -1,3 +1,4 @@
+/*
 package scoolrecords;
 
 import java.util.ArrayList;
@@ -62,7 +63,9 @@ public class ClassRecords {             // E-napló
         }
         return ;
     }
-/*
+ */
+
+/* ------------------
     public double calculateClassAverage() {
         // osztályátlagot számol, minden diákot figyelembe véve
     }
@@ -85,6 +88,7 @@ public class ClassRecords {             // E-napló
     }
     */
 
+/*
     public String getClassName() {
         return className;
     }
@@ -99,3 +103,6 @@ public class ClassRecords {             // E-napló
     }
 
 }
+
+
+ */

@@ -1,3 +1,4 @@
+/*
 package scoolrecords;
 
 import java.util.Random;
@@ -28,12 +29,15 @@ public class ScoolRecordsController {
         System.out.println("Kérem válasszon a fenti menüpontok közül! ");
         String choosenMenu = scanner.nextLine();
 
-        /*
+ */
+
+        /*----------
         if (choosenMenu.contains("1.") {
             classRecords.listStudentNames();                            // 1.
         }
          */
 
+/*
         if (choosenMenu.contains("2.") {
             System.out.println("Kérem adja meg a keresett diák nevét! ");
             String name = scanner.nextLine();
@@ -50,7 +54,10 @@ public class ScoolRecordsController {
             classRecords.findStudentByName().removeStudent();           // 4.
         }
 
-        /*
+ */
+
+        /* --------------
+
         if (choosenMenu.contains("5.") {
             classRecords.repetition();                                  // 5.
         }
@@ -80,7 +87,7 @@ public class ScoolRecordsController {
 
          */
 
-
+/*
     public static void main(String[] args) {
         ScoolRecordsController scoolRecordsController = new ScoolRecordsController();
 
@@ -91,3 +98,6 @@ public class ScoolRecordsController {
     }
 }
 
+
+
+ */

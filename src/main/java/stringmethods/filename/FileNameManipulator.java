@@ -50,7 +50,7 @@ public class FileNameManipulator {
         System.out.println(new FileNameManipulator().changeExtensionToLowerCase("HelloWord.XML"));
         System.out.println(new FileNameManipulator().replaceStringPart
                                                         ("HelloWord.java", "java", "class"));
-        
+
         /*
         r
         java
