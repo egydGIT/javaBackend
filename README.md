@@ -84,9 +84,9 @@ String, StringBuilder
 - .stringconcat - Konkatenáció
 - ,stringmethods - Főbb String metódusok
 - ,stringbuilder - StringBuilder
-- stringscanner - Scanner
-- filescanner - Fájl olvasása Scannerrel
-- formatlocaleprintf - printf
+- ,stringscanner - Scanner
+- ,filescanner - Fájl olvasása Scannerrel
+- ,formatlocaleprintf - printf
 
 Programozási tételek és egyéb algoritmusok
 
