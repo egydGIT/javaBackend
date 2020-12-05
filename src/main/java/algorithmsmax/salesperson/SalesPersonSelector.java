@@ -1,4 +1,4 @@
-package algorithmsmax;
+package algorithmsmax.salesperson;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package algorithmsmax;
+package algorithmsmax.salesperson;
 
 public class SalesPerson {
     private String name;
