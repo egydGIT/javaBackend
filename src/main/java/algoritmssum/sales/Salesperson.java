@@ -1,4 +1,4 @@
-package algoritmssum;
+package algoritmssum.sales;
 
 public class Salesperson {
     private String name;
