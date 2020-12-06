@@ -30,10 +30,11 @@ public class ExamStats {
 
         for (int point : results) {
             if (point < (1.0 * limitInPerCent / 100) * maxPoints) {    // ha van a min pontszámnál alacsonyabb
+                // 1.0-val való szorzás double-é konvertál, az egész osztás pontatlan eredményét kerüli el
                 return true;                                           // igen, bukott
             }
         }
-        return false;
+        return false;                                                   // ha if feltétel false minden elemre, akkor nem bukott senki
     }
 
 
