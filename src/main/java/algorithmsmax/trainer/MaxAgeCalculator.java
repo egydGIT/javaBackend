@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MaxAgeCalculator {
-    public Trainer TrainerWithMaxAge(List<Trainer> trainers) {
+    public Trainer trainerWithMaxAge(List<Trainer> trainers) {
         Trainer trainerFinder = null;
         for (Trainer trainer: trainers) {
             if (trainerFinder == null || trainer.getAge() > trainerFinder.getAge()) {
@@ -24,6 +24,6 @@ public class MaxAgeCalculator {
         trainers.add(trainer2);
         trainers.add(trainer3);
 
-        System.out.println(new MaxAgeCalculator().TrainerWithMaxAge(trainers).getName());
+        System.out.println(new MaxAgeCalculator().trainerWithMaxAge(trainers).getName());
     }
 }

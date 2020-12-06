@@ -5,7 +5,7 @@ import java.util.List;
 
 public class FindAccountLowerThanAmount {
 
-    public boolean FindAccountLargerThanAmount(List<BankAccount> bankAccounts, int amount) {
+    public boolean findAccountLargerThanAmount(List<BankAccount> bankAccounts, int amount) {
         boolean contains = false;
         int i = 0;
         while (i < bankAccounts.size() && !contains) {
@@ -28,6 +28,6 @@ public class FindAccountLowerThanAmount {
         bankAccounts.add(bankAccount2);
         bankAccounts.add(bankAccount3);
 
-        System.out.println(new FindAccountLowerThanAmount().FindAccountLargerThanAmount(bankAccounts, 450_000));
+        System.out.println(new FindAccountLowerThanAmount().findAccountLargerThanAmount(bankAccounts, 450_000));
     }
 }
