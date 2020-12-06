@@ -90,10 +90,10 @@ String, StringBuilder
 
 Programozási tételek és egyéb algoritmusok
 
-- algorithmssum - Összegzés tétele
-- algorithmscount - Számlálás tétele
-- algorithmsmax - Szélsőérték keresés tétele
-- algorithmsdecision - Eldöntés tétele
+- .algorithmssum - Összegzés tétele
+- .algorithmscount - Számlálás tétele
+- .algorithmsmax - Szélsőérték keresés tétele
+- ,algorithmsdecision - Eldöntés tétele
 - recursion - Rekurzió
 
 
@@ -143,5 +143,78 @@ Haladó OO elvek
 - virtualmethod - Dinamikus kötés
 - isahasa - is-a has-a kapcsolatok
 
-... 
+
+Kivétel- és fájlkezelés
+
+Kivételkezelés
+
+- exceptions - Kivételkezelés
+- exceptionclass - Saját kivétel
+- exceptionmulticatch - Multi catch
+- exceptionresource - Try-With-Resources szerkezet
+
+Fájlkezelés
+
+- ioreadstring - Szöveges állomány beolvasása
+- iowritestring - String kiírása szöveges állományba
+- ioreadwritebytes - Bájtos beolvasása fájlból és kiírása fájlba
+- ioreader - String olvasása Readerrel
+- iowriter - String írása Writerrel
+- ioprintwriter - Különböző típusok írása PrintWriterrel
+- iostringwriter - Kiírás Stringbe StringWriterrel
+- ioreadbytes - Bájtok olvasása InputStreammel
+- ioreaderclasspath - String olvasása classpath-ról
+- iowritebytes - Bájtok írása OutputStreammel
+- iodatastream - Adatok írása OutputStreamre, és olvasás
+- iozip - Bájtok írása tömörítéssel
+- ioconvert - Konvertálás a típusok között
+- iofiles - Files osztály használata
+- iofilestest - Fájlkezelés tesztelése
+
+
+Kollekciók és osztálykönyvtárak
+
+Kollekció típusok
+
+- genericsusage - Generikusok használata, diamond operátor
+- collectionsequalshash - equals, hashCode
+- collectionslist - List, ArrayList kontra LinkedList
+- collectionsset - Set
+- collectionsqueue - Queue
+- collectionsmap - Map
+- collectionsautoboxing - Autoboxing használata kollekcióknál
+
+Alapvető algoritmusok
+
+- collectionsiterator - Bejárás
+- collectionscomp - Comparable és Comparator
+- searching - Keresés
+- sorting - Rendezés
+- collectionsclass - Collections osztály (keresésen, rendezésen felüli metódusok)
+- clone - A clone() metódus, deep clone
+- properties - Properties állományok
+
+Lambda kifejezések
+
+- lambdaintro - Bevezetés a lambda kifejezések használatába
+- lambdaoptional - Optional használata
+- lambdacomparator - Comparator módosítások
+
+Streamek
+
+- lambdastreams - Streamek
+- lambdaintermediate - Intermediate műveletek
+- lambdaprimitives - Primitívek használata streamekben
+- lambdacollectors - Collectors
+
+Dátum és időkezelés
+
+- datenewtypes - Új típusok, LocalDate, LocalTime, parse
+- dateoldtypes - Régi dátum- és időkezeléssel kapcsolatos típusok
+
+Architektúrák
+
+- jvm - JVM
+- thirdparty - Third party library-k
+
 
