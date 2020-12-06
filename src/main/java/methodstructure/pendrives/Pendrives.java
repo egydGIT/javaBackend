@@ -1,5 +1,6 @@
 package methodstructure.pendrives;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Pendrives {
@@ -38,5 +39,25 @@ public class Pendrives {
         return findSearchedCapacity;
     }
 
+    // Kiválogatja az összes capacity-ben meghatározott pendrivot
+    public List<Pendrive> findWhenCapacity(List<Pendrive> pendrives, int percent, int capacity) {
+        List<Pendrive> foundPendrives = new ArrayList<>();
+        for (Pendrive pendrive: pendrives) {
+            if (pendrive.getCapacity() == capacity) {
+                foundPendrives.add(pendrive);
+            }
+        }
+        return foundPendrives;
+    }
+
+    /*
+    public Pendrive risePriceWhenCapacity2(List<Pendrive> foundPendrives, int percent) {
+        for (int i = 0; i < foundPendrives.size(); i++) {
+            foundPendrives.get(i).risePrice(percent);
+            foundPendrives.get(i).toString();
+        }
+    }
+
+     */
 
 }

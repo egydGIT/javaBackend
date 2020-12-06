@@ -80,5 +80,10 @@ public class Pendrive {
         System.out.println("cheapest: " + new Pendrives().cheapest(pendrives));
 
         System.out.println("risePrice: " + new Pendrives().risePriceWhenCapacity(pendrives, 10, 16));
+
+        System.out.println("findWhenCapacity: " + new Pendrives().findWhenCapacity(pendrives, 10, 16));
+
+
+
     }
 }
