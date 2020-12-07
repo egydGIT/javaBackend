@@ -16,4 +16,10 @@ public class ExtremeValues {
     public int getMax() {
         return max;
     }
+
+    @Override
+    public String toString() {
+        return "min= " + min +
+                " / max= " + max;
+    }
 }

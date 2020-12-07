@@ -1,5 +1,7 @@
 package methodparam;
 
+import java.util.Arrays;
+
 public class Measurement {
     private int [] measurements;                                // paraméter, tömb
 
@@ -29,7 +31,7 @@ public class Measurement {
     public int maximum() {                              // Legnagyobb mérési eredmény: szélsőérték algoritmus
         int max = Integer.MIN_VALUE;
         for (Integer m: measurements) {
-            if (m < max) {
+            if (m > max) {
                 max = m;
             }
         }
@@ -40,4 +42,16 @@ public class Measurement {
         return new ExtremeValues(minimum(), maximum());         // ehhez új osztály (immutable tipusú), ezt példányosítja
     }                                                           // melynek értékeit a fenti szélsőérték metódusok szolgáltatják
 
+
+    public static void main(String[] args) {
+        int [] measurements = {25, 58, 69, 42, 71, 65, 66, 32, 3, 75, 97};
+        System.out.println("Mérési eredmények: " + Arrays.toString(measurements));
+        Measurement measurement = new Measurement(measurements);
+        System.out.println("Min: " + measurement.minimum());
+        System.out.println("Max: " + measurement.maximum());
+
+        ExtremeValues extremeValues = new ExtremeValues(measurement.minimum(), measurement.maximum());
+        System.out.println("ExtremeValues: " + extremeValues.toString());
+
+    }
 }
