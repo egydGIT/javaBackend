@@ -2,7 +2,7 @@ package statements;
 
 import java.util.Scanner;
 
-public class TimeMain {
+public class TimeTMain {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -24,13 +24,13 @@ public class TimeMain {
 
         System.out.println(hour2 + " : " + minute2 + " : " + second2);
 
-        Time time1 = new Time(hour1, minute1, second1);
-        Time time2 = new Time(hour2, minute2, second2);
+        TimeT timeT1 = new TimeT(hour1, minute1, second1);
+        TimeT timeT2 = new TimeT(hour2, minute2, second2);
 
-        int allSeconds1 = time1.getInSeconds();
+        int allSeconds1 = timeT1.getInSeconds();
         System.out.println(allSeconds1);
 
-        int allSeconds2 = time2.getInSeconds();
+        int allSeconds2 = timeT2.getInSeconds();
         System.out.println(allSeconds2);
 /*
         // Miért nem működik?
