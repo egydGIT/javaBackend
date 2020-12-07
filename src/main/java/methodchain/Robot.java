@@ -80,7 +80,9 @@ public class Robot {
         Robot robot2 = new Robot().go(5).rotate(90).registerNavigationPoint()
                                     .go(40).rotate(-90).registerNavigationPoint()
                                     .go(-30).rotate(10).registerNavigationPoint();
-        System.out.println("Több lépés együtt: " + robot2.registerNavigationPoint().toString());
+        System.out.println("Több lépés együtt: " + robot2.registerNavigationPoint().toString());  // Végső pozíció
+        System.out.println("Minden egyes lépés: " + robot2.getNavigationPointList().toString());  // Minden lépés utáni pozíció
+                                                                                // de az utólsót miért írja ki kétszer??
 
     }
 }
