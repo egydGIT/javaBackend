@@ -57,9 +57,6 @@ public class Robot {
         System.out.println(robot1.getDistance());
         System.out.println(robot1.getAzimut());
 
-        Robot robot2 = new Robot().go(-5).rotate(5);                             // navigationPointList ??
-        System.out.println(robot2.registerNavigationPoint().toString());
-
         // build
         Robot robot3 = new Robot().go(15).rotate(0);
         System.out.println(robot3.build());
@@ -67,6 +64,23 @@ public class Robot {
         // toString a két osztályban azért különböző, h lássam melyik met, melyiket hívja meg
 
 
+        /*
+        //Bónusz feladat tesztje, kommentezd ki az alapfeladathoz
+        @Test
+        public void testNavigationChain() {
+            //When
+            robot.go(5).rotate(45).registerNavigationPoint().go(10).rotate(-15).registerNavigationPoint();
+            //Then
+            assertEquals("[distance: 5 azimut: 45, distance: 15 azimut: 30]", robot.getNavigationList().toString());
+        }
+
+         */
+
+        // navigationPointList
+        Robot robot2 = new Robot().go(5).rotate(90).registerNavigationPoint()
+                                    .go(40).rotate(-90).registerNavigationPoint()
+                                    .go(-30).rotate(10).registerNavigationPoint();
+        System.out.println("Több lépés együtt: " + robot2.registerNavigationPoint().toString());
 
     }
 }
