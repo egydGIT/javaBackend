@@ -1,6 +1,7 @@
 package constructoroverloading;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class BusTimeTable {
@@ -35,11 +36,31 @@ public class BusTimeTable {
         throw new IllegalStateException("No more buses today!");               // kivételt dob, ha nincs ilyen elem a listában
     }
 
+    public SimpleTime firstBus(List<SimpleTime> timeTable) {
+        SimpleTime min = new SimpleTime(24,00);
+        for (SimpleTime t: timeTable) {
+            if (t.timeInMinutes() < min.timeInMinutes()) {
+                min = t;
+            }
+        }
+        return min;
+    }
+
     public static void main(String[] args) {
         BusTimeTable busTimeTable = new BusTimeTable(5, 21, 40);
         System.out.println(busTimeTable.getTimeTable());
 
         System.out.println("Következö busz indul: " + busTimeTable.nextBus(new SimpleTime(20, 8)));
-        System.out.println("Következö busz indul: " + busTimeTable.nextBus(new SimpleTime(22, 30)));
+        // System.out.println("Következö busz indul: " + busTimeTable.nextBus(new SimpleTime(22, 30)));
+
+        List<SimpleTime> timetable = Arrays.asList(
+                new SimpleTime(17, 15),
+                new SimpleTime(20, 15),
+                new SimpleTime(14, 15),
+                new SimpleTime(5, 15),
+                new SimpleTime(9, 15)
+        );
+
+        System.out.println(busTimeTable.firstBus(timetable));
     }
 }
