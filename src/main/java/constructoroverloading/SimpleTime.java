@@ -37,7 +37,7 @@ public class SimpleTime {
 
     @Override
     public String toString() {
-        return hours + " : " + minutes;
+        return hours + ":" + minutes;
     }
 
     public static void main(String[] args) {
