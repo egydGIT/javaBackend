@@ -1,0 +1,19 @@
+C:\training-solutions>cd src/main/java/defaultconstructor
+
+C:\training-solutions\src\main\java\defaultconstructor>javac SimpleDate.java
+
+
+
+
+c:\training-solutions\target\classes>javap defaultconstructor.SimpleDate
+Compiled from "SimpleDate.java"
+public class defaultconstructor.SimpleDate {
+  public defaultconstructor.SimpleDate();           <--- paraméter nélküli default konstruktor :-)
+  public void setDate(int, int, int);
+  public int getYear();
+  public int getMonth();
+  public int getDay();
+  public java.lang.String toString();
+  public static void main(java.lang.String[]);
+}
+
