@@ -101,15 +101,15 @@ Objektumorientáltság
 
 Attribútumok és metódusok
 
-- immutable - Immutable objektumok
-- javabeans - JavaBeans objektumok
-- methodstructure - Metódusok
+- ,immutable - Immutable objektumok
+- .javabeans - JavaBeans objektumok
+- .methodstructure - Metódusok
 - methodpass - Értékmásolás szerinti paraméterátadás
-- methodparam - Metódus paraméterek
-- methodvarargs - Változó hosszúságú paraméterlista
-- methodchain - Metódus hívások láncolása
-- methoverloading - Metódusnév túlterhelés
-- staticattrmeth - Statikus attribútumok és metódusok
+- .methodparam - Metódus paraméterek
+- ,methodvarargs - Változó hosszúságú paraméterlista
+- ,methodchain - Metódus hívások láncolása
+- ,methoverloading - Metódusnév túlterhelés
+- ,staticattrmeth - Statikus attribútumok és metódusok
 
 Konstruktorok és inicializátorok
 
