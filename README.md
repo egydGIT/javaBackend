@@ -113,9 +113,9 @@ Attribútumok és metódusok
 
 Konstruktorok és inicializátorok
 
-- defaultconstructor - Default és paraméter nélküli konstruktor
-- constructoroverloading - Konstruktor túlterhelés
-- initializer - Inicializátorok
+- ,defaultconstructor - Default és paraméter nélküli konstruktor
+- ,constructoroverloading - Konstruktor túlterhelés
+- ,initializer - Inicializátorok
 
 Öröklődés
 
