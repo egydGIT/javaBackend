@@ -28,6 +28,14 @@ public class Product {
         return false;
     }
 
+    public boolean areTheyEqualNameAndCode(Product newProduct) {
+        if (this.getName().trim().equals(newProduct.getName().trim())
+                && Math.abs(this.getCode().trim().length() - newProduct.getCode().trim().length()) < 2 ) {
+            return true;
+        }
+        return false;
+    }
+
     public String getName() {
         return name;
     }
@@ -58,9 +66,13 @@ public class Product {
         Product product3 = new Product(name3, code3);
 
         System.out.println("Megegyeznek: " + product1.getName().trim() + " " + product2.getName().trim());
-        System.out.println(product1.areTheyEqual(product2));
+        System.out.println("Név : " + product1.areTheyEqual(product2));
+        System.out.println("Név és kód: " + product1.areTheyEqualNameAndCode(product2));
+
         System.out.println("Megegyeznek: " + product2.getName().trim() + " "  + product3.getName().trim());
-        System.out.println(product2.areTheyEqual(product3));
+        System.out.println("Név : " + product2.areTheyEqual(product3));
+        System.out.println("Név és kód: " + product2.areTheyEqualNameAndCode(product3));
+
 
     }
 }
