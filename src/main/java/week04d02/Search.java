@@ -23,6 +23,19 @@ public class Search {
             throw new IllegalArgumentException("Invalid parameters!");
         }
         List<Integer> indexOfChar = new ArrayList<>();
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == c) {
+                indexOfChar.add(i);
+            }
+        }
+        return indexOfChar;
+    }
+
+    public List<Integer> getMatchingChar(String str, char c) {
+        if (isEmpty(str, c)) {
+            throw new IllegalArgumentException("Invalid parameters!");
+        }
+        List<Integer> indexOfChar = new ArrayList<>();
         Scanner scanner = new Scanner(str).useDelimiter("");
         while (scanner.hasNext()) {
             indexOfChar.add(scanner.next().indexOf(c));
@@ -37,7 +50,8 @@ public class Search {
 
     public static void main(String[] args) {
         Search search = new Search();
-        System.out.println(search.getIndexesOfChar("almafa", 'a'));
+        System.out.println("Index of: " + search.getIndexesOfChar("almafa", 'a'));
+        System.out.println("Matching: " + search.getMatchingChar("almafa", 'a'));
         // System.out.println(search.getIndexesOfChar("", 'b'));
     }
 
