@@ -56,10 +56,7 @@ public class Search {
     }
 
     /*
-    Under construction...
-    Konzolon: adott karakter megegyezik-e c-vel, vagy nem.
-    De nem ez a feladat....
-
-    [0, -1, -1, 0, -1, 0]
+        Index of: [0, 3, 5]
+        Matching: [0, -1, -1, 0, -1, 0]
      */
 }
