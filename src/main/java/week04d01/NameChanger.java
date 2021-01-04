@@ -6,7 +6,7 @@ public class NameChanger {
 
     /*
     2020-11-16 (week04d01)
-        Készítsd el a NameChanger osztályt, melynek privát attribútuma legyen a String fillName,
+        Készítsd el a NameChanger osztályt, melynek privát attribútuma legyen a String fullName,
         mely egy ember teljes nevét reprezentálja!
         A fullName attribútum [vezetéknév][szóköz][keresztnév] formátumban épül fel.
         A konstruktor állítsa be a paraméterül kapott értékre az adattagot, de ha az érték null, vagy üres String,
@@ -16,7 +16,6 @@ public class NameChanger {
         mely megváltoztatja az objektum állapotát és kicseréli a vezetéknevet a paraméterül kapott értékre!
      */
 
-    private String fillName;            // ??
     private String fullName;
     private String firstName;
     private String givenName;
