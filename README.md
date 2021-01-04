@@ -71,8 +71,8 @@ Típusok és operátorok
 
 Vezérlési szerkezetek
 
-- introjunit - Unit tesztelés JUnittal
-- junit5 - JUnit 5
+- .introjunit - Unit tesztelés JUnittal
+- .junit5 - JUnit 5
 - .controlselection - Vezérlési szerkezetek és az elágazás
 - ,controliteration - Ciklusok
 - ,controladvanced - Haladó vezérlési szerkezetek
