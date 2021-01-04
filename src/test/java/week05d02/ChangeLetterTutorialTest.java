@@ -8,6 +8,6 @@ public class ChangeLetterTutorialTest {
 
     @Test
     void testChangeVowels() {
-        assertEquals("c*l*mb*s", new ChangeLetterTutorial().ChangeVowels("colombus"));
+        assertEquals("c*l*mb*s", new ChangeLetterTutorial().changeVowels("colombus"));
     }
 }
