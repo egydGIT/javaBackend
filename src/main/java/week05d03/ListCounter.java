@@ -28,4 +28,5 @@ public class ListCounter {
         System.out.println(listCounter.countStartWithA("az alma érésének ideje az, amikor"));
         System.out.println(listCounter.countStartWithA("itt egy sem kezdődik"));
     }
+
 }

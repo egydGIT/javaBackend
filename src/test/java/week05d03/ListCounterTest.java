@@ -11,5 +11,6 @@ public class ListCounterTest {
         ListCounter listCounter = new ListCounter();
         assertEquals(4, listCounter.countStartWithA("az alma érésének ideje az, amikor"));
         assertEquals(0, listCounter.countStartWithA("itt egy sem kezdődik"));
+
     }
 }
