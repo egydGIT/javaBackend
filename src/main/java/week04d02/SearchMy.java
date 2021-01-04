@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Search {
+public class SearchMy {
 
     /*
     2020-11-18 (week04d02)
@@ -43,13 +43,13 @@ public class Search {
         return indexOfChar;
     }
 
-    private boolean isEmpty(String str, char c) {
+    public boolean isEmpty(String str, char c) {
         String cString = Character.toString(c);
         return str == null || "".equals(str.trim()) || cString == null || "".equals(cString.trim());
     }
 
     public static void main(String[] args) {
-        Search search = new Search();
+        SearchMy search = new SearchMy();
         System.out.println("Index of: " + search.getIndexesOfChar("almafa", 'a'));
         System.out.println("Matching: " + search.getMatchingChar("almafa", 'a'));
         // System.out.println(search.getIndexesOfChar("", 'b'));
