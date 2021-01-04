@@ -11,14 +11,14 @@ public class StoreTest {
 
     @Test
     void testGetProductByCategoryName() {
-        Product product1 = new Product("milk", "dairy");
-        Product product2 = new Product("chocolate", "sweet");
-        Product product3 = new Product("ice-cream", "sweet");
+        Product product1 = new Product("milk", Category.DAIRY);
+        Product product2 = new Product("chocolate", Category.SWEET);
+        Product product3 = new Product("ice-cream", Category.SWEET);
         List<Product> products = new ArrayList<>();
         products.add(product1);
         products.add(product2);
         products.add(product3);
 
-        assertEquals(2, new Store(products).getProductByCategoryName("sweet"));
+        assertEquals(2, new Store(products).getProductByCategoryName(Category.SWEET));
     }
 }

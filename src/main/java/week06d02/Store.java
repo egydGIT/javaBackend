@@ -20,7 +20,7 @@ public class Store {
         this.products = products;
     }
 
-    public int getProductByCategoryName(String category) {
+    public int getProductByCategoryName(Category category) {
         int counter = 0;
         for (Product p: products) {
             if (p.getCategory().equals(category)) {
@@ -31,15 +31,15 @@ public class Store {
     }
 
     public static void main(String[] args) {
-        Product product1 = new Product("milk", "dairy");
-        Product product2 = new Product("chocolate", "sweet");
-        Product product3 = new Product("ice-cream", "sweet");
+        Product product1 = new Product("milk", Category.DAIRY);
+        Product product2 = new Product("chocolate", Category.SWEET);
+        Product product3 = new Product("ice-cream", Category.SWEET);
         List<Product> products = new ArrayList<>();
         products.add(product1);
         products.add(product2);
         products.add(product3);
         Store store = new Store(products);
-        System.out.println(store.getProductByCategoryName("sweet"));
+        System.out.println(store.getProductByCategoryName(Category.SWEET));
 
     }
 }

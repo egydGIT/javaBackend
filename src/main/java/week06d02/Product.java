@@ -11,10 +11,11 @@ public class Product {
      */
 
     private String name;
-    private String category;
+    // private String category;
+    private Category category;
     private int price;
 
-    public Product(String name, String category) {
+    public Product(String name, Category category) {
         this.name = name;
         this.category = category;
     }
@@ -23,7 +24,7 @@ public class Product {
         return name;
     }
 
-    public String getCategory() {
+    public Category getCategory() {
         return category;
     }
 
