@@ -5,7 +5,7 @@ public class NameChangerTutorial {          // Kristóf
 
     public NameChangerTutorial(String fullName) {
         if (fullName == null || fullName.trim().equals("")) {
-            throw new IllegalArgumentException("Invalid name " + fullName);
+            throw new IllegalArgumentException("Invalid name" + fullName);
         }
         this.fullName = fullName;
     }

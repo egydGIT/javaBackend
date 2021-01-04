@@ -3,6 +3,7 @@ package week04d01;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class NameChangerTest {
     @Test
@@ -20,5 +21,22 @@ public class NameChangerTest {
     }
     */
 
+    @Test
+    public void testIae() {
+        NameChanger nameChanger = new NameChanger("John", "Doe");
+        assertEquals("John Doe", nameChanger.getFullName());
+
+        assertThrows(IllegalArgumentException.class, () -> new NameChangerTutorial(""));
+    }
+
+    @Test
+    public void testIaeMessage() {
+        NameChanger nameChanger = new NameChanger("John", "Doe");
+        assertEquals("John Doe", nameChanger.getFullName());
+
+        IllegalArgumentException iae = assertThrows(IllegalArgumentException.class, ()
+                -> new NameChangerTutorial(""));
+        assertEquals("Invalid name", iae.getMessage());
+    }
 
 }
