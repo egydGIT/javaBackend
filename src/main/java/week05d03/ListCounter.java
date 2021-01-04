@@ -1,11 +1,10 @@
 package week05d03;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class ListCounter {
     /*
+    Junior
     Írj egy olyan metódust a ListCounter osztályban, mely a kapott String listából összeszámolja azokat,
     amelyek a vagy A betűvel kezdődnek!
     Ha nulla elemű a tömb, vagy nincs benne ilyen elem, akkor nulla értéket adjon vissza!
