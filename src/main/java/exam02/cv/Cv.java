@@ -34,18 +34,20 @@ public class Cv {
         this.skill = skill;
     }
 
-    /*
+
     // ConcurrentModificationException
     public List<Skill> addSkills(String name, int level, List<Skill> skillList) {
         for (Skill s: skillList) {
             if (!s.getName().equals(name)) {
                 skillList.add(new Skill(name, level));
             }
+            if (s.getName().equals(name) && (s.getLevel() != level)) {   // !Integer.toString(s.getLevel()).equals(Integer.toString(level))
+                s.setLevel(level);
+            }
         }
         return skillList;
     }
 
-     */
 
     public int findSkillLevelByName(List<Skill> skillList, String name) {
         if (name.isEmpty() || name.isBlank()) {
@@ -84,6 +86,6 @@ public class Cv {
 
         System.out.println(cv.findSkillLevelByName(skillList,"sport man"));
 
-        // System.out.println(cv.addSkills("teacher", 5, skillList));
+        System.out.println(cv.addSkills("teacher", 5, skillList));
     }
 }
