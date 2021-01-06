@@ -34,7 +34,20 @@ public class Cv {
         this.skill = skill;
     }
 
-    public int findSkillLevelByName(String name) {
+    /*
+    // ConcurrentModificationException
+    public List<Skill> addSkills(String name, int level, List<Skill> skillList) {
+        for (Skill s: skillList) {
+            if (!s.getName().equals(name)) {
+                skillList.add(new Skill(name, level));
+            }
+        }
+        return skillList;
+    }
+
+     */
+
+    public int findSkillLevelByName(List<Skill> skillList, String name) {
         if (name.isEmpty() || name.isBlank()) {
             throw new IllegalArgumentException("Invalid name!");
         }
@@ -57,5 +70,20 @@ public class Cv {
 
     public List<Skill> getSkillList() {
         return skillList;
+    }
+
+    public static void main(String[] args) {
+        Cv cv = new Cv("John Doe");
+        Skill skill1 = new Skill("engineer", 5);
+        Skill skill2 = new Skill("car driver", 4);
+        Skill skill3 = new Skill("sport man", 2);
+        List<Skill> skillList = new ArrayList<>();
+        skillList.add(skill1);
+        skillList.add(skill2);
+        skillList.add(skill3);
+
+        System.out.println(cv.findSkillLevelByName(skillList,"sport man"));
+
+        // System.out.println(cv.addSkills("teacher", 5, skillList));
     }
 }
