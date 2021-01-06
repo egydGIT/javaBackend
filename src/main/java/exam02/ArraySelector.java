@@ -1,6 +1,8 @@
 package exam02;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class ArraySelector {
 
@@ -15,15 +17,19 @@ public class ArraySelector {
     Ha nulla elemű a tömb, akkor üres stringet adjon vissza!
      */
 
-    public void selectEvens(int[] array) {
+
+    public String selectEvens(int[] array) {
+        List<Integer> filteredArray = new ArrayList<>();      // szűrés
         for (int i = 0; i < array.length; i+=2) {
-            System.out.println(Arrays.toString(array));   // nem tudok tömbhöz hozzáadni ciklusban
-        }                                                 // ez veszi minden 2. elemét és annyiszor kiírja az eredeti tömböt
+            filteredArray.add(array[i]);
+        }
+        return filteredArray.toString();
     }
 
     public static void main(String[] args) {
         ArraySelector arraySelector = new ArraySelector();
-        arraySelector.selectEvens(new int[]{1, 2, 3});
+        int [] array = { 1, 2, 3, 4, 5};
+        System.out.println(arraySelector.selectEvens(array));
 
 
 
