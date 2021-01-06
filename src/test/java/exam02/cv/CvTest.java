@@ -1,8 +1,8 @@
-/*
 package exam02.cv;
 
 
 import org.junit.jupiter.api.Test;
+
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -15,6 +15,7 @@ public class CvTest {
         assertEquals("John Doe", cv1.getName());
     }
 
+
     @Test
     public void testAddSkills() {
         Cv cv1 = new Cv("John Doe");
@@ -24,6 +25,7 @@ public class CvTest {
         assertEquals("programming", cv1.getSkills().get(0).getName());
         assertEquals(5, cv1.getSkills().get(0).getLevel());
     }
+
 
     @Test
     public void testFindSkill() {
@@ -36,11 +38,13 @@ public class CvTest {
     @Test
     public void testNotFoundSkill() {
         Cv cv1 = new Cv("John Doe");
-        assertThrows(SkillNotFoundException.class,
+        assertThrows(IllegalArgumentException.class,
                 () -> cv1.findSkillLevelByName("programming"));
 
     }
 
 }
 
- */
+
+
+

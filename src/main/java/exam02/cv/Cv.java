@@ -23,7 +23,7 @@ public class Cv {
 
     private Skill skill;
 
-    private List<String> skillList = new ArrayList<String>();
+    private List<Skill> skillList = new ArrayList<>();
 
     public Cv(String name) {
         this.name = name;
@@ -33,20 +33,19 @@ public class Cv {
         this.name = name;
         this.skill = skill;
     }
-/*
-    public List<Skill> addSkills(Skill name){
-        return skillList.add(name);
-    }
-
-
 
     public int findSkillLevelByName(String name) {
-        if (name.equals(name)) {
-
+        if (name.isEmpty() || name.isBlank()) {
+            throw new IllegalArgumentException("Invalid name!");
         }
+        int find = 0;
+        for (Skill s: skillList) {
+            if (s.getName().equals(name)) {
+                find = s.getLevel();
+            }
+        }
+        return find;
     }
-
- */
 
     public String getName() {
         return name;
@@ -56,5 +55,7 @@ public class Cv {
         return skill;
     }
 
-
+    public List<Skill> getSkillList() {
+        return skillList;
+    }
 }
