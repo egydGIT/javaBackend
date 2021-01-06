@@ -2,26 +2,29 @@ package exam02.cv;
 
 public class Skill {
 
-    private String skillName;
+    private String name;
+    private int level;
 
-    private SkillLevel skillLevel;
+    // private SkillLevel skillLevel;
 
-    public Skill(String skillName, SkillLevel skillLevel) {
-        this.skillName = skillName;
-        this.skillLevel = skillLevel;
+
+    public Skill(String name, int level) {
+        this.name = name;
+        this.level = level;
     }
 
-    public String getSkillName() {
-        return skillName;
+    public String getName() {
+        return name;
     }
 
-    public SkillLevel getSkillLevel() {
-        return skillLevel;
+    public int getLevel() {
+        return level;
     }
+
 
     @Override
     public String toString() {
-        return skillName + "(" + skillLevel + ")";
+        return name + "(" + level + ")";
     }
 
 

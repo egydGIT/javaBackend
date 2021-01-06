@@ -1,4 +1,3 @@
-/*
 package exam02.cv;
 
 import org.junit.jupiter.api.Test;
@@ -15,4 +14,3 @@ public class SkillTest {
     }
 }
 
- */
