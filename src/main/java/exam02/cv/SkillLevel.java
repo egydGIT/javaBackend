@@ -2,7 +2,7 @@ package exam02.cv;
 
 public enum SkillLevel {
 
-    EGY(1), KETTŐ(2), HÁROM(3), NÉGY(4), ÖT(5);
+        ONE(1), TWO(2), THREE(3), FOUR(4), FIVE(5);
 
     private int value;
 
@@ -10,4 +10,7 @@ public enum SkillLevel {
         this.value = value;
     }
 
+    public int getValue() {
+        return value;
+    }
 }
