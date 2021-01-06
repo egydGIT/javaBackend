@@ -19,7 +19,7 @@ public class ArraySelector {
 
 
     public String selectEvens(int[] array) {
-        List<Integer> filteredArray = new ArrayList<>();      // szűrés
+        List<Integer> filteredArray = new ArrayList<>();      // szűrés listába
         for (int i = 0; i < array.length; i+=2) {
             filteredArray.add(array[i]);
         }
@@ -30,7 +30,6 @@ public class ArraySelector {
         ArraySelector arraySelector = new ArraySelector();
         int [] array = { 1, 2, 3, 4, 5};
         System.out.println(arraySelector.selectEvens(array));
-
 
 
     }
