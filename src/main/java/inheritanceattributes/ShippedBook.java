@@ -5,7 +5,7 @@ public class ShippedBook extends Book{
     private int shippingCost;
 
     public ShippedBook(String title, int price, int shippingCost) {
-        super(title, price);
+        super(title, price);                // szülő oszt konstruktorát hívja a gyermek oszt konstruktora = explicit super()
         this.shippingCost = shippingCost;
     }
 
