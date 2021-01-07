@@ -1,4 +1,4 @@
-package inheritanceconstructor;
+package inheritanceconstructor.cars;
 
 public class Car {
 

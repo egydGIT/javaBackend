@@ -1,6 +1,8 @@
-package inheritanceconstructor;
+package inheritanceconstructor.cars;
 
-public class Jeep extends Car{
+import inheritanceconstructor.cars.Car;
+
+public class Jeep extends Car {
     private double extraCapacity;
     private double extraFuel;
 
