@@ -20,9 +20,9 @@ public class ShippedBook extends Book{
     public static void main(String[] args) {
         ShippedBook shippedBook = new ShippedBook("Barry Burd: Java", 4300, 20000);
         System.out.println(shippedBook.toString());
+        System.out.println(shippedBook.price);                      // protected attr. szülő oszt-ból
         System.out.println(shippedBook.purchase(24));
         System.out.println(shippedBook.order(24));
-
 
     }
 }
