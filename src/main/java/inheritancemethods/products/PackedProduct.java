@@ -6,7 +6,7 @@ import java.math.RoundingMode;
 public class PackedProduct extends Product {
 
     private int packingUnit;                    // termékből hány db helyezhető egy dobozba
-    private BigDecimal weightOfBox;             // (termékek súlya alapján) csomag súlya
+    private BigDecimal weightOfBox;             // doboz súlya
 
     public PackedProduct(String name, BigDecimal unitWeight, int numberOfDecimals, int packingUnit, BigDecimal weightOfBox) {
         super(name, unitWeight, numberOfDecimals);
