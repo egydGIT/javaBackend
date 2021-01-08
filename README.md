@@ -119,11 +119,11 @@ Konstruktorok és inicializátorok
 
 Öröklődés
 
-- introinheritance - Öröklődés
-- inheritanceconstructor - Konstruktorok és az öröklődés viszonya
-- objectclass - Object ősosztály
-- inheritanceattributes - Attribútumok öröklődése
-- inheritancemethods - Metódusok öröklődése
+- .introinheritance - Öröklődés
+- .inheritanceconstructor - Konstruktorok és az öröklődés viszonya
+- .objectclass - Object ősosztály
+- .inheritanceattributes - Attribútumok öröklődése
+- .inheritancemethods - Metódusok öröklődése
 
 Absztrakt osztályok és interfészek
 
