@@ -47,10 +47,33 @@ public class LiteralsMain {
         System.out.println(Integer.toString(-2, 2));   // -10
 
         System.out.println(Integer.toBinaryString(1));      // 1
-        System.out.println(Integer.toBinaryString(2));     //
+        System.out.println(Integer.toBinaryString(2));     // 10
         System.out.println(Integer.toBinaryString(-2));     // 11111111111111111111111111111110  // kettes komplemens
 
+        // Számrendszerek:
+        System.out.println(Integer.toString(-100, 2));  // negatív szám: előjellel (bináris)
+        System.out.println(Integer.toBinaryString(-100));     // negatív szám: kettes komplemens (bináris)
 
+        // Szövegből számot:
+        System.out.println(new Integer("123") + 2);         // osztály típus - Integer  // 125
+        System.out.println(Integer.parseInt("123") + 2);    // primitív tipus - int     // 125
+
+        // Számból szöveget:
+        System.out.println(Integer.toString(123) + 2);                                  // 1232
+
+        // IEEE szabvány:
+        System.out.println(1.0 / 0);        // Infinity
+        System.out.println(-1.0 / 0);       // -Infinity
+        System.out.println(Double.POSITIVE_INFINITY / Double.NEGATIVE_INFINITY);  // NaN
+
+        // Szélsőséges eredmények:
+        System.out.println(Integer.MIN_VALUE);      // -2147483648
+        System.out.println(Integer.toBinaryString(Integer.MIN_VALUE));
+        System.out.println(Integer.MAX_VALUE);      // 2147483647
+        System.out.println(Integer.toBinaryString(Integer.MAX_VALUE));
+
+
+        System.out.println(Boolean.parseBoolean("ajaj"));  // false ??
     }
 
 

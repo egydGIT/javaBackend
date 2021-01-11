@@ -1,6 +1,7 @@
 package staticattrmeth;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class BankTransaction {
     private static final long MIN_TRX_VALUE = 1;

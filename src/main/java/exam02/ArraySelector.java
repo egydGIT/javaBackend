@@ -21,7 +21,7 @@ public class ArraySelector {
     public String selectEvens(int[] array) {
         List<Integer> filteredArray = new ArrayList<>();      // szűrés listába
         if (array == null) {
-            return new ArrayList<>().toString();                // ez üres tömb
+            return new ArrayList<>().toString();                // ez üres lista, nem üres String...
         }
         for (int i = 0; i < array.length; i+=2) {
             filteredArray.add(array[i]);

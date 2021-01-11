@@ -1,13 +1,17 @@
 package initializer;
 
-public class CreditCard {
-    private long balance;
-    private long amount;
-    private Currency currency;
+import java.util.ArrayList;
+import java.util.List;
 
-    public CreditCard(long balance, Currency currency) {
-        this.balance = balance;
-        this.currency = currency;
+public class CreditCard {
+    private static final List<Rate> ACTUAL_RATES = new ArrayList<>();
+    private long balance;
+    // private long amount;
+    // private Currency currency;
+
+    public CreditCard(long balance, Currency currency, List<Rate> upload) {
+        ACTUAL_RATES.addAll(upload);
+        this.balance = Math.round(balance * getConversionRate(currency));
     }
 
     public CreditCard(long balance) {
@@ -17,14 +21,27 @@ public class CreditCard {
     public long getBalance() {
         return balance;
     }
-/*
-    public boolean payment(long amount, Currency currency) {
 
+    public boolean payment(long amount, Currency currency) {                  // Kiadás
+        long value = Math.round(amount * getConversionRate(currency));
+        if (value <= balance) {
+            balance -= value;
+            return true;
+        }
+        return false;
     }
 
     public boolean payment(long amount) {
-
+        return payment(amount, Currency.HUF);
     }
 
- */
+    private double getConversionRate(Currency currency) {
+        for (Rate rate : ACTUAL_RATES) {
+            if (rate.getCurrency() == currency) {
+                return rate.getConversionFactor();
+            }
+        }
+        return 1.0;
+    }
+
 }

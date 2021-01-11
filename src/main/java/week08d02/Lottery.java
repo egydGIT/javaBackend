@@ -16,7 +16,7 @@ public class Lottery {
 
     public List<Integer> getNumber() {
         List<Integer> numbers = new ArrayList<>();
-        Random random = new Random(77);                     // seed teszt miatt megadva
+        Random random = new Random(304_805);                     // seed teszt miatt megadva
         for (int i = 1; i <= 5; i++) {
             int number = random.nextInt(90) +1;
             if (!numbers.contains(number)) {
