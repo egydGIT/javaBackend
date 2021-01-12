@@ -5,5 +5,17 @@ ActivityType enum: Négy féle típus lehet: BIKING,HIKING,RUNNING,BASKETBALL. F
 package project04;
 
 public enum ActivityType {
-    BIKING, HIKING, RUNNING, BASKETBALL
+    BIKING("Biking"), HIKING("Hiking"), RUNNING("Running"), BASKETBALL("Basketball");
+
+    String type;
+
+    ActivityType(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+
 }
