@@ -8,9 +8,9 @@ public class Report {
 
     private final ActivityType activityType;
 
-    private final boolean distance;
+    private final double distance;
 
-    public Report(ActivityType activityType, boolean distance) {
+    public Report(ActivityType activityType, double distance) {
         this.activityType = activityType;
         this.distance = distance;
     }
@@ -19,8 +19,7 @@ public class Report {
         return activityType;
     }
 
-    public boolean isDistance() {
+    public double getDistance() {
         return distance;
     }
-
 }
