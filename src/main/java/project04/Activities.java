@@ -18,7 +18,7 @@ public class Activities {
     }
 
     public void addActivity(Activity activity) {
-
+        activities.add(activity);
     }
 
     public List<Report> distancesByTypes() {

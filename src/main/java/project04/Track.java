@@ -24,8 +24,8 @@ public class Track {
     private double fullElevation;
     private double rectangleArea;
 
-    public void addTrackPoint(TrackPoint) {
-
+    public void addTrackPoint(TrackPoint trackPoint) {
+        trackPoints.add(trackPoint);
     }
 
     public Coordinate findMinimumCoordinate() {
