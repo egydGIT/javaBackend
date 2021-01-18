@@ -34,4 +34,15 @@ class GradeRounderTest {
         //assertEquals(50, roundedGrade[51]);                        // 52-t 50-ra kellene
     }
 
+//    @Test
+//    void gradesRoundGradesMath() {
+//        int [] grades = new GradeRounder().fillGrades();
+//        int [] roundedGradeMath = new GradeRounder().gradesRoundGradesMath(grades);
+//        assertEquals(0, roundedGradeMath[0]);
+//        assertEquals(0, roundedGradeMath[39]);
+//        assertEquals(45, roundedGradeMath[42]);
+//        assertEquals(50, roundedGradeMath[46]);
+//        assertEquals(50, roundedGradeMath[51]);                        // 52-t 50-ra kellene
+//    }
+
 }

@@ -67,6 +67,16 @@ public class GradeRounder {
         return roundedGrade;
     }
 
+    public int[] gradesRoundGradesMath(int[] grades) {
+        int[] roundedGrade = grades;
+        for (int i = 0; i <= roundedGrade.length-1; i++) {
+            if ((roundedGrade[i]) <= 40) {
+                roundedGrade[i] = 0;
+            }
+            else Math.round(roundedGrade[i]);
+        }
+        return roundedGrade;
+    }
 
 
     public static void main(String[] args) {
@@ -81,5 +91,7 @@ public class GradeRounder {
         System.out.println(gradeRounder.gradesRoundGrades(grades, 22));
 
         System.out.println(Arrays.toString(gradeRounder.gradesRoundGradesArray(grades)));
+
+        System.out.println(Arrays.toString(gradeRounder.gradesRoundGradesMath(grades)));
     }
 }
