@@ -42,6 +42,33 @@ public class GradeRounder {
         return roundedGrade;
     }
 
+    public int[] gradesRoundGradesArray(int[] grades) {
+        int[] roundedGrade = grades;
+        for (int i = 0; i <= roundedGrade.length-1; i++) {
+            if ((roundedGrade[i]+1) <= 40) {
+                roundedGrade[i] = 0;
+            }
+            if ((roundedGrade[i]+1) % 5 == 4 ) {
+                roundedGrade[i] = roundedGrade[i]+1 + 1;
+            }
+            if ((roundedGrade[i]+1) % 5 == 3 ) {
+                roundedGrade[i] = roundedGrade[i]+1 + 2;
+            }
+            if ((roundedGrade[i]+1) % 5 == 2 ) {
+                roundedGrade[i] = roundedGrade[i]+1 - 2;
+            }
+            if ((roundedGrade[i]+1) % 5 == 1 ) {
+                roundedGrade[i] = roundedGrade[i]+1 - 1;
+            }
+            if ((roundedGrade[i]+1) % 5 == 0 ) {
+                roundedGrade[i] = roundedGrade[i]+1;
+            }
+        }
+        return roundedGrade;
+    }
+
+
+
     public static void main(String[] args) {
         GradeRounder gradeRounder = new GradeRounder();
 
@@ -52,5 +79,7 @@ public class GradeRounder {
         System.out.println(gradeRounder.gradesRoundGrades(grades, 84));
         System.out.println(gradeRounder.gradesRoundGrades(grades, 82));
         System.out.println(gradeRounder.gradesRoundGrades(grades, 22));
+
+        System.out.println(Arrays.toString(gradeRounder.gradesRoundGradesArray(grades)));
     }
 }
