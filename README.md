@@ -127,8 +127,8 @@ Konstruktorok és inicializátorok
 
 Absztrakt osztályok és interfészek
 
-- abstractclass - Absztrakt osztályok
-- interfaces - Interfészek
+- ,abstractclass - Absztrakt osztályok
+- ,interfaces - Interfészek
 - interfacerules - Interfészekkel kapcsolatos szabályok
 - interfacedependencyinversion - Dependency inversion
 - interfacedefaultmethods - Default interfész metódusok
@@ -148,10 +148,10 @@ Kivétel- és fájlkezelés
 
 Kivételkezelés
 
-- exceptions - Kivételkezelés
-- exceptionclass - Saját kivétel
-- exceptionmulticatch - Multi catch
-- exceptionresource - Try-With-Resources szerkezet
+- .exceptions - Kivételkezelés
+- ,exceptionclass - Saját kivétel
+- .exceptionmulticatch - Multi catch
+- .exceptionresource - Try-With-Resources szerkezet
 
 Fájlkezelés
 
