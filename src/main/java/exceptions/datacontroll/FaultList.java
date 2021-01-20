@@ -30,7 +30,7 @@ public class FaultList {
         try {
             int lineNumber = Integer.parseInt(words[0]);
         } catch (NumberFormatException nfe) {
-            System.out.println("Code: " + Results.NUMBER_ERROR.getCode() + ", Line no: " + Arrays.toString(words));
+            System.out.println("Code: " + Results.NUMBER_ERROR.getCode() + ", Line no: " + words[0]);
             return Results.NUMBER_ERROR;
         }
 
@@ -70,7 +70,7 @@ public class FaultList {
         System.out.println(Arrays.toString(faultList.splitLines("cc, 34.5, 2021.01.20.")));
         System.out.println(faultList.checkData(faultList.splitLines("cc, 34.5, 2021.01.20.")));
 //        [cc, 34.5, 2021.01.20.]
-//        Code: 3, Line no: [cc, 34.5, 2021.01.20.]
+//        Code: 3, Line no: cc
 //        NUMBER_ERROR
 
         System.out.println("");
