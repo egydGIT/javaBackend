@@ -155,12 +155,12 @@ Kivételkezelés
 
 Fájlkezelés
 
-- ioreadstring - Szöveges állomány beolvasása
-- iowritestring - String kiírása szöveges állományba
-- ioreadwritebytes - Bájtos beolvasása fájlból és kiírása fájlba
-- ioreader - String olvasása Readerrel
-- iowriter - String írása Writerrel
-- ioprintwriter - Különböző típusok írása PrintWriterrel
+- ,ioreadstring - Szöveges állomány beolvasása
+- .iowritestring - String kiírása szöveges állományba
+- .ioreadwritebytes - Bájtos beolvasása fájlból és kiírása fájlba
+- .ioreader - String olvasása Readerrel
+- .iowriter - String írása Writerrel
+- .ioprintwriter - Különböző típusok írása PrintWriterrel
 - iostringwriter - Kiírás Stringbe StringWriterrel
 - ioreadbytes - Bájtok olvasása InputStreammel
 - ioreaderclasspath - String olvasása classpath-ról
