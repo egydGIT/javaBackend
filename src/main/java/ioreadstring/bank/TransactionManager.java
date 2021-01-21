@@ -28,32 +28,39 @@ public class TransactionManager {
     public void dataFromTransactionFile(String filePath) {
         Path file = Path.of(filePath);
         try {
-            List<String> linesFromFile = Files.readAllLines(file);
+            List<String> linesFromFile = Files.readAllLines(file);                  // külön metódusba kellene kiszervezni pár dolgot
             for(String s: linesFromFile) {
                 String[] dataFromLines = s.split(", ");
                 for (BankAccount b: accounts) {
                     if (dataFromLines[0].equals(b.getAccountNumber())) {
-                        if (dataFromLines[1].charAt(0) == '+') {
-                            int plusAmount = Integer.parseInt(dataFromLines[1].substring(1));
-                            //b.getBalance() += plusAmount;
+                        if (dataFromLines[2].equals("0")) {
+                            //b.getBalance() += Integer.parseInt(dataFromLines[1]);
+                            b.add(Integer.parseInt(dataFromLines[1]));
                         }
-                        if (dataFromLines[1].charAt(0) == '-') {
-                            //b.getBalance() -= Integer.parseInt(dataFromLines[1].substring(1));
+                        if (dataFromLines[1].equals("0")) {
+                            //b.getBalance() -= Integer.parseInt(dataFromLines[2]);
+                            b.substract(Integer.parseInt(dataFromLines[2]));
                         }
                     }
                 }
             }
-
         } catch (IOException e) {
             throw new IllegalArgumentException("File not found: " + filePath);
         }
     }
 
+    public BankAccount getBankAccount() {
+        return bankAccount;
+    }
+
+    public List<BankAccount> getAccounts() {
+        return accounts;
+    }
 
     public static void main(String[] args) {
         TransactionManager transactionManager = new TransactionManager();
-        transactionManager.dataFromAccountFile("transactions.txt");
-
+        transactionManager.dataFromAccountFile("accounts.txt");
+        transactionManager.dataFromTransactionFile("transactions.txt");
 
     }
 }

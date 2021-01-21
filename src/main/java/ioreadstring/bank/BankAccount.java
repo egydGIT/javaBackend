@@ -31,4 +31,12 @@ public class BankAccount {
     public void setBalance(int balance) {
         this.balance = balance;
     }
+
+    public int add(int amount) {
+        return this.getBalance() + amount;
+    }
+
+    public int substract(int amount) {
+        return this.getBalance() - amount;
+    }
 }
