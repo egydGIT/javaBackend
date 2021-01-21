@@ -1,11 +1,12 @@
 package ioreadstring;
 
+import ioreadstring.names.FileManager;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class FileManagerTest {
-    private FileManager fm = new FileManager("src/test/resources/names.txt");
+    private FileManager fm = new FileManager("names.txt");
 
     @Test
     public void createClassTest() {
@@ -14,11 +15,11 @@ class FileManagerTest {
     }
 
 
-//    @Test
-//    public void readFromFileTest() {
-//        fm.readFromFile();
-//        assertEquals(3, fm.getHumans().size());
-//        assertEquals("Anybody", fm.getHumans().get(1).getFirsName());
-//    }
+    @Test
+    public void readFromFileTest() {
+        fm.readFromFile();
+        assertEquals(4, fm.getHumans().size());
+        assertEquals("Anybody", fm.getHumans().get(1).getFirsName());
+    }
 
 }

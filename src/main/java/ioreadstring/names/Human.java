@@ -1,4 +1,4 @@
-package ioreadstring;
+package ioreadstring.names;
 
 public class Human {
 
@@ -17,5 +17,9 @@ public class Human {
 
     public String getLastName() {
         return lastName;
+    }
+
+    public String getName() {
+        return firsName + " " + lastName;
     }
 }

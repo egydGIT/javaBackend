@@ -1,4 +1,4 @@
-package ioreadstring;
+package ioreadstring.names;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -46,6 +46,8 @@ public class FileManager {
     public static void main(String[] args) {
         FileManager fm = new FileManager("names.txt");
         fm.readFromFile();
+        System.out.println(fm.getHumans().get(1).getName());             // Anybody Joe
+
     }
 
 }
