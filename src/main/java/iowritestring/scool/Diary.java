@@ -11,7 +11,7 @@ public class Diary {
     public void newMark(Path file,int mark) {
         try {
             if (Files.exists(file)) {
-                Files.writeString(file, "\n" + mark, StandardOpenOption.APPEND);
+                Files.writeString(file, mark + "\n", StandardOpenOption.APPEND);
             }
             if (!Files.exists(file)) {
                 Files.writeString(file, mark + "\n");
@@ -31,7 +31,7 @@ public class Diary {
                 }
             }
 
-            Files.writeString(file, "\nAverage: "+ Math.round(sum) / marks.size(), StandardOpenOption.APPEND);
+            Files.writeString(file, "Average: "+ Math.round(sum) / marks.size() + "\n", StandardOpenOption.APPEND);
 
         } catch (IOException e) {
             throw new IllegalArgumentException("Cant find file", e);
