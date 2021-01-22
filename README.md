@@ -129,13 +129,13 @@ Absztrakt osztályok és interfészek
 
 - ,abstractclass - Absztrakt osztályok
 - ,interfaces - Interfészek
-- interfacerules - Interfészekkel kapcsolatos szabályok
-- interfacedependencyinversion - Dependency inversion
-- interfacedefaultmethods - Default interfész metódusok
-- interfacestaticmethods - Statikus interfész metódusok
+- -interfacerules - Interfészekkel kapcsolatos szabályok
+- -interfacedependencyinversion - Dependency inversion
+- .interfacedefaultmethods - Default interfész metódusok
+- .interfacestaticmethods - Statikus interfész metódusok
 - interfaceextends - Interfészek és az öröklődés viszonya
-- enumabstract - Absztrakt metódusok implementálása felsorolásos típusokban
-- statemachine - Állapotgép
+- .enumabstract - Absztrakt metódusok implementálása felsorolásos típusokban
+- .statemachine - Állapotgép
 
 Haladó OO elvek
 
