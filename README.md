@@ -7,7 +7,7 @@ Jelmagyarázat:
  -  , - mappában lévő feladatok:  van köztük hiányos, javítandó v CP
 
 
-Bevezetés a nyelvi eszközökbe
+# Bevezetés a nyelvi eszközökbe
 
 Eszközkészlet
 
@@ -58,7 +58,7 @@ Bevezetés az osztályok és objektumok világába
 - ,references - Referenciák
 
 
-A Java nyelv részletes megismerése
+# A Java nyelv részletes megismerése
 
 Típusok és operátorok
 
@@ -97,7 +97,7 @@ Programozási tételek és egyéb algoritmusok
 - recursion - Rekurzió
 
 
-Objektumorientáltság
+# Objektumorientáltság
 
 Attribútumok és metódusok
 
@@ -144,7 +144,7 @@ Haladó OO elvek
 - isahasa - is-a has-a kapcsolatok
 
 
-Kivétel- és fájlkezelés
+# Kivétel- és fájlkezelés
 
 Kivételkezelés
 
@@ -172,7 +172,7 @@ Fájlkezelés
 - iofilestest - Fájlkezelés tesztelése
 
 
-Kollekciók és osztálykönyvtárak
+# Kollekciók és osztálykönyvtárak
 
 Kollekció típusok
 
