@@ -4,7 +4,7 @@ Le lehet kérdezni a track-es illetve a track nélküli listaelemeket.
 Valamint típusonként külön-külön a távolságot egy Report-okat tartalmazó listába.
  */
 
-package project04;
+package activity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ public class Activities {
     public void addActivity(Activity activity) {
         activities.add(activity);
     }
-
+/*
     public List<Report> distancesByTypes() {
 
     }
@@ -32,5 +32,7 @@ public class Activities {
     public int numberOfWithoutTrackActivities() {
 
     }
+
+ */
 
 }

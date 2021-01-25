@@ -3,7 +3,7 @@ Activity interface: Két metódusa van a getDistance() amivel az adott sport kö
 valamint a getType(), amivel a tevékenységünk típusát kaphatjuk meg.
  */
 
-package project04;
+package activity;
 
 public interface Activity {
 

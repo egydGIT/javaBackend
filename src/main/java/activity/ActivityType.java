@@ -2,7 +2,7 @@
 ActivityType enum: Négy féle típus lehet: BIKING,HIKING,RUNNING,BASKETBALL. Fontos, hogy ebben a sorrendben.
  */
 
-package project04;
+package activity;
 
 public enum ActivityType {
     BIKING("Biking"), HIKING("Hiking"), RUNNING("Running"), BASKETBALL("Basketball");

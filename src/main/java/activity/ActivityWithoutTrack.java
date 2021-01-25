@@ -4,7 +4,7 @@ Mivel itt nincs track adattag, ezért a getDistance() mindig nullát ad vissza.
 A típus hasonló, mint az előző osztályban.
  */
 
-package project04;
+package activity;
 
 public class ActivityWithoutTrack implements Activity{
 

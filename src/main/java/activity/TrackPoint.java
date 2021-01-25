@@ -4,7 +4,7 @@ Tartalmaz egy getDistanceFrom(TrackPoint point) metódust mely, egy másik pontt
 A földrajzi koordinátákkal való számoláshoz segítségül:
  */
 
-package project04;
+package activity;
 
 public class TrackPoint {
 
@@ -17,9 +17,10 @@ public class TrackPoint {
         this.elevation = elevation;
     }
 
-    public double getDistanceFrom(TrackPoint point) {
-        // egy másik ponttól vett távolságot adja vissza
-    }
+//    public double getDistanceFrom(TrackPoint point) {
+//        // egy másik ponttól vett távolságot adja vissza
+//
+//    }
 
     public Coordinate getCoordinate() {
         return coordinate;

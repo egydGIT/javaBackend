@@ -4,9 +4,7 @@ Két adattagja van: a szélességi és hosszúsági fok (latitude,longitude), el
 utóbbi értéke a [-180,180] intervallumon mozoghat. Mindkét adattaghoz tartozik egy getter.
  */
 
-package project04;
-
-import java.util.Arrays;
+package activity;
 
 public class Coordinate {
 

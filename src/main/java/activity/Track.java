@@ -10,7 +10,7 @@ Egy TrackPoint példányt hozz létre, ha belefutsz a <ele sorba, és add hozzá
 Egy példa állományt az src/test/resources könyvtárban találsz.
  */
 
-package project04;
+package activity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,17 +28,18 @@ public class Track {
         trackPoints.add(trackPoint);
     }
 
-    public Coordinate findMinimumCoordinate() {
+//    public Coordinate findMinimumCoordinate() {
+//
+//    }
+//
+//    public Coordinate findMaximumCoordinate() {
+//
+//    }
+//
+//    public .. loadFromGpx() {
+//        // féjlbetöltés
+//    }
 
-    }
-
-    public Coordinate findMaximumCoordinate() {
-
-    }
-
-    public .. loadFromGpx() {
-        // féjlbetöltés
-    }
 
     public List<TrackPoint> getTrackPoints() {
         return trackPoints;
@@ -59,4 +60,5 @@ public class Track {
     public double getRectangleArea() {
         return rectangleArea;
     }
+
 }

@@ -3,7 +3,7 @@ ActivityWithTrack osztály: Implementálja az Activity interface-t.
 Van egy Track addattagja. A getDistance() metódus a megadott track össztávolságát adja vissza míg a getType() a típust.
  */
 
-package project04;
+package activity;
 
 public class ActivityWithTrack implements Activity{
 
