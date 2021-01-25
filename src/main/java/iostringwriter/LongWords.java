@@ -12,8 +12,9 @@ public class LongWords {
         try {
             for (String w: longWords) {
                 writer.write(w);
-                writer.write(" / ");
+                writer.write(": ");
                 writer.write(w.length());
+                writer.write("\n");
             }
         } catch (IOException e) {
             throw new IllegalArgumentException("List is not found. ", e);
