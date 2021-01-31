@@ -15,7 +15,7 @@ class BookCatalogTest {
     @Test
     void testFindBookByTitleAuthor() {
         BookCatalog bc = new BookCatalog();
-        ;
+
         assertEquals(new Book("Title1", "Author1"), bc.findBookByTitleAuthor(
                 List.of(new Book("Title1", "Author1"), new Book("Title2", "Author2")),
                 "Title1", "Author1"));
@@ -41,4 +41,20 @@ class BookCatalogTest {
 
         assertEquals(1, bc.addBooksToSet(books).size());
     }
+
+
+    /*
+    Szerintem, ha kikommentelem az equals() és hashCode() override-okat,
+    akkor az Objects-ben deklarlt metódusokat fogja használni.
+    Ami az objektiumokat referencia egyezőség szerint hasonlítja össze és nem a vizsgált attributumok alapján.
+
+    public boolean equals(Object o) {
+        return super.equals(o);
+    }
+
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+     */
 }
