@@ -1,11 +1,5 @@
 # training-solutions
-
-Learning Java step by step with Learning360.
-
-Jelmagyarázat:
- -  . - mappában lévő feladatok:  összes kész
- -  , - mappában lévő feladatok:  van köztük hiányos, javítandó v CP
-
+java with Training360
 
 # Bevezetés a nyelvi eszközökbe
 
@@ -139,7 +133,7 @@ Absztrakt osztályok és interfészek
 
 Haladó OO elvek
 
-- polymorphism - Polimorfizmus
+- -polymorphism - Polimorfizmus
 - virtualmethod - Dinamikus kötés
 - isahasa - is-a has-a kapcsolatok
 
@@ -161,8 +155,8 @@ Fájlkezelés
 - .ioreader - String olvasása Readerrel
 - .iowriter - String írása Writerrel
 - .ioprintwriter - Különböző típusok írása PrintWriterrel
-- iostringwriter - Kiírás Stringbe StringWriterrel
-- ioreadbytes - Bájtok olvasása InputStreammel
+- .iostringwriter - Kiírás Stringbe StringWriterrel
+- .ioreadbytes - Bájtok olvasása InputStreammel
 - ioreaderclasspath - String olvasása classpath-ról
 - iowritebytes - Bájtok írása OutputStreammel
 - iodatastream - Adatok írása OutputStreamre, és olvasás
