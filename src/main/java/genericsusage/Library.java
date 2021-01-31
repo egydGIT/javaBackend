@@ -29,15 +29,15 @@ public class Library {
     }
 
     public Object getFirstBookWithoutGenerics(List booksWithoutGenerics) {   // ?
-        if (books == null) {
+        if (booksWithoutGenerics == null) {
             throw new NullPointerException("Book list is null.");
         }
-        if (books.isEmpty()) {
+        if (booksWithoutGenerics.isEmpty()) {
             throw new IllegalArgumentException("Book list is empty.");
         }
         Object b = null;
-        for (int i = 0; i < books.size(); i++) {
-            b = (Object) books.get(0);
+        for (int i = 0; i < booksWithoutGenerics.size(); i++) {
+            b = (Object) booksWithoutGenerics.get(0);
         }
         return b;
     }
@@ -54,7 +54,7 @@ public class Library {
     public static void main(String[] args) {
         Library library = new Library();
         System.out.println(library.getFirstBook(List.of(new Book("Title1", "Somebody", 1529763),
-                new Book("Title2", "Somebody Else", 1458796))).getTitle());
+                new Book("Title2", "Somebody Else", 1458796))).getTitle());       // Title1
 
 
 //        Library library1 = new Library();
@@ -74,7 +74,13 @@ public class Library {
         booksWithoutGenerics.add("Just title");
         booksWithoutGenerics.add(1584616);
         System.out.println(booksWithoutGenerics.toString());
-        System.out.println(library.getFirstBookWithoutGenerics(booksWithoutGenerics));  // ??? java.lang.IllegalArgumentException: Book list is empty.
+        // [Book{title='Title1', author='Somebody', regNumber=1529763}, Book{title='Title2', author='Somebody Else', regNumber=1458796}, Just title, 1584616]
+
+        System.out.println(library.getFirstBookWithoutGenerics(booksWithoutGenerics).toString());
+        // Book{title='Title1', author='Somebody', regNumber=1529763}
+
+        Book bookWG = (Book) library.getFirstBookWithoutGenerics(booksWithoutGenerics);
+        System.out.println(bookWG.getTitle());                                              // Title1
 
     }
 }

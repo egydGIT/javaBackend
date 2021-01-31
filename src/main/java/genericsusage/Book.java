@@ -40,4 +40,13 @@ public class Book {
     public void setRegNumber(int regNumber) {
         this.regNumber = regNumber;
     }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", regNumber=" + regNumber +
+                '}';
+    }
 }
