@@ -1,11 +1,5 @@
 # training-solutions
-
-Learning Java step by step with Learning360.
-
-Jelmagyarázat:
- -  . - mappában lévő feladatok:  összes kész
- -  , - mappában lévő feladatok:  van köztük hiányos, javítandó v CP
-
+java with Training360
 
 # Bevezetés a nyelvi eszközökbe
 
