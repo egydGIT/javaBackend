@@ -1,9 +1,6 @@
 package collectionslist;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class Lottery {
 
@@ -42,10 +39,30 @@ public class Lottery {
 
     }
 
+    public List<Integer> selectWinningNumbersWithSet(int lotteryType, int ballCount) {
+
+        Random random = new Random();
+        Set<Integer> winnerNumbers = new HashSet<>();
+        int count = winnerNumbers.size();
+
+        while (winnerNumbers.size() == 0 || winnerNumbers.size() < lotteryType) {
+            int number = random.nextInt(ballCount) +1;
+            winnerNumbers.add(number);                   // Set-ben duplikáció nem lehet -> nem kell a contains vizsgálat
+        } count++;
+
+        List<Integer> sortedWinnerNumbers = new ArrayList<>(winnerNumbers);
+        Collections.sort(sortedWinnerNumbers);
+        return sortedWinnerNumbers;
+
+    }
+
 
     public static void main(String[] args) {
         Lottery lottery = new Lottery();
         System.out.println(lottery.selectWinningNumbers(5, 90));
         System.out.println(lottery.selectWinningNumbers(6, 45));
+
+        System.out.println(lottery.selectWinningNumbersWithSet(5, 90));
+        System.out.println(lottery.selectWinningNumbersWithSet(6, 45));
     }
 }
