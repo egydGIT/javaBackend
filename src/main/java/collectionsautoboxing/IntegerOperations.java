@@ -1,4 +1,4 @@
-package collectionsmap;
+package collectionsautoboxing;
 
 import java.util.ArrayList;
 import java.util.List;
