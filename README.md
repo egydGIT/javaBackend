@@ -170,13 +170,13 @@ Fájlkezelés
 
 Kollekció típusok
 
-- genericsusage - Generikusok használata, diamond operátor
-- collectionsequalshash - equals, hashCode
-- collectionslist - List, ArrayList kontra LinkedList
-- collectionsset - Set
-- collectionsqueue - Queue
-- collectionsmap - Map
-- collectionsautoboxing - Autoboxing használata kollekcióknál
+- .genericsusage - Generikusok használata, diamond operátor
+- .collectionsequalshash - equals, hashCode
+- ,collectionslist - List, ArrayList kontra LinkedList
+- .collectionsset - Set
+- .collectionsqueue - Queue
+- .collectionsmap - Map
+- ,collectionsautoboxing - Autoboxing használata kollekcióknál
 
 Alapvető algoritmusok
 
