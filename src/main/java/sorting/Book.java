@@ -1,5 +1,7 @@
 package sorting;
 
+import java.util.Objects;
+
 public class Book implements Comparable<Book> {
 
     private int id;
@@ -39,6 +41,19 @@ public class Book implements Comparable<Book> {
     @Override
     public int compareTo(Book o) {
         return Integer.valueOf(this.getId()).compareTo(Integer.valueOf(o.getId()));
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return id == book.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 
     @Override
