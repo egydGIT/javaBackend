@@ -10,15 +10,15 @@ public class Issue {
     private LocalDateTime time;
     private Status status;
     private List<Comment> comments;
-    private CopyMode copyMode;
+    // private CopyMode copyMode;
 
-    public Issue(String name, LocalDateTime time, Status status, List<Comment> comments, CopyMode copyMode) {
-        this.name = name;
-        this.time = time;
-        this.status = status;
-        this.comments = comments;
-        this.copyMode = copyMode;
-    }
+//    public Issue(String name, LocalDateTime time, Status status, List<Comment> comments, CopyMode copyMode) {
+//        this.name = name;
+//        this.time = time;
+//        this.status = status;
+//        this.comments = comments;
+//        this.copyMode = copyMode;
+//    }
 
     public Issue(String name, LocalDateTime time, Status status, List<Comment> comments) {
         this.name = name;
@@ -37,7 +37,7 @@ public class Issue {
         name = anotherIssue.name;
         time = anotherIssue.time;
         status = anotherIssue.status;
-        if (anotherIssue.copyMode.equals(CopyMode.WITH_COMMENTS)) {
+        if (copyMode.equals(CopyMode.WITH_COMMENTS)) {
             List<Comment> copiedComments = new ArrayList<>();
             for (Comment c: anotherIssue.comments) {
                 copiedComments.add(new Comment(c));
