@@ -180,12 +180,12 @@ Kollekció típusok
 
 Alapvető algoritmusok
 
-- collectionsiterator - Bejárás
-- collectionscomp - Comparable és Comparator
-- searching - Keresés
-- sorting - Rendezés
-- collectionsclass - Collections osztály (keresésen, rendezésen felüli metódusok)
-- clone - A clone() metódus, deep clone
+- .collectionsiterator - Bejárás
+- .collectionscomp - Comparable és Comparator
+- ,searching - Keresés
+- ,sorting - Rendezés
+- ,collectionsclass - Collections osztály (keresésen, rendezésen felüli metódusok)
+- ,clone - A clone() metódus, deep clone
 - properties - Properties állományok
 
 Lambda kifejezések
