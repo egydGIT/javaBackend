@@ -8,6 +8,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GradeRounderTest {
 
+    @Test
+    void testRoundGrades() {
+        GradeRounder gr = new GradeRounder();
+        assertEquals( Arrays.toString(new int[] {85}), Arrays.toString(gr.roundGrades(new int[] {84})));
+        assertEquals( Arrays.toString(new int[] {85}), Arrays.toString(gr.roundGrades(new int[] {83})));
+        assertEquals( Arrays.toString(new int[] {82}), Arrays.toString(gr.roundGrades(new int[] {82})));
+        assertEquals( Arrays.toString(new int[] {39}), Arrays.toString(gr.roundGrades(new int[] {39})));
+    }
+
 
     @Test
     void fillGrades() {

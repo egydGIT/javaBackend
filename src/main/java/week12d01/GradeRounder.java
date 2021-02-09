@@ -13,6 +13,24 @@ import java.util.Arrays;
 
 public class GradeRounder {
 
+    // konzultáció solution
+    int[] roundGrades(int[] grades) {
+        // ha a következő 5-tel osztható szám és a vizsgált szám különbsége kisebb, mint 3 -> akkor felfele kerekít
+        for ( int i = 0; i < grades.length; i++ ) {  // végigiterál a grade tömbön
+            if ( grades[i] > 40 ) {                  // ha grade[i] nagyobb, mint 40, csak akkor kerekít
+                // melyik a következő 5-tel osztható szám az adott számhoz képest
+                int floor = grades[i] / 5;           // adott számot osztjuk 5-tel -> eredmény egész része kell
+                int next = (floor + 1) * 5;          // (egész rész + 1) * 5 = következő 5-tel osztható szám
+                if (next - grades[i] < 3 ) {         // (ha a köv 5-tel oszt.szám) - (adott szám) < 3
+                    grades[i] = next;                // akkor az adott számot  a köv.5-tel osztható számra cseréljük
+                }
+            }
+        }
+        return grades;
+    }
+
+
+
     public int[] fillGrades() {
         int[] grades = new int[100];
         for (int i = 0; i < grades.length; i++){
@@ -82,16 +100,23 @@ public class GradeRounder {
     public static void main(String[] args) {
         GradeRounder gradeRounder = new GradeRounder();
 
-        int [] grades = gradeRounder.fillGrades();
-        System.out.println(Arrays.toString(grades));
+//        int [] grades = gradeRounder.fillGrades();
+//        System.out.println(Arrays.toString(grades));
+//
+//        System.out.println(gradeRounder.gradesRoundGrades(grades, 85));
+//        System.out.println(gradeRounder.gradesRoundGrades(grades, 84));
+//        System.out.println(gradeRounder.gradesRoundGrades(grades, 82));
+//        System.out.println(gradeRounder.gradesRoundGrades(grades, 22));
+//
+//        System.out.println(Arrays.toString(gradeRounder.gradesRoundGradesArray(grades)));
+//
+//        System.out.println(Arrays.toString(gradeRounder.gradesRoundGradesMath(grades)));
 
-        System.out.println(gradeRounder.gradesRoundGrades(grades, 85));
-        System.out.println(gradeRounder.gradesRoundGrades(grades, 84));
-        System.out.println(gradeRounder.gradesRoundGrades(grades, 82));
-        System.out.println(gradeRounder.gradesRoundGrades(grades, 22));
+        System.out.println(Arrays.toString(gradeRounder.roundGrades(new int[] {84})));  // [85]
+        System.out.println(Arrays.toString(gradeRounder.roundGrades(new int[] {83})));  // [85]
+        System.out.println(Arrays.toString(gradeRounder.roundGrades(new int[] {82})));  // [82]
+        System.out.println(Arrays.toString(gradeRounder.roundGrades(new int[] {81})));  // [81]
+        System.out.println(Arrays.toString(gradeRounder.roundGrades(new int[] {39})));  // [39]
 
-        System.out.println(Arrays.toString(gradeRounder.gradesRoundGradesArray(grades)));
-
-        System.out.println(Arrays.toString(gradeRounder.gradesRoundGradesMath(grades)));
     }
 }
