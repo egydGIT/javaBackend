@@ -34,9 +34,10 @@ public class Decoder {
         }
     }
 
-    public void decodeBigData(Path path) {            // nagy állomány esetén InputStream
+    public String decodeBigData(Path path) {            // nagy állomány esetén InputStream
                                                               // (egybe beolvasva memória foglaló, bájtonként beolvasva lassú)
                                                               // pufferelt megoldás: részenként kell beolvasni, tömb mérete megadható
+        StringBuilder sb = new StringBuilder();
         try (InputStream is = Files.newInputStream(path)) {   // megnyitja a par-ül átadott fájlt
             byte[] buffer = new byte[10];                     // bájtokat tömbbe, pufferbe olvassa be
             int size;                                         // puffer = 10 bájt, fájl = 126 bájt  (szimuláljuk, hogy nagy a fájl)
@@ -45,17 +46,23 @@ public class Decoder {
                 // System.out.println(size);                        // 12 x 10 bájt     +    6 bájt
                 for (int i = 0; i < size; i++) {              // ciklus csak a fájl méretéig megy (nagytömbnek elejét dolgozzuk fel)
                     char c = (char) (buffer[i] + 10);
-                    System.out.print(c);
+                    sb.append(c);
+                    //System.out.print(c);
                 }
             }
         } catch (IOException e) {
             throw new IllegalStateException("Can not find file.", e);
         }
+        return sb.toString();
     }
 
     public static void main(String[] args) {
         //new Decoder().decode(Path.of("secret.dat"));        // Path interfész, .of() statikus metódus
-        new Decoder().decodeBigData(Path.of("secret.dat"));
+        //new Decoder().decodeBigData(Path.of("secret.dat"));
+
+        String result = new Decoder().decodeBigData(Path.of("secret.dat"));
+        System.out.println(result);
+
 
     }
 
