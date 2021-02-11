@@ -16,7 +16,7 @@ public class Covid {
 
     // index.hu -> Crtl U, Ctrl A, Ctrl C  -> new file: index.html  Ctrl V
 
-    public int wordCounter(String word, Path file) {        // korábban bent definiált vált-t par-be kivinni -> tesztelhetőbb a met.
+    public int wordCounter(String word, Path file) {
         try (BufferedReader br = new BufferedReader(Files.newBufferedReader(file))) {
             int counter = 0;    // összegzés tételéhez változó: lokális vátozó, nincs kezdőértéke, inicializálni kell
             String line;
@@ -35,7 +35,7 @@ public class Covid {
 
 
     public static void main(String[] args) {
-        Path file = Path.of("src/main/resources/index.html");
+        Path file = Path.of("src/main/resources/index.html");       // korábban bent definiált vált-t par-be kivinni -> tesztelhetőbb a met.
 
         Covid covid = new Covid();
         System.out.println(covid.wordCounter("covid", file));     // 4
