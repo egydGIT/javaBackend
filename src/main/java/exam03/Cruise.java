@@ -95,12 +95,12 @@ public class Cruise {
             }
             result.put(CruiseClass.FIRST, counterFirst);
         }
-        for (Passenger p: passengers) {
-            if ( p.getCruiseClass() == CruiseClass.SECOND ) {
-                counterSecond++;
-            }
-            result.put(CruiseClass.SECOND, counterSecond);
-        }
+//        for (Passenger p: passengers) {
+//            if ( p.getCruiseClass() == CruiseClass.SECOND ) {
+//                counterSecond++;
+//            }
+//            result.put(CruiseClass.SECOND, counterSecond);
+//        }
         return result;
     }
 
