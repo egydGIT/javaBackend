@@ -30,14 +30,14 @@ public class CruiseTest {
         assertEquals("John Doe", cruise.getPassengers().get(0).getName());
     }
 
-//    @Test
-//    void overBooking() {
-//        for (int i = 0; i < 5; i++) {
-//            cruise.bookPassenger(new Passenger("John Doe", CruiseClass.LUXURY));
-//        }
-//        assertThrows(IllegalArgumentException.class,
-//                () -> cruise.bookPassenger(new Passenger("John Doe", CruiseClass.LUXURY)));
-//    }
+    @Test
+    void overBooking() {
+        for (int i = 0; i < 5; i++) {
+            cruise.bookPassenger(new Passenger("John Doe", CruiseClass.LUXURY));
+        }
+        assertThrows(IllegalArgumentException.class,
+                () -> cruise.bookPassenger(new Passenger("John Doe", CruiseClass.LUXURY)));
+    }
 
     @Test
     void getPriceForPassenger() {

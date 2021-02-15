@@ -39,6 +39,9 @@ public class Cruise {
 
     public List<Passenger> bookPassenger(Passenger passenger) {
         // egy foglalás. Ellenőrizni kell, hogy van-e még elég hely.
+        if (passengers.size() >= boat.getMaxPassengers()) {
+            throw new IllegalArgumentException("There's no free place on boat. You can't book.");
+        }
         passengers.add(passenger);
         return passengers;
     }
