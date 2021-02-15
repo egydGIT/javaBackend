@@ -2,6 +2,8 @@ package exam03;
 
 public class Boat {
 
+    private final int basicPrice = 100_000;
+
     private String name;
     private int maxPassengers;
 
@@ -16,5 +18,9 @@ public class Boat {
 
     public int getMaxPassengers() {
         return maxPassengers;
+    }
+
+    public int getBasicPrice() {
+        return basicPrice;
     }
 }

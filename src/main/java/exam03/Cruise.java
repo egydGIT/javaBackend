@@ -53,7 +53,7 @@ public class Cruise {
 //        for (Passenger p: passengers) {
 //            price += p.getCruiseClass().getPrice();
 //        }
-        return 100_000 * price;
+        return boat.getBasicPrice() * price;
     }
 
     public Passenger findPassengerByName(String name) {
@@ -83,7 +83,7 @@ public class Cruise {
         for (Passenger p: passengers) {
             sum += (double) p.getCruiseClass().getPrice();
         }
-        return 100_000 * sum;
+        return boat.getBasicPrice() * sum;
     }
 
     public Map<CruiseClass, Integer> countPassengerByClass() {
