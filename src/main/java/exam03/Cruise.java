@@ -46,10 +46,15 @@ public class Cruise {
         return passengers;
     }
 
-//    public double getPriceForPassenger(Passenger passenger) {
-//        // visszaadja, hogy mennyibe kerülne a foglalás. Ez a metódus még NEM foglal.
-//
-//    }
+    public double getPriceForPassenger(Passenger passenger) {
+        // visszaadja, hogy mennyibe kerülne a foglalás. Ez a metódus még NEM foglal.
+        double price = 0.0;
+        price += passenger.getCruiseClass().getPrice();
+//        for (Passenger p: passengers) {
+//            price += p.getCruiseClass().getPrice();
+//        }
+        return 100_000 * price;
+    }
 
     public Passenger findPassengerByName(String name) {
         // foglalás megkeresése név alapján
