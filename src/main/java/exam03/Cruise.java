@@ -29,6 +29,7 @@ public class Cruise {
     private Boat boat;
     private LocalDate sailing;
     private double basicPrice;
+    private Passenger passenger;
 
     private List<Passenger> passengers = new ArrayList<>();
 
@@ -48,22 +49,32 @@ public class Cruise {
 //        // visszaadja, hogy mennyibe kerülne a foglalás. Ez a metódus még NEM foglal.
 //
 //    }
-//
-//    public Passenger findPassengerByName(String name) {
-//        // foglalás megkeresése név alapján
-//
-//    }
-//
+
+    public Passenger findPassengerByName(String name) {
+        // foglalás megkeresése név alapján
+        Passenger passenger = null;
+        for (Passenger p: passengers) {
+            if (p.getName().equals(name)) {
+                passenger = p;
+            }
+        }
+        return passenger;
+    }
+
 //    public List<String> getPassengerNamesOrdered() {
 //        // visszaadja a foglalást végzők neveit ábécé sorrendben
 //
 //    }
-//
-//    public double sumAllBookingsCharged() {
-//        // összegzi, hogy mennyi az összes bevétel
-//
-//    }
-//
+
+    public double sumAllBookingsCharged() {
+        // összegzi, hogy mennyi az összes bevétel
+        double sum = 0;
+        for (Passenger p: passengers) {
+            sum += (double) p.getCruiseClass().getPrice();
+        }
+        return 100_000 * sum;
+    }
+
 //    public Map<CruiseClass, Integer> countPassengerByClass() {
 //        // visszaadja, hogy osztályonként mennyien foglaltak
 //

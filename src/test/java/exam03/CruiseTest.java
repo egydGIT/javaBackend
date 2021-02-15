@@ -50,16 +50,16 @@ public class CruiseTest {
 //        price = cruise.getPriceForPassenger(new Passenger("John Doe", CruiseClass.SECOND));
 //        assertEquals(100_000, price, 0.5);
 //    }
-//
-//    @Test
-//    void findPassengerByName() {
-//        cruise.bookPassenger(new Passenger("John Doe", CruiseClass.LUXURY));
-//        cruise.bookPassenger(new Passenger("Jack Doe", CruiseClass.FIRST));
-//
-//        Passenger passenger = cruise.findPassengerByName("Jack Doe");
-//        assertEquals("Jack Doe", passenger.getName());
-//    }
-//
+
+    @Test
+    void findPassengerByName() {
+        cruise.bookPassenger(new Passenger("John Doe", CruiseClass.LUXURY));
+        cruise.bookPassenger(new Passenger("Jack Doe", CruiseClass.FIRST));
+
+        Passenger passenger = cruise.findPassengerByName("Jack Doe");
+        assertEquals("Jack Doe", passenger.getName());
+    }
+
 //    @Test
 //    void getPassengerNamesOrdered() {
 //        cruise.bookPassenger(new Passenger("Jack Smith", CruiseClass.FIRST));
@@ -69,17 +69,17 @@ public class CruiseTest {
 //        List<String> names = cruise.getPassengerNamesOrdered();
 //        assertEquals(List.of("Jack Doe", "Jack Smith", "John Doe"), names);
 //    }
-//
-//    @Test
-//    void sumAllBookingsCharged() {
-//        cruise.bookPassenger(new Passenger("Jack Smith", CruiseClass.LUXURY));
-//        cruise.bookPassenger(new Passenger("John Doe", CruiseClass.FIRST));
-//        cruise.bookPassenger(new Passenger("Jack Doe", CruiseClass.SECOND));
-//
-//        double sum = cruise.sumAllBookingsCharged();
-//        assertEquals(300_000 + 180_000 + 100_000, sum, 0.5);
-//    }
-//
+
+    @Test
+    void sumAllBookingsCharged() {
+        cruise.bookPassenger(new Passenger("Jack Smith", CruiseClass.LUXURY));
+        cruise.bookPassenger(new Passenger("John Doe", CruiseClass.FIRST));
+        cruise.bookPassenger(new Passenger("Jack Doe", CruiseClass.SECOND));
+
+        double sum = cruise.sumAllBookingsCharged();
+        assertEquals(300_000 + 180_000 + 100_000, sum, 0.5);
+    }
+
 //    @Test
 //    void countPassengerByClass() {
 //        cruise.bookPassenger(new Passenger("Jack Smith", CruiseClass.LUXURY));
