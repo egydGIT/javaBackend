@@ -38,35 +38,36 @@ public class Cruise {
         this.basicPrice = basicPrice;
     }
 
-    public void bookPassenger(Passenger passenger) {
+    public List<Passenger> bookPassenger(Passenger passenger) {
         // egy foglalás. Ellenőrizni kell, hogy van-e még elég hely.
-
+        passengers.add(passenger);
+        return passengers;
     }
 
-    public double getPriceForPassenger(Passenger passenger) {
-        // visszaadja, hogy mennyibe kerülne a foglalás. Ez a metódus még NEM foglal.
-
-    }
-
-    public Passenger findPassengerByName(String name) {
-        // foglalás megkeresése név alapján
-
-    }
-
-    public List<String> getPassengerNamesOrdered() {
-        // visszaadja a foglalást végzők neveit ábécé sorrendben
-
-    }
-
-    public double sumAllBookingsCharged() {
-        // összegzi, hogy mennyi az összes bevétel
-
-    }
-
-    public Map<CruiseClass, Integer> countPassengerByClass() {
-        // visszaadja, hogy osztályonként mennyien foglaltak
-
-    }
+//    public double getPriceForPassenger(Passenger passenger) {
+//        // visszaadja, hogy mennyibe kerülne a foglalás. Ez a metódus még NEM foglal.
+//
+//    }
+//
+//    public Passenger findPassengerByName(String name) {
+//        // foglalás megkeresése név alapján
+//
+//    }
+//
+//    public List<String> getPassengerNamesOrdered() {
+//        // visszaadja a foglalást végzők neveit ábécé sorrendben
+//
+//    }
+//
+//    public double sumAllBookingsCharged() {
+//        // összegzi, hogy mennyi az összes bevétel
+//
+//    }
+//
+//    public Map<CruiseClass, Integer> countPassengerByClass() {
+//        // visszaadja, hogy osztályonként mennyien foglaltak
+//
+//    }
 
     public Boat getBoat() {
         return boat;
