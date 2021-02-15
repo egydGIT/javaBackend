@@ -22,11 +22,22 @@ A Histogram osztályba dolgozz, tesztje HistogramTest. Minden sor után legyen s
 
 package exam03;
 
-import java.io.Reader;
+import java.io.BufferedReader;
+import java.io.IOException;
 
 public class Histogram {
 
-    public void createHistogram() {
-
+    public String createHistogram(BufferedReader reader) {
+        StringBuilder sb = new StringBuilder();
+        try (reader) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                int numberFromFile = Integer.parseInt(line);
+                sb.append("*".repeat(numberFromFile)).append("\n");
+            }
+            return sb.toString();
+        } catch (IOException e) {
+            throw new IllegalStateException("Can not find file.", e);
+        }
     }
 }
