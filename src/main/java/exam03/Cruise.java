@@ -20,10 +20,7 @@ countPassengerByClass(): visszaadja, hogy osztályonként mennyien foglaltak
 package exam03;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Cruise {
 
@@ -67,10 +64,15 @@ public class Cruise {
         return passenger;
     }
 
-//    public List<String> getPassengerNamesOrdered() {
-//        // visszaadja a foglalást végzők neveit ábécé sorrendben
-//
-//    }
+    public List<String> getPassengerNamesOrdered() {                          // még nem jó
+        // visszaadja a foglalást végzők neveit ábécé sorrendben
+        List<String> passengerNames = null;
+        for(Passenger p: passengers) {
+            passengerNames.add(p.getName());
+        }
+        Collections.sort(passengerNames);
+        return passengerNames;
+    }
 
     public double sumAllBookingsCharged() {
         // összegzi, hogy mennyi az összes bevétel
