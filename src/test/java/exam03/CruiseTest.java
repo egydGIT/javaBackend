@@ -80,14 +80,14 @@ public class CruiseTest {
         assertEquals(300_000 + 180_000 + 100_000, sum, 0.5);
     }
 
-//    @Test
-//    void countPassengerByClass() {
-//        cruise.bookPassenger(new Passenger("Jack Smith", CruiseClass.LUXURY));
-//        cruise.bookPassenger(new Passenger("John Doe", CruiseClass.LUXURY));
-//        cruise.bookPassenger(new Passenger("Jack Doe", CruiseClass.FIRST));
-//
-//        Map<CruiseClass, Integer> result = cruise.countPassengerByClass();
-//        assertEquals(Map.of(CruiseClass.LUXURY, 2 , CruiseClass.FIRST, 1), result);
-//    }
+    @Test
+    void countPassengerByClass() {
+        cruise.bookPassenger(new Passenger("Jack Smith", CruiseClass.LUXURY));
+        cruise.bookPassenger(new Passenger("John Doe", CruiseClass.LUXURY));
+        cruise.bookPassenger(new Passenger("Jack Doe", CruiseClass.FIRST));
+
+        Map<CruiseClass, Integer> result = cruise.countPassengerByClass();
+        assertEquals(Map.of(CruiseClass.LUXURY, 2 , CruiseClass.FIRST, 1), result);
+    }
 
 }

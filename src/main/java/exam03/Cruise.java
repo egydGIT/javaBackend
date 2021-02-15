@@ -21,6 +21,7 @@ package exam03;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -75,10 +76,33 @@ public class Cruise {
         return 100_000 * sum;
     }
 
-//    public Map<CruiseClass, Integer> countPassengerByClass() {
-//        // visszaadja, hogy osztályonként mennyien foglaltak
-//
-//    }
+    public Map<CruiseClass, Integer> countPassengerByClass() {
+        // visszaadja, hogy osztályonként mennyien foglaltak
+        Map<CruiseClass, Integer> result = new HashMap<>();
+        CruiseClass luxury = null;
+        Integer counterLuxury = 0;
+        Integer counterFirst = 0;
+        Integer counterSecond = 0;
+        for (Passenger p: passengers) {
+            if ( p.getCruiseClass() == CruiseClass.LUXURY ) {
+                counterLuxury++;
+            }
+            result.put(CruiseClass.LUXURY, counterLuxury);
+        }
+        for (Passenger p: passengers) {
+            if ( p.getCruiseClass() == CruiseClass.FIRST ) {
+                counterFirst++;
+            }
+            result.put(CruiseClass.FIRST, counterFirst);
+        }
+        for (Passenger p: passengers) {
+            if ( p.getCruiseClass() == CruiseClass.SECOND ) {
+                counterSecond++;
+            }
+            result.put(CruiseClass.SECOND, counterSecond);
+        }
+        return result;
+    }
 
     public Boat getBoat() {
         return boat;
