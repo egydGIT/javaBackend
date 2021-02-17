@@ -77,19 +77,36 @@ public class Cruise {
 //        return passengerNames;
 //    }
 
-    public List<String> getPassengerNamesOrdered() {                             // Comparator + anonymus inner class
+//    public List<String> getPassengerNamesOrdered() {                             // Comparator + anonymus inner class
+//        // visszaadja a foglalást végzők neveit ábécé sorrendben
+//        List<String> passengerNames = new ArrayList<>();
+//        for(Passenger p: passengers) {
+//            passengerNames.add(p.getName());
+//        }
+//        Collections.sort(passengerNames, new Comparator<String>() {
+//            @Override
+//            public int compare(String o1, String o2) {
+//                return o1.compareTo(o2);
+//            }
+//        });
+//        return passengerNames;
+//    }
+
+    public List<String> getPassengerNamesOrdered() {                           // Comparator + inner class
         // visszaadja a foglalást végzők neveit ábécé sorrendben
         List<String> passengerNames = new ArrayList<>();
         for(Passenger p: passengers) {
             passengerNames.add(p.getName());
         }
-        Collections.sort(passengerNames, new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                return o1.compareTo(o2);
-            }
-        });
+        Collections.sort(passengerNames, new PassengerNameComparator());
         return passengerNames;
+    }
+
+    public class PassengerNameComparator implements Comparator<String> {        // inner class
+        @Override
+        public int compare(String o1, String o2) {
+            return o1.compareTo(o2);
+        }
     }
 
     public double sumAllBookingsCharged() {
