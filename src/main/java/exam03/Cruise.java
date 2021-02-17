@@ -69,7 +69,7 @@ public class Cruise {
 
     public List<String> getPassengerNamesOrdered() {                          // még nem jó
         // visszaadja a foglalást végzők neveit ábécé sorrendben
-        List<String> passengerNames = null;
+        List<String> passengerNames = new ArrayList<>();
         for(Passenger p: passengers) {
             passengerNames.add(p.getName());
         }
