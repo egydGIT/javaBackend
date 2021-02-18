@@ -54,7 +54,7 @@ public class LetterCounter {
                                         // e
             if (isEnglishChar(c)) {
                 characters.add(c);
-                // System.out.println(characters);  -> [a]
+                // System.out.println(characters);  // [a]
                                                     // [p, a]
                                                     // [p, a]          -> Set miatt
                                                     // [p, a, l]
@@ -100,9 +100,9 @@ public class LetterCounter {
                                                     // {p=1, a=1}
                                                     // {p=1, a=1}
                                                     // {p=1, a=1, l=1}
+                                                    // {p=1, a=1, e=1, l=1}
             }
         }
-        // System.out.println(counter);             // {p=1, a=1, e=1, l=1}
         return counter.size();
     }
 
