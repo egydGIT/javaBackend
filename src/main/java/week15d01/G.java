@@ -20,7 +20,7 @@ public class G {
         return foundResults;
     }
 
-    private Map<Double, Double> findEveryBiggest(Map.Entry<Double, Double> foundResult, Map<Double, Double> graphOfFunction) {
+    public Map<Double, Double> findEveryBiggest(Map.Entry<Double, Double> foundResult, Map<Double, Double> graphOfFunction) {
         Map<Double, Double> results = new HashMap<>();
         for ( Map.Entry<Double, Double> entry : graphOfFunction.entrySet()) {
             if ( foundResult.getValue() == entry.getValue() ) {
@@ -30,7 +30,7 @@ public class G {
         return results;
     }
 
-    private Map.Entry<Double, Double> findFirstBiggest(Map<Double, Double> graphOfFunction) {
+    public Map.Entry<Double, Double> findFirstBiggest(Map<Double, Double> graphOfFunction) {
         Map.Entry<Double, Double> result = null;
         // double max = Double.MIN_VALUE;
         for ( Map.Entry<Double, Double> entry : graphOfFunction.entrySet() ) {
@@ -49,17 +49,22 @@ public class G {
 
 
     public static void main(String[] args) {
-        Graph graph = new Graph();
+        G g = new G();
         Map<Double, Double> testGraph = new HashMap<>();
-        testGraph.put(-2.0, 9.0);
+        testGraph.put(-2.0, 9.0);   // <-
         testGraph.put( -1.0, 2.0);
         testGraph.put(0.0, -4.0);
-        testGraph.put(1.0, 9.0);
+        testGraph.put(1.0, 9.0);   // <-
         testGraph.put(2.0, 3.0);
-        testGraph.put(2.0, 9.0);
+        testGraph.put(2.0, 9.0);   // <-
 
-        System.out.println(graph.maxEntry(testGraph));      // -2.0=9.0
+        Map.Entry<Double, Double> found = g.findFirstBiggest(testGraph);            // -2.0=9.0
+        System.out.println(found);
 
+        Map<Double, Double> foundEvery = g.findEveryBiggest(found, testGraph);      // {-2.0=9.0}  nem jó
+        System.out.println(foundEvery);
+
+        System.out.println(g.maxEntry(testGraph));                                  // {-2.0=9.0}
     }
 }
 
