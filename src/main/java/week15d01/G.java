@@ -20,10 +20,10 @@ public class G {
         return foundResults;
     }
 
-    public Map<Double, Double> findEveryBiggest(Map.Entry<Double, Double> foundResult, Map<Double, Double> graphOfFunction) {
+    public Map<Double, Double> findEveryBiggest(Map.Entry<Double, Double> foundResult, Map<Double, Double> graphOfFunction) { // Összes legnagyobbat
         Map<Double, Double> results = new HashMap<>();
         for ( Map.Entry<Double, Double> entry : graphOfFunction.entrySet()) {
-            if ( foundResult.getValue() == entry.getValue() ) {
+            if (foundResult.getValue().equals(entry.getValue())) {
                 results.put(entry.getKey(), entry.getValue());
             }
         }
@@ -58,13 +58,13 @@ public class G {
         testGraph.put(2.0, 3.0);
         testGraph.put(2.0, 9.0);   // <-
 
-        Map.Entry<Double, Double> found = g.findFirstBiggest(testGraph);            // -2.0=9.0
-        System.out.println(found);
+//        Map.Entry<Double, Double> found = g.findFirstBiggest(testGraph);            // -2.0=9.0
+//        System.out.println(found);
+//
+//        Map<Double, Double> foundEvery = g.findEveryBiggest(found, testGraph);      // {-2.0=9.0, 1.0=9.0, 2.0=9.0}
+//        System.out.println(foundEvery);
 
-        Map<Double, Double> foundEvery = g.findEveryBiggest(found, testGraph);      // {-2.0=9.0}  nem jó
-        System.out.println(foundEvery);
-
-        System.out.println(g.maxEntry(testGraph));                                  // {-2.0=9.0}
+        System.out.println(g.maxEntry(testGraph));                                  // {-2.0=9.0, 1.0=9.0, 2.0=9.0}
     }
 }
 
