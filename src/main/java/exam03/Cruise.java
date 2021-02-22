@@ -19,6 +19,7 @@ countPassengerByClass(): visszaadja, hogy osztályonként mennyien foglaltak
 
 package exam03;
 
+import java.text.Collator;
 import java.time.LocalDate;
 import java.util.*;
 
@@ -37,19 +38,18 @@ public class Cruise {
         this.basicPrice = basicPrice;
     }
 
-    public List<Passenger> bookPassenger(Passenger passenger) {
+    public void bookPassenger(Passenger passenger) {
         // egy foglalás. Ellenőrizni kell, hogy van-e még elég hely.
         if (passengers.size() >= boat.getMaxPassengers()) {
             throw new IllegalArgumentException("There's no free place on boat. You can't book.");
         }
         passengers.add(passenger);
-        return passengers;
     }
 
     public double getPriceForPassenger(Passenger passenger) {
         // visszaadja, hogy mennyibe kerülne a foglalás. Ez a metódus még NEM foglal.
         double price = 0.0;
-        price += passenger.getCruiseClass().getPrice();
+        price = passenger.getCruiseClass().getPrice();
 //        for (Passenger p: passengers) {
 //            price += p.getCruiseClass().getPrice();
 //        }
@@ -64,10 +64,13 @@ public class Cruise {
                 passenger = p;
             }
         }
+        if ( passenger == null) {
+            throw new IllegalArgumentException("This name is not found: " + name);  // jav: met. null-lal ne térjen vissza!
+        }
         return passenger;
     }
 
-//    public List<String> getPassengerNamesOrdered() {                           // Comparable if.
+//    public List<String> getPassengerNamesOrdered() {                           // Comparable if. -> ez ok
 //        // visszaadja a foglalást végzők neveit ábécé sorrendben
 //        List<String> passengerNames = new ArrayList<>();
 //        for(Passenger p: passengers) {
@@ -77,7 +80,7 @@ public class Cruise {
 //        return passengerNames;
 //    }
 
-//    public List<String> getPassengerNamesOrdered() {                             // Comparator + anonymus inner class
+//    public List<String> getPassengerNamesOrdered() {                           // Comparator + anonymus inner class -> ez is ok
 //        // visszaadja a foglalást végzők neveit ábécé sorrendben
 //        List<String> passengerNames = new ArrayList<>();
 //        for(Passenger p: passengers) {
@@ -92,63 +95,86 @@ public class Cruise {
 //        return passengerNames;
 //    }
 
-    public List<String> getPassengerNamesOrdered() {                           // Comparator + inner class
+//    public List<String> getPassengerNamesOrdered() {                           // Comparator + inner class -> ez is ok
+//        // visszaadja a foglalást végzők neveit ábécé sorrendben
+//        List<String> passengerNames = new ArrayList<>();
+//        for(Passenger p: passengers) {
+//            passengerNames.add(p.getName());
+//        }
+//        Collections.sort(passengerNames, new PassengerNameComparator());
+//        return passengerNames;
+//    }
+//
+//    public class PassengerNameComparator implements Comparator<String> {        // inner class
+//        @Override
+//        public int compare(String o1, String o2) {
+//            return o1.compareTo(o2);
+//        }
+//    }
+
+    public List<String> getPassengerNamesOrdered() {                           // Collator -> ékezetes betűkhöz -> de ez a legjobb
         // visszaadja a foglalást végzők neveit ábécé sorrendben
         List<String> passengerNames = new ArrayList<>();
         for(Passenger p: passengers) {
             passengerNames.add(p.getName());
         }
-        Collections.sort(passengerNames, new PassengerNameComparator());
+        Collections.sort(passengerNames, Collator.getInstance(new Locale("hu", "HU")));
         return passengerNames;
-    }
-
-    public class PassengerNameComparator implements Comparator<String> {        // inner class
-        @Override
-        public int compare(String o1, String o2) {
-            return o1.compareTo(o2);
-        }
     }
 
     public double sumAllBookingsCharged() {
         // összegzi, hogy mennyi az összes bevétel
         double sum = 0;
         for (Passenger p: passengers) {
-            sum += (double) p.getCruiseClass().getPrice();
+            sum += getPriceForPassenger(p);                                     // jav: kódismétlés helyett met. hívás!
         }
-        return boat.getBasicPrice() * sum;
+        return sum;
     }
 
-    public Map<CruiseClass, Integer> countPassengerByClass() {
-        // visszaadja, hogy osztályonként mennyien foglaltak
-        Map<CruiseClass, Integer> result = new HashMap<>();
-        Integer counterLuxury = 0;
-        Integer counterFirst = 0;
-        Integer counterSecond = 0;
-        for (Passenger p: passengers) {
-            if ( p.getCruiseClass() == CruiseClass.LUXURY ) {
-                counterLuxury++;
+//    public Map<CruiseClass, Integer> countPassengerByClass() {                // ez ok, de:
+//        // visszaadja, hogy osztályonként mennyien foglaltak
+//        Map<CruiseClass, Integer> result = new HashMap<>();
+//        Integer counterLuxury = 0;
+//        Integer counterFirst = 0;
+//        Integer counterSecond = 0;
+//        for (Passenger p: passengers) {
+//            if ( p.getCruiseClass() == CruiseClass.LUXURY ) {
+//                counterLuxury++;
+//            }
+//            if( counterLuxury != 0) {
+//                result.put(CruiseClass.LUXURY, counterLuxury);
+//            }
+//        }
+//        for (Passenger p: passengers) {
+//            if ( p.getCruiseClass() == CruiseClass.FIRST ) {
+//                counterFirst++;
+//            }
+//            if( counterFirst != 0) {
+//                result.put(CruiseClass.FIRST, counterFirst);
+//            }
+//        }
+//        for (Passenger p: passengers) {
+//            if ( p.getCruiseClass() == CruiseClass.SECOND ) {
+//                counterSecond++;
+//            }
+//            if( counterSecond != 0) {
+//                result.put(CruiseClass.SECOND, counterSecond);
+//            }
+//        }
+//        return result;
+//    }
+
+    public Map<CruiseClass, Integer> countPassengerByClass() {                  // jav: Map metódusok használata :-)
+        Map<CruiseClass, Integer> counts = new HashMap<>();
+        for (Passenger passenger: passengers) {
+            if (!counts.containsKey(passenger.getCruiseClass())) {
+                counts.put(passenger.getCruiseClass(), 1);
             }
-            if( counterLuxury != 0) {
-                result.put(CruiseClass.LUXURY, counterLuxury);
-            }
+            else {
+                counts.put(passenger.getCruiseClass(), counts.get(passenger.getCruiseClass()) + 1);
+            } // beteszi:  kulcs                       érték ( értéket kiveszi kulcs alapján ) majd növeli eggyel
         }
-        for (Passenger p: passengers) {
-            if ( p.getCruiseClass() == CruiseClass.FIRST ) {
-                counterFirst++;
-            }
-            if( counterFirst != 0) {
-                result.put(CruiseClass.FIRST, counterFirst);
-            }
-        }
-        for (Passenger p: passengers) {
-            if ( p.getCruiseClass() == CruiseClass.SECOND ) {
-                counterSecond++;
-            }
-            if( counterSecond != 0) {
-                result.put(CruiseClass.SECOND, counterSecond);
-            }
-        }
-        return result;
+        return counts;
     }
 
     public Boat getBoat() {
