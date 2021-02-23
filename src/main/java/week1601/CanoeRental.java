@@ -21,11 +21,11 @@ public class CanoeRental {
     }
 
     public double calculateRentalSum() {
-        LocalDateTime beginDate = this.getStartTime();
-        LocalDateTime endDate = this.getEndTime();
         if ( this.getEndTime() == null ) {
             throw new IllegalArgumentException("This rental is still active. " + name);
         }
+        LocalDateTime beginDate = this.getStartTime();
+        LocalDateTime endDate = this.getEndTime();
         return Duration.between(beginDate, endDate).toHours();
     }
 
