@@ -73,7 +73,7 @@ public class CanoeOffice {
         if ( foundName.getEndTime() == null ) {
             throw new IllegalArgumentException("This rental is still active. " + name);
         }
-        double rentedHours = foundName.calculateRentalSum(foundName);
+        double rentedHours = foundName.calculateRentalSum();
         return price = BASIC_PRICE_PER_HOUR * rentedHours * foundName.getCanoeType().getMultiplier();
     }
 

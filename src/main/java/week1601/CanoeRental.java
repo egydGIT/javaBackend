@@ -20,10 +20,10 @@ public class CanoeRental {
         this.endTime = endTime;
     }
 
-    public double calculateRentalSum(CanoeRental canoeRental) {
-        LocalDateTime beginDate = canoeRental.getStartTime();
-        LocalDateTime endDate = canoeRental.getEndTime();
-        if ( canoeRental.getEndTime() == null ) {
+    public double calculateRentalSum() {
+        LocalDateTime beginDate = this.getStartTime();
+        LocalDateTime endDate = this.getEndTime();
+        if ( this.getEndTime() == null ) {
             throw new IllegalArgumentException("This rental is still active. " + name);
         }
         return Duration.between(beginDate, endDate).toHours();
