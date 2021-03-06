@@ -5,6 +5,8 @@ import org.mariadb.jdbc.MariaDbDataSource;
 import javax.sql.DataSource;
 import java.sql.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ActivityTrackerMain {
 
@@ -52,6 +54,25 @@ public class ActivityTrackerMain {
         }
     }
 
+    public List<Activity> selectAllActivities(DataSource dataSource) {
+        List<Activity> activities = new ArrayList<>();
+        try (Connection conn = dataSource.getConnection();
+            PreparedStatement stmt = conn.prepareStatement("select * from activities");
+            ResultSet rs = stmt.executeQuery();
+        ) {
+            while (rs.next()) {
+                Activity activity = new Activity(
+                        rs.getLong("id"),
+                        rs.getTimestamp("start_time").toLocalDateTime(),
+                        rs.getString("activity_desc"),
+                        ActivityType.valueOf(rs.getString("activity_type")));
+                activities.add(activity);
+            }
+            return activities;
+        } catch (SQLException se) {
+            throw new IllegalArgumentException("Can not connect", se);
+        }
+    }
 
     public static void main(String[] args) {
         MariaDbDataSource dataSource;
@@ -75,6 +96,8 @@ public class ActivityTrackerMain {
         activityTrackerMain.insertActivity(dataSource, activity3);
 
         System.out.println(activityTrackerMain.selectById(dataSource, 3));
+
+        System.out.println(activityTrackerMain.selectAllActivities(dataSource));
 
     }
 }
