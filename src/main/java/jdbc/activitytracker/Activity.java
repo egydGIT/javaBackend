@@ -29,6 +29,15 @@ Létrehozni a Timestamp.valueOf(LocalDateTime) metódussal lehet.
 Amennyiben kész, szervezd ki a beszúrást egy külön metódusba!
  */
 
+/*
+Egyszerű JDBC lekérdezés
+A main metódust egészítsd ki úgy, hogy kérdezz le egy rekordot id alapján az activities táblából.
+A visszakapott ResultSet alapján példányosíts egy Activity típusú objektumot! Szervezd ki egy külön metódusba!
+
+A main metódust egészítsd ki úgy, hogy kérdezd le az összes rekordot az activities táblából!
+Példányosíts egy List<Activity> listát, amit feltöltesz a lekérdezett adatok alapján! Szervezd ki egy külön metódusba!
+ */
+
 package jdbc.activitytracker;
 
 import java.time.LocalDateTime;
