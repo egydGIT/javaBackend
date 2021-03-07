@@ -30,7 +30,9 @@ class ActivityDaoTest {
             throw new IllegalStateException("Can not connect", se);
         }
 
-        Flyway flyway = Flyway.configure().dataSource(dataSource).load();
+        Flyway flyway = Flyway.configure()                          // flyway location a db/migration könyvtáron belül
+                .locations("/db/migration/activitytracker")
+                .dataSource(dataSource).load();
         flyway.clean();
         flyway.migrate();
 
@@ -42,7 +44,7 @@ class ActivityDaoTest {
         Activity activity1 = new Activity(LocalDateTime.of(2021, 2, 22, 10, 00), "Biking in Bükk 1", ActivityType.BIKING);
         activityDao.insertActivity(activity1);
 
-        assertEquals(activityDao.selectAllActivities().size(), 2);
+        assertEquals(activityDao.selectAllActivities().size(), 4);
     }
 
     @Test
