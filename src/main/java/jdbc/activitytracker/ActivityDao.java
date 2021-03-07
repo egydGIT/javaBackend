@@ -14,6 +14,8 @@ package jdbc.activitytracker;
 
 import javax.sql.DataSource;
 import java.sql.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -147,4 +149,16 @@ public class ActivityDao {      // DAO = Data Access Object
         }
     }
 
+    public List<Activity> activitiesBeforeDate(LocalDate date) {   // par-ben kapott dátum előtti activity-ket adja vissza listában
+       try (Connection conn = dataSource.getConnection();
+            PreparedStatement stmt = conn.prepareStatement("select * from activities where start_time < ?")
+       ) {
+           // stmt.setTimestamp(1, Timestamp.valueOf(date));                 // ha param: LocalDateTime date
+           LocalDateTime actualDate = date.atTime(0,0);          // ha param: LocalDate date
+           stmt.setTimestamp(1, Timestamp.valueOf(actualDate));
+           return  selectByPreparedStatement(stmt);
+       } catch (SQLException se) {
+           throw new IllegalStateException("Can not connect.", se);
+       }
+    }
 }
