@@ -1,5 +1,6 @@
 package jdbc.activitytracker;
 
+import org.flywaydb.core.Flyway;
 import org.mariadb.jdbc.MariaDbDataSource;
 
 import javax.sql.DataSource;
@@ -27,6 +28,12 @@ public class ActivityTrackerMain {
         Activity activity1 = new Activity(LocalDateTime.of(2021, 2, 22, 10, 00), "Biking in Bükk 1", ActivityType.BIKING);
         Activity activity2 = new Activity(LocalDateTime.of(2021, 2, 23, 10, 00), "Biking in Bükk 2", ActivityType.BIKING);
         Activity activity3 = new Activity(LocalDateTime.of(2021, 2, 24, 10, 00), "Biking in Bükk 3", ActivityType.BIKING);
+
+
+        Flyway flyway = Flyway.configure().dataSource(dataSource).load();
+        flyway.clean();
+        flyway.migrate();
+
 
         ActivityDao activityDao = new ActivityDao(dataSource); // dataSource nem kell met. param-ként, mert megkapja konstr-ban
         activityDao.insertActivity(activity1);
