@@ -13,3 +13,6 @@ CREATE TABLE `activities` (
 
 SELECT * FROM `activities`; 
 
+DROP TABLE `activities`;
+
+-- DELETE FROM `activities` WHERE 1;
