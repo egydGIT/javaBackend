@@ -28,10 +28,32 @@ public class ActivityDao {      // DAO = Data Access Object
         this.dataSource = dataSource;
     }
 
-    public void insertActivity(Activity activity) {
+/*
+Generált azonosító lekérdezése
+Módosítsd úgy a void saveActivity(Activity) metódust, hogy Activity-t adjon vissza, aminek már fel van töltve az id mezője!
+*/
+
+//    public void insertActivity(Activity activity) {
+//        try(Connection conn = dataSource.getConnection();
+//            PreparedStatement stmt =
+//                    conn.prepareStatement("insert into activities(start_time, activity_desc, activity_type) values (?,?,?)")
+//        ) {
+//            // A LocalDateTime értéket JDBC-vel a ResultSet.setTimestamp() metódussal lehet beszúrni.
+//            // Létrehozni a Timestamp.valueOf(LocalDateTime) metódussal lehet.
+//            stmt.setTimestamp(1, Timestamp.valueOf(activity.getStartTime()));
+//            stmt.setString(2, activity.getDesc());
+//            stmt.setString(3, activity.getType().toString());
+//            stmt.executeUpdate();
+//        } catch (SQLException se) {
+//            throw new IllegalStateException("Can not connect", se);
+//        }
+//    }
+
+    public Activity insertActivity(Activity activity) {
         try(Connection conn = dataSource.getConnection();
             PreparedStatement stmt =
-                    conn.prepareStatement("insert into activities(start_time, activity_desc, activity_type) values (?,?,?)")
+                    conn.prepareStatement("insert into activities(start_time, activity_desc, activity_type) values (?,?,?)",
+                                            Statement.RETURN_GENERATED_KEYS)        // konstans a kulcsok visszakérésére
         ) {
             // A LocalDateTime értéket JDBC-vel a ResultSet.setTimestamp() metódussal lehet beszúrni.
             // Létrehozni a Timestamp.valueOf(LocalDateTime) metódussal lehet.
@@ -39,9 +61,28 @@ public class ActivityDao {      // DAO = Data Access Object
             stmt.setString(2, activity.getDesc());
             stmt.setString(3, activity.getType().toString());
             stmt.executeUpdate();
+            return getIdFromStatement(activity, stmt);
         } catch (SQLException se) {
             throw new IllegalStateException("Can not connect", se);
         }
+    }
+
+    private Activity getIdFromStatement(Activity activity, PreparedStatement stmt) throws SQLException {
+        try (ResultSet rs = stmt.getGeneratedKeys()){       // ez adja vissza a kulcsokat
+            if (rs.next()) {
+                long id = rs.getLong(1);
+                return new Activity(id, activity.getStartTime(), activity.getDesc(), activity.getType());
+            }
+            throw new IllegalStateException("Can not get key");
+        }
+    }
+
+    public String createStatementForMoreInsert(int numberOfElements) {
+        StringBuilder sb = new StringBuilder("insert into activities(start_time, activity_desc, activity_type");
+        for (int i = 0; i < numberOfElements; i++ ) {
+            sb.append("(?,?,?)");
+        }
+        return sb.toString();
     }
 
 //    public Activity selectById(long id) {
@@ -161,4 +202,6 @@ public class ActivityDao {      // DAO = Data Access Object
            throw new IllegalStateException("Can not connect.", se);
        }
     }
+
+
 }
