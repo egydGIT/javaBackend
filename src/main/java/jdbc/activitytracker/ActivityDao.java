@@ -38,8 +38,8 @@ Módosítsd úgy a void saveActivity(Activity) metódust, hogy Activity-t adjon 
 //            PreparedStatement stmt =
 //                    conn.prepareStatement("insert into activities(start_time, activity_desc, activity_type) values (?,?,?)")
 //        ) {
-//            // A LocalDateTime értéket JDBC-vel a ResultSet.setTimestamp() metódussal lehet beszúrni.
-//            // Létrehozni a Timestamp.valueOf(LocalDateTime) metódussal lehet.
+//                  // A LocalDateTime értéket JDBC-vel a ResultSet.setTimestamp() metódussal lehet beszúrni.
+//                  // Létrehozni a Timestamp.valueOf(LocalDateTime) metódussal lehet.
 //            stmt.setTimestamp(1, Timestamp.valueOf(activity.getStartTime()));
 //            stmt.setString(2, activity.getDesc());
 //            stmt.setString(3, activity.getType().toString());
@@ -55,8 +55,6 @@ Módosítsd úgy a void saveActivity(Activity) metódust, hogy Activity-t adjon 
                     conn.prepareStatement("insert into activities(start_time, activity_desc, activity_type) values (?,?,?)",
                                             Statement.RETURN_GENERATED_KEYS)        // konstans a kulcsok visszakérésére
         ) {
-            // A LocalDateTime értéket JDBC-vel a ResultSet.setTimestamp() metódussal lehet beszúrni.
-            // Létrehozni a Timestamp.valueOf(LocalDateTime) metódussal lehet.
             stmt.setTimestamp(1, Timestamp.valueOf(activity.getStartTime()));
             stmt.setString(2, activity.getDesc());
             stmt.setString(3, activity.getType().toString());
@@ -65,6 +63,60 @@ Módosítsd úgy a void saveActivity(Activity) metódust, hogy Activity-t adjon 
         } catch (SQLException se) {
             throw new IllegalStateException("Can not connect", se);
         }
+    }
+
+    public Activity insertActivityTransaction(Activity activity) {
+        try(Connection conn = dataSource.getConnection();
+            PreparedStatement stmt =
+                    conn.prepareStatement("insert into activities(start_time, activity_desc, activity_type) values (?,?,?)",
+                            Statement.RETURN_GENERATED_KEYS)        // konstans a kulcsok visszakérésére
+        ) {
+            stmt.setTimestamp(1, Timestamp.valueOf(activity.getStartTime()));
+            stmt.setString(2, activity.getDesc());
+            stmt.setString(3, activity.getType().toString());
+            stmt.executeUpdate();
+
+            Activity result = getIdFromStatement(activity, stmt);
+            insertActivityTrackPoints(activity.getTrackPoints(), result.getId());
+            return result;
+        } catch (SQLException se) {
+            throw new IllegalStateException("Can not connect", se);
+        }
+    }
+
+
+    private void insertActivityTrackPoints(List<TrackPoint> trackPoints, long activityId) {
+        try(Connection conn = dataSource.getConnection()) {
+            conn.setAutoCommit(false);
+            try (PreparedStatement stmt =
+                         conn.prepareStatement("insert into track_points(actual_time, lat, lon, activity_id) values (?,?,?,?)")) {
+                for (TrackPoint trackPoint: trackPoints) {
+                    if(!isValidLatLon(trackPoint.getLat(), trackPoint.getLon())) {
+                        throw new IllegalArgumentException("Invalid lat or lon.");
+                    }
+                    stmt.setDate(1, Date.valueOf(trackPoint.getTime()));
+                    stmt.setDouble(2, trackPoint.getLat());
+                    stmt.setDouble(3, trackPoint.getLon());
+                    stmt.setLong(4, activityId);
+                    stmt.executeUpdate();
+                }
+                conn.commit();
+            } catch (IllegalArgumentException iae) {
+                conn.rollback();
+            }
+        } catch (SQLException se) {
+            throw new IllegalStateException("Can not connect.", se);
+        }
+    }
+
+    private boolean isValidLatLon(double lat, double lon) {
+        if ( lat > 90 || lat <-90 ) {
+            return false;
+        }
+        if ( lon > 180 || lon < -180 ) {
+            return false;
+        }
+        return true;
     }
 
     private Activity getIdFromStatement(Activity activity, PreparedStatement stmt) throws SQLException {
@@ -202,6 +254,5 @@ Módosítsd úgy a void saveActivity(Activity) metódust, hogy Activity-t adjon 
            throw new IllegalStateException("Can not connect.", se);
        }
     }
-
 
 }

@@ -41,6 +41,8 @@ Példányosíts egy List<Activity> listát, amit feltöltesz a lekérdezett adat
 package jdbc.activitytracker;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Activity {
 
@@ -48,6 +50,8 @@ public class Activity {
     private LocalDateTime startTime;
     private String desc;
     private ActivityType type;
+
+    private List<TrackPoint> trackPoints = new ArrayList<>();
 
     // ha adatbázisból akarjuk lekérdezni, az ott lévő adatokat kell példányosítani (id-t is)
     public Activity(long id, LocalDateTime startTime, String desc, ActivityType type) {
@@ -64,6 +68,14 @@ public class Activity {
         this.type = type;
     }
 
+    public void addTrackPoint(TrackPoint trackPoint) {
+        trackPoints.add(trackPoint);
+    }
+
+    public void addTrackPoints(List<TrackPoint> trackPoints) {
+        this.trackPoints.addAll(trackPoints);
+    }
+
     public long getId() {
         return id;
     }
@@ -78,6 +90,10 @@ public class Activity {
 
     public ActivityType getType() {
         return type;
+    }
+
+    public List<TrackPoint> getTrackPoints() {
+        return new ArrayList<>(trackPoints);
     }
 
     @Override

@@ -8,6 +8,7 @@ import org.mariadb.jdbc.MariaDbDataSource;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -71,6 +72,17 @@ class ActivityDaoTest {
         Activity result = activityDao.insertActivity(activity);
 
         assertEquals(activity.getDesc(), activityDao.selectById(result.getId()).getDesc());
+    }
+
+    @Test
+    public void testInsertActivityWithTrackPoints() {
+        Activity activity1 = new Activity(LocalDateTime.of(2021, 2, 22, 10, 00), "Biking in Bükk 1", ActivityType.BIKING);
+        activity1.addTrackPoints(List.of(
+                new TrackPoint(LocalDate.of(2021, 02, 20), 67, 23),
+                new TrackPoint(LocalDate.of(2021, 02, 20), 67, 23),
+                new TrackPoint(LocalDate.of(2021, 02, 20), 67, 23)));
+
+        activityDao.insertActivityTransaction(activity1);
     }
 
 }
