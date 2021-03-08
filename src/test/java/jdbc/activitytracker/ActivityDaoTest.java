@@ -81,8 +81,11 @@ class ActivityDaoTest {
                 new TrackPoint(LocalDate.of(2021, 02, 20), 67, 23),
                 new TrackPoint(LocalDate.of(2021, 02, 20), 67, 23),
                 new TrackPoint(LocalDate.of(2021, 02, 20), 67, 23)));
+                                            // ha nem valid adat, teszt lefut, de nem szúr be a táblába semmit
 
-        activityDao.insertActivityTransaction(activity1);
+        Activity ac = activityDao.insertActivityTransaction(activity1);
+
+        System.out.println(activityDao.selectBothById(ac.getId()));
     }
 
 }

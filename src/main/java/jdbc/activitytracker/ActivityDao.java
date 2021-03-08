@@ -200,6 +200,25 @@ Módosítsd úgy a void saveActivity(Activity) metódust, hogy Activity-t adjon 
         }
     }
 
+    public Activity selectBothById(long id) {
+        try(Connection conn = dataSource.getConnection();
+            PreparedStatement stmt = conn.prepareStatement("select * from activities where id = ?");
+            PreparedStatement stmt2 = conn.prepareStatement("select * from track_points where activity_id = ?")
+        ) {
+            stmt.setLong(1, id);
+            List<Activity> result = selectByPreparedStatement(stmt); // egy id-val csak egy Activity van a listában
+            if(result.size()==1) {
+                stmt2.setLong(1, id);
+                List<TrackPoint> resultPoints = selectTrackPointsByPreparedStatement(stmt2);
+                result.get(0).addTrackPoints(resultPoints);
+                return result.get(0);
+            }
+            throw new IllegalArgumentException("Not found.");
+        } catch (SQLException se) {
+            throw new IllegalStateException("Can not contact.", se);
+        }
+    }
+
     private List<Activity> selectByPreparedStatement(PreparedStatement stmt) {      // select végrehajtása
         List<Activity> activities = new ArrayList<>();
         try (ResultSet rs = stmt.executeQuery()){
@@ -212,6 +231,24 @@ Módosítsd úgy a void saveActivity(Activity) metódust, hogy Activity-t adjon 
                 activities.add(activity);
             }
             return activities;
+        }
+        catch (SQLException se) {
+            throw new IllegalArgumentException("Wrong statement.", se);
+        }
+    }
+
+    private List<TrackPoint> selectTrackPointsByPreparedStatement(PreparedStatement stmt) {
+        List<TrackPoint> trackPoints = new ArrayList<>();
+        try (ResultSet rs = stmt.executeQuery()){
+            while (rs.next()) {
+                TrackPoint trackPoint = new TrackPoint(
+                        rs.getLong("id"),
+                        rs.getDate("actual_time").toLocalDate(),
+                        rs.getDouble("lat"),
+                        rs.getDouble("lon"));
+                trackPoints.add(trackPoint);
+            }
+            return trackPoints;
         }
         catch (SQLException se) {
             throw new IllegalArgumentException("Wrong statement.", se);
@@ -256,3 +293,26 @@ Módosítsd úgy a void saveActivity(Activity) metódust, hogy Activity-t adjon 
     }
 
 }
+
+/*
+Tranzakciókezelés
+Az aktivitásokhoz pontokat is lehet felvinni, ha pl. GPS-szel nyomon követtük a mozgásunk, pl. a futásunk.
+
+Írj egy TrackPoint osztályt, melynek attribútumai:
+
+id - egyedi azonosító
+time - LocalDate
+lat és lon - koordináták, szélességi és hosszúsági fok
+Az Activity tartalmazzon egy List<TrackPoint> attribútumot! Módosítsd a saveActivity() metódust,
+hogy egy tranzakcióban mentse le a TrackPoint objektumokat is a track_point táblába. Hozd létre a táblát!
+A track_point táblának egy külső kulcsot kell tartalmaznia az activities táblára. Módosítsd a findActivityById() metódust,
+hogy betöltse a TrackPoint értékeket is!
+
+Írj rá tesztesetet!
+
+Szabályok a koordinátákra:
+
+Szélesség : +90 - -90
+Hosszúság : +180 - -180
+Amennyiben valamelyik pont nem felel meg a szabályoknak, vissza kell görgetni a tranzakciót, és kivételt kell dobni.
+ */
