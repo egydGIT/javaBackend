@@ -32,6 +32,10 @@ public class Mail {
         this.message = message;
     }
 
+    public boolean match(String content) {
+        return subject.contains(content) || message.contains(content);
+    }
+
     public Contact getFrom() {
         return from;
     }
@@ -46,5 +50,15 @@ public class Mail {
 
     public String getMessage() {
         return message;
+    }
+
+    @Override
+    public String toString() {
+        return "Mail{" +
+                "from=" + from +
+                ", to=" + to +
+                ", subject='" + subject + '\'' +
+                ", message='" + message + '\'' +
+                '}';
     }
 }
