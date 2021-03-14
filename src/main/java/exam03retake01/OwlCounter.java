@@ -1,16 +1,3 @@
-/*
-Bagolyszámlálás
-A OwlCounter oszály egy Map<String, Integer> attribútumban tárolja, hogy melyik megyében mennyi baglyot számoltak a madárszámlálók.
-A readFromFile() metódussal (paraméterezése, visszatérési értéke kiderül a tesztesetből) töltsd be az értékeket egy fájlból!
-A fájl formátuma a következő:
-
-Bács-Kiskun=1000
-Baranya=1050
-Békés=980
-Borsod-Abaúj-Zemplén=600
-A getNumberOfOwls() metódus adja vissza a baglyok számát a paraméterként átadott megyében!
-
- */
 package exam03retake01;
 
 import java.io.BufferedReader;
