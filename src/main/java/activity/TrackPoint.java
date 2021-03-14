@@ -1,9 +1,3 @@
-/*
-TrackPoint osztály: Van egy koordináta és egy emelkedés adattagja.
-Tartalmaz egy getDistanceFrom(TrackPoint point) metódust mely, egy másik ponttól vett távolságot adja vissza.
-A földrajzi koordinátákkal való számoláshoz segítségül:
- */
-
 package activity;
 
 public class TrackPoint {

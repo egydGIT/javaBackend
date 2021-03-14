@@ -1,9 +1,3 @@
-/*
-ActivityWithoutTrack osztály: Implementálja az Activity interface-t.
-Mivel itt nincs track adattag, ezért a getDistance() mindig nullát ad vissza.
-A típus hasonló, mint az előző osztályban.
- */
-
 package activity;
 
 public class ActivityWithoutTrack implements Activity{

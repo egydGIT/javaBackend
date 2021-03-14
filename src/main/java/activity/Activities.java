@@ -1,9 +1,3 @@
-/*
-Activities osztály: Activity-k listáját tartalmazza.
-Le lehet kérdezni a track-es illetve a track nélküli listaelemeket.
-Valamint típusonként külön-külön a távolságot egy Report-okat tartalmazó listába.
- */
-
 package activity;
 
 import java.util.ArrayList;

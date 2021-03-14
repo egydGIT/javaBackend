@@ -1,7 +1,3 @@
-/*
-Report osztály: Egy immutable osztály melynek egy típus és egy távolság adattagja van.
- */
-
 package activity;
 
 public class Report {

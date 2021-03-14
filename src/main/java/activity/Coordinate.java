@@ -1,9 +1,3 @@
-/*
-Coordinate immutable osztály:
-Két adattagja van: a szélességi és hosszúsági fok (latitude,longitude), előbbi az értéke [-90,90] intervallumon,
-utóbbi értéke a [-180,180] intervallumon mozoghat. Mindkét adattaghoz tartozik egy getter.
- */
-
 package activity;
 
 public class Coordinate {
