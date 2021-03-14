@@ -1,15 +1,3 @@
-/*
-Alkalmazás architektúra
-Hozz létre egy ActivityDao osztályt, mely a következő metódusokat tartalmazza:
-
-void saveActivity(Activity)
-Activity findActivityById(long id)
-List<Activity> listActivities()
-Töröld ki az adatbázisban a táblát, és használd a Flyway-t, hogy hozza létre a sémát!
-
-Írj egy JUnit integrációs tesztet az ActivityDao tesztelésére!
- */
-
 package jdbc.activitytracker;
 
 import javax.sql.DataSource;
@@ -28,10 +16,6 @@ public class ActivityDao {      // DAO = Data Access Object
         this.dataSource = dataSource;
     }
 
-/*
-Generált azonosító lekérdezése
-Módosítsd úgy a void saveActivity(Activity) metódust, hogy Activity-t adjon vissza, aminek már fel van töltve az id mezője!
-*/
 
 //    public void insertActivity(Activity activity) {
 //        try(Connection conn = dataSource.getConnection();
@@ -294,25 +278,3 @@ Módosítsd úgy a void saveActivity(Activity) metódust, hogy Activity-t adjon 
 
 }
 
-/*
-Tranzakciókezelés
-Az aktivitásokhoz pontokat is lehet felvinni, ha pl. GPS-szel nyomon követtük a mozgásunk, pl. a futásunk.
-
-Írj egy TrackPoint osztályt, melynek attribútumai:
-
-id - egyedi azonosító
-time - LocalDate
-lat és lon - koordináták, szélességi és hosszúsági fok
-Az Activity tartalmazzon egy List<TrackPoint> attribútumot! Módosítsd a saveActivity() metódust,
-hogy egy tranzakcióban mentse le a TrackPoint objektumokat is a track_point táblába. Hozd létre a táblát!
-A track_point táblának egy külső kulcsot kell tartalmaznia az activities táblára. Módosítsd a findActivityById() metódust,
-hogy betöltse a TrackPoint értékeket is!
-
-Írj rá tesztesetet!
-
-Szabályok a koordinátákra:
-
-Szélesség : +90 - -90
-Hosszúság : +180 - -180
-Amennyiben valamelyik pont nem felel meg a szabályoknak, vissza kell görgetni a tranzakciót, és kivételt kell dobni.
- */
