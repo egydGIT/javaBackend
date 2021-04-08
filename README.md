@@ -1,94 +1,95 @@
-# training-solutions
+## training-solutions
 java with Training360
+
 
 # Bevezetés a nyelvi eszközökbe
 
-Eszközkészlet
+### Eszközkészlet
 
-- background - Java történeti háttér
-- introjdk - Java platform
-- intromaven - Maven
-- introide - IDE
-- introgit - Git használata az IDE-ben
-- introgithub - Feltöltés GitHubra
+- [ ] background - Java történeti háttér
+- [ ] introjdk - Java platform
+- [ ] intromaven - Maven
+- [ ] introide - IDE
+- [ ] introgit - Git használata az IDE-ben
+- [ ] introgithub - Feltöltés GitHubra
 
-Java osztályok
+### Java osztályok
 
--  .classstructureio - Kiírás és beolvasás konzolról
--  .classstructureattributes - Objektumok és attribútumok
--  .classstructuremethods - Metódusok
--  .classstructureconstructors - Konstruktorok
--  ,classstructureintegrate - UML, példányok konzol íráskor/olvasáskor
+- [x] [classstructureio](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/classstructureio) - Kiírás és beolvasás konzolról
+- [x] [classstructureattributes](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/classstructureattributes) - Objektumok és attribútumok
+- [x] [classstructuremethods](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/classstructuremethods) - Metódusok
+- [x] [classstructureconstructors](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/classstructureconstructors) - Konstruktorok
+- [ ] [classstructureintegrate](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/classstructureintegrate) - UML, példányok konzol íráskor/olvasáskor
 
-A nyelv építőkövei
+### A nyelv építőkövei
 
-- conventions - Kódolási konvenciók
-- .localvariables - Literálok és lokális változók
-- ,statements - Kifejezések és utasítások
-- .packages - Csomagok
-- .javaapi - Java API
-- distjar - JAR állomány
-- .stringtype - Szöveges típus
-- ,introdate - Dátum és időkezelés alapok
-- ,introcontrol - Bevezetés a vezérlési szerkezetekbe
+- [ ] conventions - Kódolási konvenciók
+- [x] [localvariables](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/localvariables) - Literálok és lokális változók
+- [ ] [statements](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/statements) - Kifejezések és utasítások
+- [x] [packages](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/packages) - Csomagok
+- [x] [javaapi](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/javaapi) - Java API
+- [ ] distjar - JAR állomány
+- [x] [stringtype](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/stringtype) - Szöveges típus
+- [ ] [introdate](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/introdate) - Dátum és időkezelés alapok
+- [ ] [introcontrol](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/introcontrol) - Bevezetés a vezérlési szerkezetekbe
 
-Bonyolultabb típusok
+### Bonyolultabb típusok
 
-- ,array - Tömbök
-- cmdarguments - Parancssori paraméterek
-- ,arrayofarrays - Tömbök tömbje
-- .arrays - Tömbök kezelése
-- .arraylist - Lista
-- ,debug - Debug
-- .finalmodifier - Konstans értékek használata
-- .,math - Math és Random osztály
+- [ ] [array](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/array) - Tömbök
+- [ ] cmdarguments - Parancssori paraméterek
+- [ ] [arrayofarrays](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/arrayofarrays) - Tömbök tömbje
+- [x] [arrays](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/arrays) - Tömbök kezelése
+- [x] [arraylist](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/arraylist) - Lista
+- [ ] [debug](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/debug) - Debug
+- [x] [finalmodifier](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/finalmodifier) - Konstans értékek használata
+- [x] [math](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/math) - Math és Random osztály
 
-Bevezetés az osztályok és objektumok világába
+### Bevezetés az osztályok és objektumok világába
 
-- .objects - Objektumok
-- ,attributes - Bevezetés az attribútumok használatába
-- .introconstructors - Bevezetés a konstruktorok használatába
-- .intromethods - Bevezetés a metódusok használatába
-- ,references - Referenciák
+- [x] [objects](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/objects) - Objektumok
+- [ ] [attributes](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/attributes) - Bevezetés az attribútumok használatába
+- [x] [introconstructors](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/introconstructors) - Bevezetés a konstruktorok használatába
+- [x] [intromethods](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/intromethods) - Bevezetés a metódusok használatába
+- [ ] [references](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/references) - Referenciák
 
 
 # A Java nyelv részletes megismerése
 
-Típusok és operátorok
+### Típusok és operátorok
 
-- .literals - Literálok
-- primitivetypes - Egyszerű típusok
-- ,enumtype - Felsorolásos típus
-- .operators - Operátorok
-- .typeconversion - Típuskonverzió
-- .numbers - Egész és lebegőpontos számok
+- [x] [literals](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/literals) - Literálok
+- [ ] primitivetypes - Egyszerű típusok
+- [ ] [enumtype](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/enumtype) - Felsorolásos típus
+- [x] [operators](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/operators) - Operátorok
+- [x] [typeconversion](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/typeconversion) - Típuskonverzió
+- [x] [numbers](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/numbers) - Egész és lebegőpontos számok
 
-Vezérlési szerkezetek
+### Vezérlési szerkezetek
 
-- .introjunit - Unit tesztelés JUnittal
-- .junit5 - JUnit 5
-- .controlselection - Vezérlési szerkezetek és az elágazás
-- ,controliteration - Ciklusok
-- ,controladvanced - Haladó vezérlési szerkezetek
-- introexception - Bevezetés a kivételkezelésbe
+- [x] [introjunit](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/introjunit) - Unit tesztelés JUnittal
+- [x] junit5 - JUnit 5
+- [x] [controlselection](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/controlselection) - Vezérlési szerkezetek és az elágazás
+- [ ] [controliteration](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/controliteration) - Ciklusok
+- [ ] [controladvanced](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/controladvanced) - Haladó vezérlési szerkezetek
+- [ ] introexception - Bevezetés a kivételkezelésbe
 
-String, StringBuilder
+### String, StringBuilder
 
-- ,stringbasic - String alapok
-- .stringconcat - Konkatenáció
-- ,stringmethods - Főbb String metódusok
-- ,stringbuilder - StringBuilder
-- ,stringscanner - Scanner
-- ,filescanner - Fájl olvasása Scannerrel
-- ,formatlocaleprintf - printf
+- [ ] [stringbasic](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/stringbasic) - String alapok
+- [x] [stringconcat](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/stringconcat) - Konkatenáció
+- [ ] [stringmethods](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/stringmethods) - Főbb String metódusok
+- [ ] [stringbuilder](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/stringbuilder) - StringBuilder
+- [ ] [stringscanner](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/stringscanner) - Scanner
+- [ ] [filescanner](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/filescanner) - Fájl olvasása Scannerrel
+- [ ] [formatlocaleprintf](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/formatlocaleprintf) - printf
 
-Programozási tételek és egyéb algoritmusok
+### Programozási tételek és egyéb algoritmusok
 
-- .algorithmssum - Összegzés tétele
-- .algorithmscount - Számlálás tétele
-- .algorithmsmax - Szélsőérték keresés tétele
-- ,algorithmsdecision - Eldöntés tétele
-- recursion - Rekurzió
+- [x] [algorithmssum](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/algorithmssum) - Összegzés tétele
+- [x] [algorithmscount](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/algorithmscount) - Számlálás tétele
+- [x] [algorithmsmax](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/algorithmsmax) - Szélsőérték keresés tétele
+- [ ] [algorithmsdecision](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/algorithmsdecision) - Eldöntés tétele
+- [ ] recursion - Rekurzió
 
 
 # Objektumorientáltság
