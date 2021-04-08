@@ -8,8 +8,8 @@ public class IntroControlMain {
         IntroControl introControl = new IntroControl();
         // List<Integer> number = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15);
         System.out.println("substractTenIfGreaterThanTen");
-        System.out.println(introControl.substractTenIfGreaterThanTen(9));
-        System.out.println(introControl.substractTenIfGreaterThanTen(19));
+        System.out.println(introControl.subtractTenIfGreaterThanTen(9));
+        System.out.println(introControl.subtractTenIfGreaterThanTen(19));
         System.out.println("");
 
         System.out.println("describeNumber");
@@ -38,14 +38,14 @@ public class IntroControlMain {
         System.out.println("");
 
         System.out.println("printNumbersBeetwen");
-        introControl.printNumbersBeetwen(100, 110);
+        introControl.printNumbersBetween(100, 110);
         System.out.println("");
         System.out.println("");
 
         System.out.println("printNumbersBeetwenAnyDirection");
-        introControl.printNumbersBeetwenAnyDirection(1,12);
+        introControl.printNumbersBetweenAnyDirection(1,12);
         System.out.println("");
-        introControl.printNumbersBeetwenAnyDirection(12,1);
+        introControl.printNumbersBetweenAnyDirection(12,1);
         System.out.println("");
         System.out.println("");
 

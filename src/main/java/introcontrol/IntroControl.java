@@ -2,11 +2,11 @@ package introcontrol;
 
 public class IntroControl {
 
-    public int substractTenIfGreaterThanTen(int number) {
-        if ( number <= 10 ) {
-            return number;
-        } else {
+    public int subtractTenIfGreaterThanTen(int number) {
+        if ( number > 10 ) {
             return number - 10;
+        } else {
+            return number;
         }
     }
 
@@ -34,7 +34,7 @@ public class IntroControl {
         }
     }
 
-    public int calculateConsumption(int prev, int next) {
+    public int calculateConsumption(int prev, int next) {   // ?
         if (prev <= next) {
             return next - prev;
         } else {
@@ -49,14 +49,14 @@ public class IntroControl {
     }
 
 
-    public void printNumbersBeetwen(int min, int max) {
+    public void printNumbersBetween(int min, int max) {
         for ( int i = min; i <= max; i++ ) {
             System.out.print(i + ", ");
         }
     }
 
 
-    public void printNumbersBeetwenAnyDirection(int a, int b) {
+    public void printNumbersBetweenAnyDirection(int a, int b) {
         if ( a < b ) {
             for ( int i = a; i <= b ; i++ ) {
                 System.out.print(i + ", ");
