@@ -6,12 +6,12 @@ java with Training360
 
 ### Eszközkészlet
 
-- [ ] background - Java történeti háttér
-- [ ] introjdk - Java platform
-- [ ] intromaven - Maven
-- [ ] introide - IDE
-- [ ] introgit - Git használata az IDE-ben
-- [ ] introgithub - Feltöltés GitHubra
+- [x] background - Java történeti háttér
+- [x] introjdk - Java platform
+- [x] intromaven - Maven
+- [x] introide - IDE
+- [x] introgit - Git használata az IDE-ben
+- [x] introgithub - Feltöltés GitHubra
 
 ### Java osztályok
 
@@ -19,19 +19,19 @@ java with Training360
 - [x] [classstructureattributes](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/classstructureattributes) - Objektumok és attribútumok
 - [x] [classstructuremethods](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/classstructuremethods) - Metódusok
 - [x] [classstructureconstructors](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/classstructureconstructors) - Konstruktorok
-- [ ] [classstructureintegrate](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/classstructureintegrate) - UML, példányok konzol íráskor/olvasáskor
+- [x] [classstructureintegrate](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/classstructureintegrate) - UML, példányok konzol íráskor/olvasáskor
 
 ### A nyelv építőkövei
 
-- [ ] conventions - Kódolási konvenciók
+- [x] conventions - Kódolási konvenciók
 - [x] [localvariables](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/localvariables) - Literálok és lokális változók
 - [ ] [statements](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/statements) - Kifejezések és utasítások
 - [x] [packages](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/packages) - Csomagok
 - [x] [javaapi](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/javaapi) - Java API
 - [ ] distjar - JAR állomány
 - [x] [stringtype](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/stringtype) - Szöveges típus
-- [ ] [introdate](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/introdate) - Dátum és időkezelés alapok
-- [ ] [introcontrol](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/introcontrol) - Bevezetés a vezérlési szerkezetekbe
+- [x] [introdate](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/introdate) - Dátum és időkezelés alapok
+- [x] [introcontrol](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/introcontrol) - Bevezetés a vezérlési szerkezetekbe
 
 ### Bonyolultabb típusok
 
