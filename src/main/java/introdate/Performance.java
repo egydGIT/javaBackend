@@ -16,6 +16,10 @@ public class Performance {
         this.endTime = endTime;
     }
 
+    public String getInfo() {
+        return getArtistName() + ": " + getPerformanceDate() + " " + getStartTime() + "-" + getEndTime();
+    }
+
     public String getArtistName() {
         return artistName;
     }

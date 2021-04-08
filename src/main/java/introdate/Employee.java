@@ -6,9 +6,9 @@ import java.time.LocalDateTime;
 public class Employee {
     private String name;
     private LocalDate dateOfBirth;
-    private LocalDateTime beginEmployment;
+    private LocalDate beginEmployment;
 
-    public Employee(String name, LocalDate dateOfBirth, LocalDateTime beginEmployment) {
+    public Employee(String name, LocalDate dateOfBirth, LocalDate beginEmployment) {
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.beginEmployment = beginEmployment;
@@ -22,7 +22,7 @@ public class Employee {
         return dateOfBirth;
     }
 
-    public LocalDateTime getBeginEmployment() {
+    public LocalDate getBeginEmployment() {
         return beginEmployment;
     }
 

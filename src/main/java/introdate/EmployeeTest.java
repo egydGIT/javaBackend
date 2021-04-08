@@ -11,12 +11,12 @@ public class EmployeeTest {
         System.out.println("Alkalmazott neve: ");
         String name = scanner.nextLine();
 
-        System.out.println("Alkalmazott születési dátuma: ");
-        LocalDate dateOfBirth = LocalDate.ofEpochDay(scanner.nextInt());
+        System.out.println("Alkalmazott születési dátuma: [yyyy-mm-dd]");
+        LocalDate dateOfBirth = LocalDate.parse(scanner.nextLine());
         // String dateOfBirth = scanner.nextLine();
 
         System.out.println("Mukábalépés kezdete: ");
-        LocalDateTime beginEmployment = LocalDateTime.parse(scanner.nextLine());
+        LocalDate beginEmployment = LocalDate.parse(scanner.nextLine());
         // String beginEmployment = scanner.nextLine();
 
         LocalDateTime dateTime = LocalDateTime.now();

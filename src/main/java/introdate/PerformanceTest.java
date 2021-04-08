@@ -14,6 +14,9 @@ public class PerformanceTest {
 
         Performance performance1 = new Performance(artistName, performanceDate, startTime, endTime);
 
-        System.out.println(performance1.getArtistName() + ": " + performance1.getPerformanceDate() + " " + performance1.getStartTime() + "-" + performance1.getEndTime());
+        System.out.println(performance1.getArtistName() + ": " + performance1.getPerformanceDate() + " " +
+                            performance1.getStartTime() + "-" + performance1.getEndTime());
+
+        System.out.println(performance1.getInfo());
     }
 }
