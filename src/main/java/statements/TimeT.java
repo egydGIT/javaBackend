@@ -16,12 +16,18 @@ public class TimeT {
     }
 
     public int getInSeconds() {
-        return (60 * hour + minute) * 60 + second;
+        return getInMinutes() * 60 + second;
     }
 
-    //  Én if-fel akarom megoldani, de nem működik.
-    // A 'solutions' megoldást nem értem.
+    public boolean earlierThan(TimeT other) {
+        int thisTimeInSeconds = this.getInSeconds();
+        int otherTimeInSeconds = other.getInSeconds();
+        return thisTimeInSeconds < otherTimeInSeconds;
+    }
 
+    public String toString() {
+        return hour + ":" + minute + ":" + second;
+    }
 
 
 }
