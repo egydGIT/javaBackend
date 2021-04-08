@@ -15,17 +15,15 @@ public class ProductMain {
         System.out.println("Add meg az akció százalékát!");
         int perCent = scanner.nextInt();
 
-        Product product = new Product(name, price, perCent);
+        Product product = new Product(name, price);
 
         System.out.println(product.getName());
         System.out.println(product.getPrice());
-        System.out.println(product.getPerCent() + " %");
-        product.decreasePrice();
+        System.out.println(perCent + " %");
 
         System.out.println("Akció: " + perCent + " % kedvezmény minden " + product.getName() + " árából!");
-        System.out.println("Akciós ár: " + price);
+        System.out.println("Akciós ár: " + product.decreasePrice(perCent));
 
     }
 }
-
 

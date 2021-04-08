@@ -5,10 +5,9 @@ public class Product {
     private int price;
     private int perCent;
 
-    public Product(String name, int price, int perCent) {
+    public Product(String name, int price) {
         this.name = name;
         this.price = price;
-        this.perCent = perCent;
     }
 
     public String getName() {
@@ -23,11 +22,11 @@ public class Product {
         return perCent;
     }
 
-    public void decreasePrice() {
-        price = (100 - perCent) / 100 * price;
+    public int decreasePrice(int perCent) {
+        return price = (100 - perCent) * price / 100;
     }
 
-    public void increasePrice(int price, int perCent) {
-        price = (100 + perCent) / 100 * price;
+    public int increasePrice(int perCent) {
+        return price = (100 + perCent) * price / 100;
     }
 }

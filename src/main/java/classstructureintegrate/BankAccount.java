@@ -15,8 +15,13 @@ public class BankAccount {
         balance = balance + amount;
     }
 
-    public void withraw(int amount) {
+    public void withdraw(int amount) {
         balance = balance - amount;
+    }
+
+    public void transfer(BankAccount to, int amount) {
+        withdraw(amount);
+        to.deposit(amount);
     }
 
     public String getInfo() {
