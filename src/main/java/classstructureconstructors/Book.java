@@ -3,15 +3,14 @@ package classstructureconstructors;
 public class Book {
     private String author;
     private String tittle;
-    private int regNumber;
+    private String regNumber;
 
-    public Book(String author, String tittle, int regNumber) {
+    public Book(String author, String tittle) {
         this.author = author;
         this.tittle = tittle;
-        this.regNumber = regNumber;
     }
 
-    public void register(int regNumber) {
+    public void register(String regNumber) {
         this.regNumber = regNumber;
     }
 
@@ -23,7 +22,7 @@ public class Book {
         return tittle;
     }
 
-    public int getRegNumber() {
+    public String getRegNumber() {
         return regNumber;
     }
 }
