@@ -13,7 +13,8 @@ public class NumberStatistics {
     public int sumPositives() {
         int sum = 0;
         for(int n: numbers) {                                            // nem kell ehhez debug:
-            if(n != 0) {                                                 // != helyett >
+//            if(n != 0) {                                                 // != helyett >
+            if(n > 0) {
                 sum += n;
             }
         }
@@ -21,9 +22,11 @@ public class NumberStatistics {
     }
 
     public int minDifferenceBetweenNeighbours() {
-        int minDifference = numbers.get(0) - numbers.get(1) >= 0 ? numbers.get(0) - numbers.get(1) : numbers.get(1) - numbers.get(0);
+//        int minDifference = numbers.get(0) - numbers.get(1) >= 0 ? numbers.get(0) - numbers.get(1) : numbers.get(1) - numbers.get(0);
+        int minDifference = Integer.MAX_VALUE;
         for(int i = 1; i < numbers.size() - 1; i++) {
-            int actDifference = numbers.get(i) - numbers.get(i + 1);     // hiányzik a 3 operandusos kif v. absz érték
+//            int actDifference = numbers.get(i) - numbers.get(i + 1);     // hiányzik a 3 operandusos kif v. absz érték
+            int actDifference = numbers.get(i) - numbers.get(i + 1) >= 0  ? numbers.get(i) - numbers.get(i+1) : numbers.get(i+1) - numbers.get(i);
             if(actDifference < minDifference) {
                 minDifference = actDifference;
             }
