@@ -12,8 +12,8 @@ public class Restaurant {
     public Restaurant(String name, int numberOfTables) {
         this.name = name;
         this.numberOfTables = numberOfTables;
-        capacity = 4 * numberOfTables;
-        menu = getMenu();
+        this.capacity = 4 * numberOfTables;
+        this.menu = createMenu();
     }
 
     private List<String> createMenu() {
@@ -21,7 +21,7 @@ public class Restaurant {
     }
 
     public List<String> getMenu() {
-        return menu = createMenu();
+        return menu;
     }
 
     public String getName() {
