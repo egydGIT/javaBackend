@@ -51,8 +51,9 @@ public class LiteralsMain {
         System.out.println(Integer.toBinaryString(-2));     // 11111111111111111111111111111110  // kettes komplemens
 
         // Számrendszerek:
-        System.out.println(Integer.toString(-100, 2));  // negatív szám: előjellel (bináris)
+        System.out.println(Integer.toString(-100, 2));  // negatív szám: előjellel (bináris)    // -1100100
         System.out.println(Integer.toBinaryString(-100));     // negatív szám: kettes komplemens (bináris)
+                                                                                // 11111111111111111111111110011100
 
         // Szövegből számot:
         System.out.println(new Integer("123") + 2);         // osztály típus - Integer  // 125
@@ -68,9 +69,9 @@ public class LiteralsMain {
 
         // Szélsőséges eredmények:
         System.out.println(Integer.MIN_VALUE);      // -2147483648
-        System.out.println(Integer.toBinaryString(Integer.MIN_VALUE));
+        System.out.println(Integer.toBinaryString(Integer.MIN_VALUE));      // 10000000000000000000000000000000
         System.out.println(Integer.MAX_VALUE);      // 2147483647
-        System.out.println(Integer.toBinaryString(Integer.MAX_VALUE));
+        System.out.println(Integer.toBinaryString(Integer.MAX_VALUE));      // 1111111111111111111111111111111
 
 
         System.out.println(Boolean.parseBoolean("ajaj"));  // false ??
