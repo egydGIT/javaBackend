@@ -1,5 +1,9 @@
 package attributes.bill;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class BillMain {
     public static void main(String[] args) {
         Item item = new Item("laptop", 1, 325_000.0);
@@ -13,9 +17,11 @@ public class BillMain {
         bill.addItem(item);
         bill.addItem(item1);
 
-        // System.out.println(bill.getItems());                 // Nem sikerül kiiratni..
+        System.out.println(bill.getItems());
 
         System.out.println("Fizetendő: " + bill.calculateTotalPrice());
+
+        System.out.println(bill.getItemNames());
 
 
     }

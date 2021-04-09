@@ -18,22 +18,17 @@ public class Bill {
         return sum;
     }
 
-    public List<Item> getItems() {                          // Nem sikerül kiiratni...
+    public List<Item> getItems() {
         return items;
     }
 
-/*
-    @Override
-    public String toString() {
-        return "Items: " + items;
-    }
-
-    public Item getItems() {
+    public List<String> getItemNames() {
+        List<String> itemNames = new ArrayList<>();
         for (int j = 0; j < items.size(); j++) {
-            System.out.println(items.get(j).toString());
+            itemNames.add(items.get(j).getProduct());
         }
-        return (Item) items;
+        return itemNames;
     }
 
- */
+
 }

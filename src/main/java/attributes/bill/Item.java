@@ -22,4 +22,13 @@ public class Item {
     public double getPrice() {
         return price;
     }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "product='" + product + '\'' +
+                ", quantity=" + quantity +
+                ", price=" + price +
+                '}';
+    }
 }
