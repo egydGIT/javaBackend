@@ -38,7 +38,7 @@ public class CsvValidate {
                 continue;
             }
             int year = Integer.parseInt(parts[1]);                  // tömb 2. elemét (év)számmá konvertálja
-            if (year > 1970 || year < 2019) {                       // ha későbbi, mint 1970, és korábbi, mint 2019
+            if (year < 1970 || year > 2019) {                       // ha későbbi, mint 1970, és korábbi, mint 2019
                 continue;
             }
             validLines.add(line);                                   // akkor a listához adja hozzá a feldarabolás előtti
