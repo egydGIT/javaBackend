@@ -6,17 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UnitConverter {
-    /*
-    public List<LengthUnit> siUnits() {
-
-    }
-
-    public BigDecimal convert(BigDecimal length, LengthUnit source, LengthUnit target) {
-
-    }
-
-     */
-
 
     // Solution:
     public static final int DEFAULT_SCALE = 4;
