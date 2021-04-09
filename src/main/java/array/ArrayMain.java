@@ -20,21 +20,21 @@ public class ArrayMain {
         System.out.println(eredmeny);
         }
 */
-        int basic = 2;
-        int power = 5;
-        // int result = 1;
-        int [] result = new int[5];
-        result[0] = 1;
-        for ( int i = 0; i <= 4; i++) {
-            // result *= basic;
-            result[i] *= basic;
-            System.out.print(result[i] + " ");          // Konzol: 2 0 0 0 0          Miért?
-        }
-
-        System.out.println();
-        for(int r : result) {
-            System.out.print(r + " ");
-        }
+//        int basic = 2;
+//        int power = 5;
+//        // int result = 1;
+//        int [] result = new int[5];
+//        result[0] = 1;
+//        for ( int i = 0; i <= 4; i++) {
+//            // result *= basic;
+//            result[i] *= basic;
+//            System.out.print(result[i] + " ");          // Konzol: 2 0 0 0 0          Miért?
+//        }
+//
+//        System.out.println();
+//        for(int r : result) {
+//            System.out.print(r + " ");
+//        }
 
 /*
         System.out.println("");
@@ -42,15 +42,39 @@ public class ArrayMain {
             System.out.print(result[i] + " ");
         }
 */
+
+        int[] powersOfTwo = new int[5];                   // Solution
+        powersOfTwo[0] = 1;
+        for (int i = 1; i < powersOfTwo.length; i++) {
+            powersOfTwo[i] = powersOfTwo[i - 1] * 2;
+        }
+
+        for (int i = 0; i < powersOfTwo.length; i++) {
+            System.out.print(powersOfTwo[i] + " ");
+        }
+
+
+
+//        System.out.println();
+//        boolean [] b = new boolean[6];
+//
+//        for (int i = 1; i < b.length; i++) {
+//            b[i] = !b[i-1];
+//            System.out.print(b[i] + " ");
+//        }                                               // true false true false true    Nem false kezdődik!
+
+
         System.out.println();
-        boolean [] b = new boolean[6];
 
-        for (int i = 1; i < b.length; i++) {
-            b[i] = !b[i-1];
-            System.out.print(b[i] + " ");
-        }                                               // true false true false true    Nem false kezdődik!
+        boolean[] bools = new boolean[6];                 // Solution
 
+        for (int i = 1; i < bools.length; i++) {
+            bools[i] = !bools[i - 1];
+        }
 
+        for (int i = 0; i < bools.length; i++) {
+            System.out.print(bools[i] + " ");
+        }
 
 
 
