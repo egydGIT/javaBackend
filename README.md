@@ -25,7 +25,7 @@ java with Training360
 
 - [x] conventions - Kódolási konvenciók
 - [x] [localvariables](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/localvariables) - Literálok és lokális változók
-- [ ] [statements](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/statements) - Kifejezések és utasítások
+- [x] [statements](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/statements) - Kifejezések és utasítások
 - [x] [packages](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/packages) - Csomagok
 - [x] [javaapi](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/javaapi) - Java API
 - [ ] distjar - JAR állomány
@@ -35,22 +35,22 @@ java with Training360
 
 ### Bonyolultabb típusok
 
-- [ ] [array](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/array) - Tömbök
-- [ ] cmdarguments - Parancssori paraméterek
+- [x] [array](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/array) - Tömbök
+- [x] cmdarguments - Parancssori paraméterek
 - [ ] [arrayofarrays](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/arrayofarrays) - Tömbök tömbje
 - [x] [arrays](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/arrays) - Tömbök kezelése
 - [x] [arraylist](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/arraylist) - Lista
-- [ ] [debug](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/debug) - Debug
+- [x] [debug](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/debug) - Debug
 - [x] [finalmodifier](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/finalmodifier) - Konstans értékek használata
 - [x] [math](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/math) - Math és Random osztály
 
 ### Bevezetés az osztályok és objektumok világába
 
 - [x] [objects](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/objects) - Objektumok
-- [ ] [attributes](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/attributes) - Bevezetés az attribútumok használatába
+- [x] [attributes](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/attributes) - Bevezetés az attribútumok használatába
 - [x] [introconstructors](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/introconstructors) - Bevezetés a konstruktorok használatába
 - [x] [intromethods](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/intromethods) - Bevezetés a metódusok használatába
-- [ ] [references](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/references) - Referenciák
+- [x] [references](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/references) - Referenciák
 
 
 # A Java nyelv részletes megismerése
