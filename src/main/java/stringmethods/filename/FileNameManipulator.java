@@ -1,46 +1,73 @@
 package stringmethods.filename;
 
 public class FileNameManipulator {
-    public String findLastCharacter(String str) {
-        int i = str.length();
-        // char c = (char) str.substring(i-1, i-1);
-        String c = str.substring(i-1);
+    public Character findLastCharacter(String str) {
+        if (isEmpty(str)) {
+            throw new IllegalArgumentException("Empty string!");
+        }
+        int i = str.trim().length();
+        //String c = str.substring(i-1);
+        Character c = str.charAt(i-1);
         return c;
     }
 
     public String findFileExtension(String fileName) {
-        int i = fileName.indexOf(".");
+        if (isEmpty(fileName)) {
+            throw new IllegalArgumentException("Invalid file name!");
+        }
+        int i = fileName.trim().lastIndexOf(".");
+        if (i < 1 || i == fileName.length() - 1) {
+            throw new IllegalArgumentException("Invalid file name!");
+        }
         String fileExtension = fileName.substring(i+1);
         return fileExtension;
     }
 
     public boolean identifyFilesByExtension(String ext, String fileName) {
-        if (fileName.endsWith(ext)) {
-            return true;
+        if (isEmpty(fileName) || isEmpty(ext)) {
+            throw new IllegalArgumentException("Invalid argument!");
         }
-        return false;
+        int i = fileName.trim().lastIndexOf(".");
+        if (i < 1 || i == fileName.length() - 1) {
+            throw new IllegalArgumentException("Invalid argument!");
+        }
+        return fileName.trim().endsWith(ext.trim());
     }
 
     public boolean compareFilesByName(String searchedFileName, String actualFileName) {
-        searchedFileName.equals(actualFileName);
-        return true;
+        if (isEmpty(searchedFileName) || isEmpty(actualFileName)) {
+            throw new IllegalArgumentException("Invalid argument!");
+        }
+        return searchedFileName.trim().equalsIgnoreCase(actualFileName.trim());
     }
 
     public String changeExtensionToLowerCase(String fileName) {
-        int i = fileName.indexOf(".");
+        if (isEmpty(fileName)) {
+            throw new IllegalArgumentException("Empty string!");
+        }
+        int i = fileName.trim().lastIndexOf(".");
+        if (i < 1 || i == fileName.length() - 1) {
+            throw new IllegalArgumentException("Invalid argument!");
+        }
         String givenName = fileName.substring(0, i);
         String extensionToLoweCase = fileName.substring(i+1).toLowerCase();
         return givenName.concat("." + extensionToLoweCase);
     }
 
     public String replaceStringPart(String fileName, String present, String target) {
+        if (isEmpty(fileName)) {
+            throw new IllegalArgumentException("Empty string!");
+        }
         String repleacedFileName = null;
         if (fileName.contains(present)) {
-            repleacedFileName = fileName.replace(present, target);
+            return repleacedFileName = fileName.replace(present, target);
         }
-        return repleacedFileName;
+        return fileName;
     }
 
+    private boolean isEmpty(String str) {
+        return str == null || "".equals(str.trim());
+    }
 
     public static void main(String[] args) {
         System.out.println(new FileNameManipulator().findLastCharacter("Utósó karakter"));
