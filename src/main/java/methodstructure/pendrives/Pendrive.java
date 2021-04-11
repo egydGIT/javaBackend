@@ -18,7 +18,7 @@ public class Pendrive {
         this.price = (int) (this.price * (1 + percent / 100.0));
     }
 
-    public int comparePricePerCapacity(Pendrive pendrive) {
+    public int comparePricePerCapacityMy(Pendrive pendrive) {
         if ( (this.getPrice() / this.getCapacity()) > (pendrive.getPrice() / pendrive.getCapacity()) ) {
             return 1;
         }
@@ -31,6 +31,22 @@ public class Pendrive {
         }
         */
         else return 0;
+    }
+
+    public int comparePricePerCapacity(Pendrive other) {
+        double ppc = pricePerCapacity();
+        double otherPpc = other.pricePerCapacity();
+        if (ppc > otherPpc) {
+            return 1;
+        }
+        if (ppc < otherPpc) {
+            return -1;
+        }
+        return  0;
+    }
+
+    private double pricePerCapacity() {
+        return (double)price/capacity;
     }
 
     public boolean cheaperThan(Pendrive pendrive) {
@@ -65,7 +81,7 @@ public class Pendrive {
         pendrive3.risePrice(15);
         System.out.println("Áremelés: " + pendrive3.getPrice());
 
-        System.out.println("comparePricePerCapacity: " + pendrive1.comparePricePerCapacity(pendrive2));
+        System.out.println("comparePricePerCapacity: " + pendrive1.comparePricePerCapacityMy(pendrive2));
 
         System.out.println("cheaperThan: " + pendrive1.cheaperThan(pendrive2));
 
@@ -75,13 +91,13 @@ public class Pendrive {
         pendrives.add(pendrive3);
         System.out.println(pendrives);
 
-        System.out.println("best: " + new Pendrives().best(pendrives));
+        System.out.println("best: " + new Pendrives().bestMy(pendrives));
 
-        System.out.println("cheapest: " + new Pendrives().cheapest(pendrives));
+        System.out.println("cheapest: " + new Pendrives().cheapestMy(pendrives));
 
-        System.out.println("risePrice: " + new Pendrives().risePriceWhenCapacity(pendrives, 10, 16));
+        System.out.println("risePrice: " + new Pendrives().risePriceWhenCapacityMy(pendrives, 10, 16));
 
-        System.out.println("findWhenCapacity: " + new Pendrives().findWhenCapacity(pendrives, 10, 16));
+        System.out.println("findWhenCapacity: " + new Pendrives().findWhenCapacityMy(pendrives, 10, 16));
 
 
 

@@ -2,6 +2,9 @@ package methodstructure.bmi;
 
 public class BodyMass {
 
+    public static double LOWER_LIMIT = 18.5;
+    public static double UPPER_LIMIT = 25.0;
+
     private double weight;
     private double height;
 
@@ -15,9 +18,9 @@ public class BodyMass {
     }
 
     public BmiCategory body() {
-        if (bodyMassIndex() < 18.5) {
+        if (bodyMassIndex() < LOWER_LIMIT) {
             return BmiCategory.UNDERWEIGHT;
-        } else if (bodyMassIndex() > 25) {
+        } else if (bodyMassIndex() > UPPER_LIMIT) {
             return BmiCategory.OVERWEIGHT;
         } else {
             return BmiCategory.NORMAL;
