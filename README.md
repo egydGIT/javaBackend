@@ -59,7 +59,7 @@ java with Training360
 
 - [x] [literals](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/literals) - Literálok
 - [ ] primitivetypes - Egyszerű típusok
-- [ ] [enumtype](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/enumtype) - Felsorolásos típus
+- [x] [enumtype](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/enumtype) - Felsorolásos típus
 - [x] [operators](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/operators) - Operátorok
 - [x] [typeconversion](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/typeconversion) - Típuskonverzió
 - [x] [numbers](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/numbers) - Egész és lebegőpontos számok
@@ -69,27 +69,27 @@ java with Training360
 - [x] [introjunit](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/introjunit) - Unit tesztelés JUnittal
 - [x] junit5 - JUnit 5
 - [x] [controlselection](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/controlselection) - Vezérlési szerkezetek és az elágazás
-- [ ] [controliteration](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/controliteration) - Ciklusok
-- [ ] [controladvanced](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/controladvanced) - Haladó vezérlési szerkezetek
-- [ ] introexception - Bevezetés a kivételkezelésbe
+- [x] [controliteration](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/controliteration) - Ciklusok
+- [x] [controladvanced](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/controladvanced) - Haladó vezérlési szerkezetek
+- [x] [introexception](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/introexception) - Bevezetés a kivételkezelésbe
 
 ### String, StringBuilder
 
-- [ ] [stringbasic](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/stringbasic) - String alapok
+- [x] [stringbasic](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/stringbasic) - String alapok
 - [x] [stringconcat](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/stringconcat) - Konkatenáció
-- [ ] [stringmethods](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/stringmethods) - Főbb String metódusok
-- [ ] [stringbuilder](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/stringbuilder) - StringBuilder
-- [ ] [stringscanner](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/stringscanner) - Scanner
-- [ ] [filescanner](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/filescanner) - Fájl olvasása Scannerrel
-- [ ] [formatlocaleprintf](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/formatlocaleprintf) - printf
+- [x] [stringmethods](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/stringmethods) - Főbb String metódusok
+- [x] [stringbuilder](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/stringbuilder) - StringBuilder
+- [x] [stringscanner](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/stringscanner) - Scanner
+- [x] [filescanner](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/filescanner) - Fájl olvasása Scannerrel
+- [x] [formatlocaleprintf](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/formatlocaleprintf) - printf
 
 ### Programozási tételek és egyéb algoritmusok
 
 - [x] [algorithmssum](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/algorithmssum) - Összegzés tétele
 - [x] [algorithmscount](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/algorithmscount) - Számlálás tétele
 - [x] [algorithmsmax](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/algorithmsmax) - Szélsőérték keresés tétele
-- [ ] [algorithmsdecision](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/algorithmsdecision) - Eldöntés tétele
-- [ ] recursion - Rekurzió
+- [x] [algorithmsdecision](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/algorithmsdecision) - Eldöntés tétele
+- [ ] [recursion](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/recursion) - Rekurzió
 
 
 # Objektumorientáltság
