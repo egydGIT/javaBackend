@@ -94,49 +94,49 @@ java with Training360
 
 # Objektumorientáltság
 
-Attribútumok és metódusok
+### Attribútumok és metódusok
 
-- ,immutable - Immutable objektumok
-- .javabeans - JavaBeans objektumok
-- .methodstructure - Metódusok
-- methodpass - Értékmásolás szerinti paraméterátadás
-- .methodparam - Metódus paraméterek
-- ,methodvarargs - Változó hosszúságú paraméterlista
-- ,methodchain - Metódus hívások láncolása
-- ,methoverloading - Metódusnév túlterhelés
-- ,staticattrmeth - Statikus attribútumok és metódusok
+- [ ] [immutable](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/immutable) - Immutable objektumok
+- [ ] [javabeans](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/javabeans) - JavaBeans objektumok
+- [ ] [methodstructure](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/methodstructure) - Metódusok
+- [ ] [methodpass]() - Értékmásolás szerinti paraméterátadás
+- [ ] [methodparam](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/methodparam) - Metódus paraméterek
+- [ ] [methodvarargs](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/methodvarargs) - Változó hosszúságú paraméterlista
+- [ ] [methodchain](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/methodchain) - Metódus hívások láncolása
+- [ ] [methoverloading](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/methoverloading) - Metódusnév túlterhelés
+- [ ] [staticattrmeth](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/staticattrmeth) - Statikus attribútumok és metódusok
 
-Konstruktorok és inicializátorok
+### Konstruktorok és inicializátorok
 
-- ,defaultconstructor - Default és paraméter nélküli konstruktor
-- ,constructoroverloading - Konstruktor túlterhelés
-- ,initializer - Inicializátorok
+- [ ] [defaultconstructor](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/defaultconstructor) - Default és paraméter nélküli konstruktor
+- [ ] [constructoroverloading](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/constructoroverloading) - Konstruktor túlterhelés
+- [ ] [initializer](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/initializer) - Inicializátorok
 
-Öröklődés
+### Öröklődés
 
-- .introinheritance - Öröklődés
-- .inheritanceconstructor - Konstruktorok és az öröklődés viszonya
-- .objectclass - Object ősosztály
-- .inheritanceattributes - Attribútumok öröklődése
-- .inheritancemethods - Metódusok öröklődése
+- [ ] [introinheritance](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/introinheritance) - Öröklődés
+- [ ] [inheritanceconstructor](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/inheritanceconstructor) - Konstruktorok és az öröklődés viszonya
+- [ ] [objectclass](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/objectclass) - Object ősosztály
+- [ ] [inheritanceattributes](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/inheritanceattributes) - Attribútumok öröklődése
+- [ ] [inheritancemethods](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/inheritancemethods) - Metódusok öröklődése
 
-Absztrakt osztályok és interfészek
+### Absztrakt osztályok és interfészek
 
-- ,abstractclass - Absztrakt osztályok
-- ,interfaces - Interfészek
-- -interfacerules - Interfészekkel kapcsolatos szabályok
-- -interfacedependencyinversion - Dependency inversion
-- .interfacedefaultmethods - Default interfész metódusok
-- .interfacestaticmethods - Statikus interfész metódusok
-- interfaceextends - Interfészek és az öröklődés viszonya
-- .enumabstract - Absztrakt metódusok implementálása felsorolásos típusokban
-- .statemachine - Állapotgép
+- [ ] [abstractclass](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/abstractclass) - Absztrakt osztályok
+- [ ] [interfaces](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/interfaces) - Interfészek
+- [ ] [interfacerules]() - Interfészekkel kapcsolatos szabályok
+- [ ] [interfacedependencyinversion]() - Dependency inversion
+- [ ] [interfacedefaultmethods](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/interfacedefaultmethods) - Default interfész metódusok
+- [ ] [interfacestaticmethods](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/interfacestaticmethods) - Statikus interfész metódusok
+- [ ] [interfaceextends]() - Interfészek és az öröklődés viszonya
+- [ ] [enumabstract](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/enumabstract) - Absztrakt metódusok implementálása felsorolásos típusokban
+- [ ] [statemachine](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/statemachine) - Állapotgép
 
-Haladó OO elvek
+### Haladó OO elvek
 
-- -polymorphism - Polimorfizmus
-- virtualmethod - Dinamikus kötés
-- isahasa - is-a has-a kapcsolatok
+- [ ] [polymorphism]() - Polimorfizmus
+- [ ] [virtualmethod]() - Dinamikus kötés
+- [ ] [isahasa]() - is-a has-a kapcsolatok
 
 
 # Kivétel- és fájlkezelés
