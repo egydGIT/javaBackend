@@ -96,13 +96,13 @@ java with Training360
 
 ### Attribútumok és metódusok
 
-- [ ] [immutable](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/immutable) - Immutable objektumok
-- [ ] [javabeans](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/javabeans) - JavaBeans objektumok
-- [ ] [methodstructure](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/methodstructure) - Metódusok
-- [ ] [methodpass]() - Értékmásolás szerinti paraméterátadás
-- [ ] [methodparam](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/methodparam) - Metódus paraméterek
-- [ ] [methodvarargs](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/methodvarargs) - Változó hosszúságú paraméterlista
-- [ ] [methodchain](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/methodchain) - Metódus hívások láncolása
+- [x] [immutable](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/immutable) - Immutable objektumok
+- [x] [javabeans](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/javabeans) - JavaBeans objektumok
+- [x] [methodstructure](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/methodstructure) - Metódusok
+- [x] [methodpass]() - Értékmásolás szerinti paraméterátadás
+- [x] [methodparam](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/methodparam) - Metódus paraméterek
+- [x] [methodvarargs](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/methodvarargs) - Változó hosszúságú paraméterlista
+- [x] [methodchain](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/methodchain) - Metódus hívások láncolása
 - [ ] [methoverloading](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/methoverloading) - Metódusnév túlterhelés
 - [ ] [staticattrmeth](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/staticattrmeth) - Statikus attribútumok és metódusok
 
@@ -213,3 +213,19 @@ Architektúrák
 - thirdparty - Third party library-k
 
 
+
+# Perzisztencia, adatbázis programozás
+
+### [MariaDB](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/mariadb)
+
+### [JDBC](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc)
+
+- [ ] Egyszerű JDBC adatmódosítás (simpleupdate)
+- [ ] Egyszerű JDBC lekérdezés (simplequery)
+- [ ] Alkalmazás architektúra (architecture)
+- [ ] Generált azonosító lekérdezése (generatedid)
+- [ ] Tranzakciókezelés (transaction)
+- [ ] Blob (blob)
+- [ ] Adatbázis metaadatok (metadata)
+- [ ] Haladó ResultSet (advancedrs)
+- [ ] Spring JdbcTemplate (spring)
