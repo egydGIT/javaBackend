@@ -26,10 +26,9 @@ public class CelestialCoordinates {
 
     @Override
     public String toString() {
-        return "CelestialCoordinates{" +
+        return "CelestialCoordinates: " +
                 "x=" + x +
                 ", y=" + y +
-                ", z=" + z +
-                '}';
+                ", z=" + z;
     }
 }
