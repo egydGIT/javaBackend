@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TransactionCounter {
-    public int TransactionsLowerThan (List<Transaction> transactions, int amount) {
+    public int transactionsLowerThan (List<Transaction> transactions, int amount) {
         int counter = 0;
         for (Transaction transaction: transactions) {
             if (transaction.getAmount() < amount) {
@@ -24,6 +24,6 @@ public class TransactionCounter {
         transactions.add(transaction2);
         transactions.add(transaction3);
 
-        System.out.println(new TransactionCounter().TransactionsLowerThan(transactions, 9_000));
+        System.out.println(new TransactionCounter().transactionsLowerThan(transactions, 9_000));
     }
 }
