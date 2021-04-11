@@ -1,12 +1,13 @@
 package stringscanner;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
 public class StringScanner {
 
-    public int readAndSumValues(String intstring) {
+    public int readAndSumValuesMy(String intstring) {
         Scanner scanner = new Scanner(intstring);
         int sum = 0;
         while (scanner.hasNextInt()) {
@@ -16,7 +17,7 @@ public class StringScanner {
         return sum;
     }
 
-    public int readAndSumValues(String intstring, String delimiter) {
+    public int readAndSumValuesMy(String intstring, String delimiter) {
         Scanner scanner = new Scanner(intstring).useDelimiter(delimiter);
         List<Integer> numbers = new ArrayList<>();
         while (scanner.hasNextInt()) {
@@ -28,6 +29,31 @@ public class StringScanner {
             sum += n;
         }
         return sum;
+    }
+
+    public int readAndSumValues(String intString, String delimiter) {
+        try (Scanner scanner = new Scanner(intString)) {
+            if (!isEmpty(delimiter)) {
+                scanner.useDelimiter(delimiter);
+            }
+            return calculateWithScanner(scanner);
+        }
+    }
+
+    private int calculateWithScanner(Scanner sc) {
+        int sum = 0;
+        try {
+            while (sc.hasNext()) {
+                sum += sc.nextInt();
+            }
+        } catch (InputMismatchException ex) {
+            throw new IllegalArgumentException("Incorrect parameter string!", ex);
+        }
+        return sum;
+    }
+
+    public int readAndSumValues(String intString) {
+        return readAndSumValues(intString, null);
     }
 
     public String filterLinesWithWordOccurrences(String text, String word) {
@@ -56,8 +82,8 @@ public class StringScanner {
     public static void main(String[] args) {
         StringScanner stringScanner = new StringScanner();
 
-        System.out.println(stringScanner.readAndSumValues("12 13 14 15 16 17 18"));
-        System.out.println(stringScanner.readAndSumValues("12, 13, 14, 15, 16, 17, 18", ", "));
+        System.out.println(stringScanner.readAndSumValuesMy("12 13 14 15 16 17 18"));
+        System.out.println(stringScanner.readAndSumValuesMy("12, 13, 14, 15, 16, 17, 18", ", "));
 
     }
 }
