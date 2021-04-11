@@ -18,16 +18,20 @@ public class ConcatName {
         this.middleName = middleName;
         this.givenName = givenName;
     }
-/*
-    public ConcatName(String dr, String brown, String familyName, String givenName) {
-        this.title = title;
+
+    public ConcatName(String familyName, String middleName, String givenName) {
+        if (isEmpty(familyName) || isEmpty(givenName)) {
+            throw new IllegalArgumentException("Family name and given name must not be empty!");
+        }
         this.familyName = familyName;
-        this.middleNames = middleNames;
+        this.middleName = middleName;
         this.givenName = givenName;
     }
 
- */
-
+    public ConcatName(String familyName, String middleName, String givenName, Title title) {
+        this(familyName, middleName, givenName);
+        this.title = title;
+    }
 
     public String concatNameWesternStyle() {
         String nameString;
@@ -81,12 +85,54 @@ public class ConcatName {
             nameString = nameString + " " + givenName.trim();
         }
         else {
-            nameString = nameString + " " + givenName.trim() + " " + middleName.trim() ;
+            nameString = nameString + " " + middleName.trim() + " " + givenName.trim();
         }
         return nameString;
     }
 
+    public String concatNameWesternStyle2() {                       // Solution
 
+        String nameString;
+
+        if (title != null) {
+            nameString = title.getTitleString();
+            nameString = nameString.concat(" ");
+            nameString = nameString.concat(givenName);
+        } else {
+            nameString = givenName;
+        }
+        nameString = nameString.concat(" ");
+        if (middleName != null && !"".equals(middleName)) {
+            nameString = nameString.concat(middleName);
+            nameString = nameString.concat(" ");
+        }
+        nameString = nameString.concat(familyName);
+
+        return nameString;
+    }
+
+    public String concatNameHungarianStyle2() {                     // Solution
+
+        String nameString;
+
+        if (title != null) {
+            nameString = title.getTitleString();
+            nameString += " ";
+            nameString += familyName;
+        } else {
+            nameString = familyName;
+        }
+
+        nameString += " ";
+
+        if (middleName != null && !"".equals(middleName)) {
+            nameString += middleName;
+            nameString += " ";
+        }
+        nameString += givenName;
+
+        return nameString;
+    }
 
     public Title getTitle() {
         return title;

@@ -14,8 +14,8 @@ public class Employee {
         if (isEmpty(profession)) {
             throw new IllegalArgumentException("Job must not be empty.");
         }
-        if (salary <= 0 && (salary % 1000 != 0)) {
-            throw new IllegalArgumentException("Salary must be positive and divisible with 1000.");
+        if (salary <= 0 ) {                                                         // && (salary % 1000 != 0)
+            throw new IllegalArgumentException("Salary must be positive.");         // and divisible with 1000
         }
         this.name = name;
         this.profession = profession;
@@ -36,7 +36,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return name + " - " + profession + " - " + salary;
+        return name + " - " + profession + " - " + salary + " Ft";
     }
 
     private boolean isEmpty(String str) {
