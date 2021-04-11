@@ -201,7 +201,7 @@ public class FileNameManipulatorTest {
     @Test
     public void findFileExtension() {
 
-        assertEquals("dat", new FileNameManipulator().findFileExtension("record.dat"));
+        assertEquals(".dat", new FileNameManipulator().findFileExtension("record.dat"));
     }
 
     @Test
