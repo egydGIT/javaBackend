@@ -4,14 +4,36 @@ import java.time.LocalDateTime;
 
 public class Transaction {
     private String accountNumber;
-    private TransactionOperation transactionOperation;
+    private TransactionOperation transactionOperation;      // enum, a tranzakció típusa
     private int amount;
     private LocalDateTime dateOfTransaction;
     private TransactionStatus status;
 
+    public Transaction(String accountNumber, TransactionOperation transactionOperation, int amount, LocalDateTime dateOfTransaction) {
+        this.accountNumber = accountNumber;
+        this.transactionOperation = transactionOperation;
+        this.amount = amount;
+        this.dateOfTransaction = dateOfTransaction;
+    }
+
     public Transaction(String accountNumber, int amount) {
         this.accountNumber = accountNumber;
         this.amount = amount;
+    }
+
+    public boolean isCredit() {
+        return transactionOperation == TransactionOperation.CREDIT;
+    }
+    public boolean isDebit() {
+        return transactionOperation == TransactionOperation.DEBIT;
+    }
+
+    public void setExecutedSuccessfully(){
+        status = TransactionStatus.SUCCEEDED;
+    }
+
+    public void setNotExecutedSuccessfully(){
+        status = TransactionStatus.PENDING;
     }
 
     public String getAccountNumber() {

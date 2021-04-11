@@ -11,14 +11,29 @@ public class BankAccount {
         this.balance = balance;
     }
 
-    public int withdraw(int amount) {
-        balance -= amount;
+    public int withdrawMy(int amount) {
+        if (amount <= balance) {
+            balance -= amount;
+        }
         return balance;
     }
 
-    public int deposit(int amount) {
+    public boolean withdraw(int amount) {
+        if (amount <= balance) {
+            balance -= amount;
+            return true;
+        }
+        return false;
+    }
+
+    public int depositMy(int amount) {
         balance += amount;
         return balance;
+    }
+
+    public boolean deposit(int amount) {
+        balance += amount;
+        return true;
     }
 
     public String getNameOfOwner() {

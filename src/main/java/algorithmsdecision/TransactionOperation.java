@@ -1,6 +1,9 @@
 package algorithmsdecision;
 
 public enum TransactionOperation {
-    WITHDRAW,
-    DEPOSIT;
+//    WITHDRAW,
+//    DEPOSIT;
+
+    CREDIT,
+    DEBIT;
 }
