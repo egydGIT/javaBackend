@@ -10,9 +10,9 @@ public class TransactionSumCalculator {
             if (transaction.isCredit()) {
                 sum += transaction.getAmount();
             }
-            if (transaction.isDebit()) {
-                sum -= transaction.getAmount();
-            }
+//            if (transaction.isDebit()) {
+//                sum -= transaction.getAmount();
+//            }
         }
         return sum;
     }
