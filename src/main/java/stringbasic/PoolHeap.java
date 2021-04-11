@@ -15,4 +15,12 @@ public class PoolHeap {
         s = s.intern();                           // intern() vizsgálja, a String a Pool-ban van-e, ha nincs, beleteszi
         return s;
     }
+
+    public String createStringForHeap2(){         // Solution
+        return new String("apple");
+    }
+
+    public String createStringForPool2(){         // Solution
+        return "apple";
+    }
 }

@@ -1,14 +1,15 @@
 package stringbasic.pet;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Pet {
     private String name;
-    private String yearOfBirth;
+    private LocalDate yearOfBirth;
     private Gender GENDER;
     private String regNumber;
 
-    public Pet(String name, String yearOfBirth, Gender GENDER, String regNumber) {
+    public Pet(String name, LocalDate yearOfBirth, Gender GENDER, String regNumber) {
         this.name = name;
         this.yearOfBirth = yearOfBirth;
         this.GENDER = GENDER;
@@ -19,7 +20,7 @@ public class Pet {
         return name;
     }
 
-    public String getYearOfBirth() {
+    public LocalDate getYearOfBirth() {
         return yearOfBirth;
     }
 
