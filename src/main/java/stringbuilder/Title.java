@@ -1,11 +1,11 @@
 package stringbuilder;
 
 public enum Title {
-    DR("Dr"),
-    PROF("Prof"),
-    MR("Mr"),
-    MRS("Mrs"),
-    MS("Ms");
+    DR("Dr."),
+    PROF("Prof."),
+    MR("Mr."),
+    MRS("Mrs."),
+    MS("Ms.");
 
     private String titleString;
 

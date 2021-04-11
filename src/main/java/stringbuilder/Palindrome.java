@@ -6,6 +6,9 @@ public class Palindrome {
     private StringBuilder palidrom = new StringBuilder();
 
     public boolean isPalindrome(String sentenceOrWord) {
+        if (sentenceOrWord == null) {
+            throw new IllegalArgumentException("Text must not be null!");
+        }
         if (sentenceOrWord.trim().endsWith(".")) {
             sentenceOrWord = sentenceOrWord.replace(".", "");
         }
@@ -26,6 +29,16 @@ public class Palindrome {
             return true;
         }
         return false;
+    }
+
+    public boolean isPalindrome2(String text) {                                 // Solution
+        if (text == null) {
+            throw new IllegalArgumentException("Text must not be null!");
+        }
+        text = text.trim();
+
+        StringBuilder sb = new StringBuilder(text);
+        return text.equalsIgnoreCase(sb.reverse().toString());
     }
 
     public static void main(String[] args) {
