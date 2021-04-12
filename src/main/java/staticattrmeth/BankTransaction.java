@@ -14,7 +14,7 @@ public class BankTransaction {
     private long trxValue;
 
     public BankTransaction(long trxValue) {
-        if (trxValue <= MIN_TRX_VALUE && trxValue >= MAX_TRX_VALUE) {
+        if (trxValue <= MIN_TRX_VALUE || trxValue >= MAX_TRX_VALUE) {
             throw new IllegalArgumentException("This transaction cannot be excepted! " + trxValue);
         }
         countTrx++;
