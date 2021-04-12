@@ -49,9 +49,12 @@ public class BusTimeTable {
     public static void main(String[] args) {
         BusTimeTable busTimeTable = new BusTimeTable(5, 21, 40);
         System.out.println(busTimeTable.getTimeTable());
-
+        // [5:40, 6:40, 7:40, 8:40, 9:40, 10:40, 11:40, 12:40, 13:40, 14:40, 15:40, 16:40, 17:40, 18:40, 19:40, 20:40, 21:40]
         System.out.println("Következö busz indul: " + busTimeTable.nextBus(new SimpleTime(20, 8)));
+        // Következö busz indul: 20:40
+
         // System.out.println("Következö busz indul: " + busTimeTable.nextBus(new SimpleTime(22, 30)));
+        // IllegalStateException: No more buses today!
 
         List<SimpleTime> timetable = Arrays.asList(
                 new SimpleTime(17, 15),
@@ -61,6 +64,6 @@ public class BusTimeTable {
                 new SimpleTime(9, 15)
         );
 
-        System.out.println(busTimeTable.firstBus(timetable));
+        System.out.println(busTimeTable.firstBus(timetable));           // 5:15
     }
 }

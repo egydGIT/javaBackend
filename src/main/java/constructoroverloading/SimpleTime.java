@@ -1,7 +1,5 @@
 package constructoroverloading;
 
-import methodoverloading.Time;
-
 public class SimpleTime {
     private int hours;
     private  int minutes;
