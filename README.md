@@ -103,22 +103,22 @@ java with Training360
 - [x] [methodparam](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/methodparam) - Metódus paraméterek
 - [x] [methodvarargs](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/methodvarargs) - Változó hosszúságú paraméterlista
 - [x] [methodchain](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/methodchain) - Metódus hívások láncolása
-- [ ] [methoverloading](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/methoverloading) - Metódusnév túlterhelés
-- [ ] [staticattrmeth](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/staticattrmeth) - Statikus attribútumok és metódusok
+- [x] [methoverloading](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/methoverloading) - Metódusnév túlterhelés
+- [x] [staticattrmeth](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/staticattrmeth) - Statikus attribútumok és metódusok
 
 ### Konstruktorok és inicializátorok
 
-- [ ] [defaultconstructor](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/defaultconstructor) - Default és paraméter nélküli konstruktor
-- [ ] [constructoroverloading](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/constructoroverloading) - Konstruktor túlterhelés
-- [ ] [initializer](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/initializer) - Inicializátorok
+- [x] [defaultconstructor](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/defaultconstructor) - Default és paraméter nélküli konstruktor
+- [x] [constructoroverloading](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/constructoroverloading) - Konstruktor túlterhelés
+- [x] [initializer](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/initializer) - Inicializátorok
 
 ### Öröklődés
 
-- [ ] [introinheritance](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/introinheritance) - Öröklődés
-- [ ] [inheritanceconstructor](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/inheritanceconstructor) - Konstruktorok és az öröklődés viszonya
-- [ ] [objectclass](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/objectclass) - Object ősosztály
-- [ ] [inheritanceattributes](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/inheritanceattributes) - Attribútumok öröklődése
-- [ ] [inheritancemethods](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/inheritancemethods) - Metódusok öröklődése
+- [x] [introinheritance](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/introinheritance) - Öröklődés
+- [x] [inheritanceconstructor](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/inheritanceconstructor) - Konstruktorok és az öröklődés viszonya
+- [x] [objectclass](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/objectclass) - Object ősosztály
+- [x] [inheritanceattributes](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/inheritanceattributes) - Attribútumok öröklődése
+- [x] [inheritancemethods](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/inheritancemethods) - Metódusok öröklődése
 
 ### Absztrakt osztályok és interfészek
 
@@ -134,37 +134,37 @@ java with Training360
 
 ### Haladó OO elvek
 
-- [ ] [polymorphism]() - Polimorfizmus
+- [x] polymorphism - Polimorfizmus
 - [ ] [virtualmethod]() - Dinamikus kötés
 - [ ] [isahasa]() - is-a has-a kapcsolatok
 
 
 # Kivétel- és fájlkezelés
 
-Kivételkezelés
+### Kivételkezelés
 
-- .exceptions - Kivételkezelés
-- ,exceptionclass - Saját kivétel
-- .exceptionmulticatch - Multi catch
-- .exceptionresource - Try-With-Resources szerkezet
+- [ ] [exceptions](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exceptions) - Kivételkezelés
+- [ ] [exceptionclass](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exceptionclass) - Saját kivétel
+- [ ] [exceptionmulticatch](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exceptionmulticatch) - Multi catch
+- [ ] [exceptionresource](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exceptionresource) - Try-With-Resources szerkezet
 
-Fájlkezelés
+### Fájlkezelés
 
-- ,ioreadstring - Szöveges állomány beolvasása
-- .iowritestring - String kiírása szöveges állományba
-- .ioreadwritebytes - Bájtos beolvasása fájlból és kiírása fájlba
-- .ioreader - String olvasása Readerrel
-- .iowriter - String írása Writerrel
-- .ioprintwriter - Különböző típusok írása PrintWriterrel
-- .iostringwriter - Kiírás Stringbe StringWriterrel
-- .ioreadbytes - Bájtok olvasása InputStreammel
-- ioreaderclasspath - String olvasása classpath-ról
-- iowritebytes - Bájtok írása OutputStreammel
-- iodatastream - Adatok írása OutputStreamre, és olvasás
-- iozip - Bájtok írása tömörítéssel
-- ioconvert - Konvertálás a típusok között
-- iofiles - Files osztály használata
-- iofilestest - Fájlkezelés tesztelése
+- [ ] [ioreadstring](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/ioreadstring) - Szöveges állomány beolvasása
+- [ ] [iowritestring](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/iowritestring) - String kiírása szöveges állományba
+- [ ] [ioreadwritebytes](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/ioreadwritebytes) - Bájtos beolvasása fájlból és kiírása fájlba
+- [ ] [ioreader](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/ioreader) - String olvasása Readerrel
+- [ ] [iowriter](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/iowriter) - String írása Writerrel
+- [ ] [ioprintwriter](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/ioprintwriter) - Különböző típusok írása PrintWriterrel
+- [ ] [iostringwriter](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/iostringwriter) - Kiírás Stringbe StringWriterrel
+- [ ] [ioreadbytes](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/ioreadbytes) - Bájtok olvasása InputStreammel
+- [ ] ioreaderclasspath - String olvasása classpath-ról
+- [ ] iowritebytes - Bájtok írása OutputStreammel
+- [ ] iodatastream - Adatok írása OutputStreamre, és olvasás
+- [ ] iozip - Bájtok írása tömörítéssel
+- [ ] ioconvert - Konvertálás a típusok között
+- [ ] iofiles - Files osztály használata
+- [ ] iofilestest - Fájlkezelés tesztelése
 
 
 # Kollekciók és osztálykönyvtárak
