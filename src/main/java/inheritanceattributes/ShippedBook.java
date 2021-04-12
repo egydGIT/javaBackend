@@ -14,7 +14,8 @@ public class ShippedBook extends Book{
     }
 
     public String toString() {
-        return getTitle() + " / " + price + " + " + shippingCost;
+        //return getTitle() + " / " + price + " + " + shippingCost;
+        return getTitle() + ":" + price + " - " + shippingCost;
     }
 
     public static void main(String[] args) {
