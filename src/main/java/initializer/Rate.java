@@ -4,7 +4,7 @@ public class Rate {
     private double conversionFactor;
     private Currency currency;
 
-    public Rate(double conversionFactor, Currency currency) {
+    public Rate(Currency currency, double conversionFactor) {
         this.conversionFactor = conversionFactor;
         this.currency = currency;
     }
