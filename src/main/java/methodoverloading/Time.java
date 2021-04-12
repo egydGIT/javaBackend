@@ -1,11 +1,11 @@
-package methoverloading;
+package methodoverloading;
 
 public class Time {
     private int hours;
     private int minutes;
     private int seconds;
 
-    public Time(int hours, int minutes, int seconds) {
+    public Time(int hours, int minutes, int seconds) {                // konstruktor overloading (4db)
         this.hours = hours;
         this.minutes = minutes;
         this.seconds = seconds;
@@ -20,12 +20,13 @@ public class Time {
         this.hours = hours;
     }
 
-    public Time(Time time) {
-        this.hours = time.hours;
-        this.minutes = time.minutes;
+    public Time(Time time) {                                            // copy konstruktor
+        this.hours = time.hours;                                                // attr-ai értékét a par-ként átadott obj.
+        this.minutes = time.minutes;                                            // azonos attr-nak értékére állítja be
         this.seconds = time.seconds;
     }
 
+                                                                        // metódus overloading
                                                                         // Két külön metódus:
     public boolean isEqual (Time time) {                                        // - azonos metódus név
         return  timeInSeconds() == time.timeInSeconds();                        // - de más par. signatura (típusa u.a, neve eltérhet)
@@ -38,7 +39,7 @@ public class Time {
     }
 
     public boolean isEqual2 (int hours, int minutes, int seconds) {                         // Azonos metódusok, ha: ( -> hibaüzenet)
-        if (this.hours == hours && this.minutes == minutes && this.seconds == seconds) {        // - neve ugyanaz
+        if (this.hours == hours && this.minutes == minutes && this.seconds == seconds) {        // - ha neve ugyanaz
             return true;                                                                        // - paraméterek típusa is megegyezik
         }                                                                                       // - par.-ek neve nem befolyásol
         return false;
