@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ShoppingBasket {
-    private Basket basket;
+    private Basket basket = new Basket();
+
+    public ShoppingBasket() {
+    }
 
     public ShoppingBasket(Basket basket) {
         this.basket = basket;
@@ -28,7 +31,7 @@ public class ShoppingBasket {
         basket.removeItem(barcode);
     }
 
-    public double sumNettoPrice() {
+    public double sumNettoPrice() {        // Összegzés tétele
         double sumNetto = 0.0;
         for (Item item : basket.getItems()) {
             sumNetto += item.getNettoPrice();
@@ -44,7 +47,7 @@ public class ShoppingBasket {
         return sumTax;
     }
 
-    public double sumBruttoPrice() {        // Összegzés tétele
+    public double sumBruttoPrice() {
         return sumNettoPrice() + sumTaxValue();
     }
 
@@ -52,14 +55,18 @@ public class ShoppingBasket {
         basket.clearBasket();
     }
 
-    public Item removeMostExpensiveItem() {     // Szélsőértékkeresés tétele objektumon
+    public void removeMostExpensiveItem() {
+        removeItem2(getMostExpensiveItemBarcode());
+    }
+
+    public String getMostExpensiveItemBarcode() {     // Szélsőértékkeresés tétele objektumon
         Item mostExpensive = null;
         for (Item item : basket.getItems()) {
             if (mostExpensive == null || item.getNettoPrice() > mostExpensive.getNettoPrice()) {
                 mostExpensive = item;
             }
         }
-        return mostExpensive;
+        return mostExpensive.getBarcode();
     }
 
 
@@ -84,7 +91,7 @@ public class ShoppingBasket {
 
         ShoppingBasket shoppingBasket = new ShoppingBasket(basket);
         // mostExpensive
-        System.out.println("removeMostExpensive: " + shoppingBasket.removeMostExpensiveItem());
+        System.out.println("getMostExpensive: " + shoppingBasket.getMostExpensiveItemBarcode());
 
         // árak:
         System.out.println("sumNettoPrice: " + shoppingBasket.sumNettoPrice());

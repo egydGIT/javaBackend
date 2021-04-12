@@ -7,6 +7,9 @@ public class Basket {
 
     private List<Item> items = new ArrayList<>();
 
+    public Basket() {
+    }
+
     public Basket(List<Item> items) {
         this.items = items;
     }
