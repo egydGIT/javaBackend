@@ -7,6 +7,9 @@ public class Car {
     private double tankCapacity;
 
     public Car(double fuelRate, double fuel, double tankCapacity) {
+        if (fuel > tankCapacity) {
+            throw new IllegalArgumentException("Tank capacity is less than fuel!");
+        }
         this.fuelRate = fuelRate;
         this.fuel = fuel;
         this.tankCapacity = tankCapacity;
