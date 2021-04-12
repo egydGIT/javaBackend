@@ -1,6 +1,6 @@
 package inheritancemethods.products;
 
-        import java.math.BigDecimal;
+import java.math.BigDecimal;
         import java.math.RoundingMode;
 
 public class Product {
