@@ -7,7 +7,8 @@ public class SimpleDate {
 
     public void setDate(int year, int month, int day) {
         if (!isCorrect(year, month, day)) {
-            throw new IllegalArgumentException("Please check the date parameters: " + year + "." + month + "." + day);
+            // throw new IllegalArgumentException("Please check the date parameters: " + year + "." + month + "." + day);
+            throw new IllegalArgumentException("One or more given parameter cannot be applied! " + year + ", " + month + ", " + day);
         }
         this.year = year;
         this.month = month;
@@ -61,7 +62,8 @@ public class SimpleDate {
 
     @Override
     public String toString() {
-        return year + "." + month + "." + day + ".";
+        // return year + "." + month + "." + day + ".";
+        return year + ", " + month + ", " + day;
     }
 
     public static void main(String[] args) {
@@ -70,7 +72,7 @@ public class SimpleDate {
         simpleDate2.setDate(2020, 12, 8);
         System.out.println(simpleDate2);
 /*
-        SimpleDate simpleDate3 = new SimpleDate();
+        SimpleDate simpleDate3 = new SimpleDate();  // IllegalArgumentException: One or more given parameter cannot be applied! 2020, 11, 31
         simpleDate3.setDate(2020, 11, 31);
         System.out.println(simpleDate3);
 
@@ -81,7 +83,7 @@ public class SimpleDate {
         SimpleDate simpleDate5 = new SimpleDate();
         simpleDate5.setDate(220, 12, 8);
         System.out.println(simpleDate5);
- */
+*/
         SimpleDate simpleDate6 = new SimpleDate();
         simpleDate6.setDate(2020, 2, 29);
         System.out.println(simpleDate6);

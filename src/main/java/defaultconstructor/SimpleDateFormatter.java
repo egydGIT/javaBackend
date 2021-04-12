@@ -26,10 +26,10 @@ public class SimpleDateFormatter {
     public static void main(String[] args) {
         SimpleDate simpleDate = new SimpleDate();
         simpleDate.setDate(2020, 12, 8);
-        System.out.println("toString: " + simpleDate);
-
+        System.out.println("toString: " + simpleDate);                       // toString: 2020, 12, 8
+                                                                             // formatDateString: 2020-12-8
         System.out.println("formatDateString: " + new SimpleDateFormatter().formatDateString(simpleDate));
         System.out.println("formatDateStringByCountryCode: "
                 + new SimpleDateFormatter().formatDateStringByCountryCode(CountryCode.US, simpleDate));
-    }
+    }                                                                       // formatDateStringByCountryCode: 12-8-2020
 }
