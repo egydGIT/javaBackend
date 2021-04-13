@@ -10,8 +10,11 @@ public class AxeWarrior extends Character {
         super(position, random);
     }
 
+    private int getActualSecondaryDamageMy() {
+        return getRandom().nextInt(getActualPrimaryDamage() * 2) + 1;
+    }
+
     private int getActualSecondaryDamage() {
-        // return getRandom().nextInt(getActualPrimaryDamage() * 2) + 1;
         return (int)(Math.random() * SECONDARY_DAMAGE_MULTIPLIER * getActualPrimaryDamage());
     }
 
