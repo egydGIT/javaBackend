@@ -1,12 +1,12 @@
+
 package interfacestaticmethods;
 
-public class SomethingWithValue implements Valued {
+public class Product implements Valued {
 
     private String name;
+    private double value;
 
-    private int value;
-
-    public SomethingWithValue(String name, int value) {
+    public Product(String name, double value) {
         this.name = name;
         this.value = value;
     }
@@ -15,6 +15,7 @@ public class SomethingWithValue implements Valued {
         return name;
     }
 
+    @Override
     public double getValue() {
         return value;
     }
