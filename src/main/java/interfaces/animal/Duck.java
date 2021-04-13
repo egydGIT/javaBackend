@@ -12,9 +12,11 @@ public class Duck implements Animal {
 
  */
 
+    public static final int NUMBER_OF_LEGS = 2;
+
     @Override
     public int getNumberOfLegs() {
-        return 2;
+        return NUMBER_OF_LEGS;
     }
 
     @Override
