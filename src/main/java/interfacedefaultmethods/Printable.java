@@ -2,7 +2,7 @@ package interfacedefaultmethods;
 
 public interface Printable {                            // Dependency inversion: NewsPaper, StoryBook
 
-    public final String DEFAULT_COLOUR_BLACK = "#000000";
+    String DEFAULT_COLOUR_BLACK = "#000000";
 
     int getLength();
 

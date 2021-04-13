@@ -14,12 +14,16 @@ public class StoryBook implements Printable{
 
     @Override
     public String getPage(int pageNumber) {
-        return storyBookPages.get(pageNumber-1).getPageContent();
+        return storyBookPages.get(pageNumber).getPageContent();
     }
 
     @Override
     public String getColor(int pageNumber) {
-        return storyBookPages.get(pageNumber-1).getPageColour();
+        return storyBookPages.get(pageNumber).getPageColour();
+    }
+
+    public void addPage(String page, String color) {
+        storyBookPages.add(new ColoredPage(page, color));
     }
 
 

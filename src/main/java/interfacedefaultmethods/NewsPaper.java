@@ -14,7 +14,7 @@ public class NewsPaper implements Printable {
 
     @Override
     public String getPage(int pageNumber) {
-        return newsPaperPages.get(pageNumber-1);
+        return newsPaperPages.get(pageNumber);
     }
 
     public void addPage(String pageContent) {
