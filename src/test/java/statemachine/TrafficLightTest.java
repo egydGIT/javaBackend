@@ -11,4 +11,12 @@ class TrafficLightTest {
         assertEquals(TrafficLight.GREEN, TrafficLight.RED_YELLOW.next());
     }
 
+    @Test
+    public void testNext() {
+        assertEquals(TrafficLight.RED_YELLOW, TrafficLight.RED.next());
+        assertEquals(TrafficLight.GREEN, TrafficLight.RED_YELLOW.next());
+        assertEquals(TrafficLight.YELLOW, TrafficLight.GREEN.next());
+        assertEquals(TrafficLight.RED, TrafficLight.YELLOW.next());
+    }
+
 }
