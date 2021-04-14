@@ -122,15 +122,15 @@ java with Training360
 
 ### Absztrakt osztályok és interfészek
 
-- [ ] [abstractclass](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/abstractclass) - Absztrakt osztályok
-- [ ] [interfaces](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/interfaces) - Interfészek
-- [ ] [interfacerules]() - Interfészekkel kapcsolatos szabályok
-- [ ] [interfacedependencyinversion]() - Dependency inversion
-- [ ] [interfacedefaultmethods](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/interfacedefaultmethods) - Default interfész metódusok
-- [ ] [interfacestaticmethods](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/interfacestaticmethods) - Statikus interfész metódusok
-- [ ] [interfaceextends]() - Interfészek és az öröklődés viszonya
-- [ ] [enumabstract](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/enumabstract) - Absztrakt metódusok implementálása felsorolásos típusokban
-- [ ] [statemachine](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/statemachine) - Állapotgép
+- [x] [abstractclass](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/abstractclass) - Absztrakt osztályok
+- [x] [interfaces](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/interfaces) - Interfészek
+- [x] interfacerules - Interfészekkel kapcsolatos szabályok
+- [x] interfacedependencyinversion - Dependency inversion
+- [x] [interfacedefaultmethods](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/interfacedefaultmethods) - Default interfész metódusok
+- [x] [interfacestaticmethods](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/interfacestaticmethods) - Statikus interfész metódusok
+- [x] [interfaceextends]() - Interfészek és az öröklődés viszonya
+- [x] [enumabstract](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/enumabstract) - Absztrakt metódusok implementálása felsorolásos típusokban
+- [x] [statemachine](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/statemachine) - Állapotgép
 
 ### Haladó OO elvek
 
@@ -229,3 +229,13 @@ Architektúrák
 - [ ] Adatbázis metaadatok (metadata)
 - [ ] Haladó ResultSet (advancedrs)
 - [ ] Spring JdbcTemplate (spring)
+
+
+
+# Egyéb
+
+### Napi feladatok
+
+### Projekt feladatok
+
+### Vizsgák
