@@ -7,20 +7,13 @@ import java.util.Date;
 import java.util.List;
 
 public class FaultList {
-    // Az adatsorok szerkezete: sorszám, mért érték, mérésdátum.
-    // Pl. 12, 34.5, 2014.05.22.
 
-    // A megjegyzésbe tett sorok ugyanúgy , karakterrel elválasztott három részből állnak, csak az első rész nem alakítható számmá.
-    // Pl. M12, 12, 2014.01.01.
-
-    // A jelentés egy List<String> legyen, ahol a String tartalmazza a hibás sor sorszámát és a hiba kódját, sorszam, hibakód alakban.
-
-    public String[] splitLines(String line) {
+    public String[] splitLinesMy(String line) {
         String[] words = line.split(", ");
         return words;
     }
 
-    public Results checkData(String[] words) {
+    public Results checkDataMy(String[] words) {
 
         if (words.length != 3) {
             System.out.println("Code: " + Results.WORD_COUNT_ERROR.getCode() + ", Line no: " + Integer.parseInt(words[0]));
@@ -52,48 +45,8 @@ public class FaultList {
         return Results.NO_ERROR;
     }
 
-    public static void main(String[] args) {
-        FaultList faultList = new FaultList();
-        System.out.println(Arrays.toString(faultList.splitLines("01, 34.5, 2021.01.20.")));
-        System.out.println(faultList.checkData(faultList.splitLines("01, 34.5, 2021.01.20.")));
-//        [01, 34.5, 2021.01.20.]
-//        NO_ERROR
-
-        System.out.println("");
-        System.out.println(Arrays.toString(faultList.splitLines("02, 34.5")));
-        System.out.println(faultList.checkData(faultList.splitLines("02, 34.5")));
-//        [02, 34.5]
-//        Code: 2, Line no: 2
-//        WORD_COUNT_ERROR
-
-        System.out.println("");
-        System.out.println(Arrays.toString(faultList.splitLines("cc, 34.5, 2021.01.20.")));
-        System.out.println(faultList.checkData(faultList.splitLines("cc, 34.5, 2021.01.20.")));
-//        [cc, 34.5, 2021.01.20.]
-//        Code: 3, Line no: cc
-//        NUMBER_ERROR
-
-        System.out.println("");
-        System.out.println(Arrays.toString(faultList.splitLines("04, 3ff, 2021.01.20.")));
-        System.out.println(faultList.checkData(faultList.splitLines("04, 3ff, 2021.01.20.")));
-//        [04, 3ff, 2021.01.20.]
-//        Code: 4, Line no: 4
-//        VALUE_ERROR
-
-        System.out.println("");
-        System.out.println(Arrays.toString(faultList.splitLines("05, 34.5, 2021-99-20")));
-        System.out.println(faultList.checkData(faultList.splitLines("05, 34.5, 2021-99-20")));
-//        [05, 34.5, 2021-99-20]
-//        Code: 8, Line no: 5
-//        DATE_ERROR
-
-    }
-
-    /*
-
+    // Solution
     public static final int SPECIAL_VALUE_COMMENT_LINE = -1;
-
-    private Results result;
 
     public List<String> processLines(List<String> lines) {
         if (lines == null) {
@@ -166,8 +119,44 @@ public class FaultList {
         return lineNumber + "," + resultCode;
     }
 
-     */
 
+
+    public static void main(String[] args) {
+        FaultList faultList = new FaultList();
+        System.out.println(Arrays.toString(faultList.splitLinesMy("01, 34.5, 2021.01.20.")));
+        System.out.println(faultList.checkDataMy(faultList.splitLinesMy("01, 34.5, 2021.01.20.")));
+//        [01, 34.5, 2021.01.20.]
+//        NO_ERROR
+
+        System.out.println("");
+        System.out.println(Arrays.toString(faultList.splitLinesMy("02, 34.5")));
+        System.out.println(faultList.checkDataMy(faultList.splitLinesMy("02, 34.5")));
+//        [02, 34.5]
+//        Code: 2, Line no: 2
+//        WORD_COUNT_ERROR
+
+        System.out.println("");
+        System.out.println(Arrays.toString(faultList.splitLinesMy("cc, 34.5, 2021.01.20.")));
+        System.out.println(faultList.checkDataMy(faultList.splitLinesMy("cc, 34.5, 2021.01.20.")));
+//        [cc, 34.5, 2021.01.20.]
+//        Code: 3, Line no: cc
+//        NUMBER_ERROR
+
+        System.out.println("");
+        System.out.println(Arrays.toString(faultList.splitLinesMy("04, 3ff, 2021.01.20.")));
+        System.out.println(faultList.checkDataMy(faultList.splitLinesMy("04, 3ff, 2021.01.20.")));
+//        [04, 3ff, 2021.01.20.]
+//        Code: 4, Line no: 4
+//        VALUE_ERROR
+
+        System.out.println("");
+        System.out.println(Arrays.toString(faultList.splitLinesMy("05, 34.5, 2021-99-20")));
+        System.out.println(faultList.checkDataMy(faultList.splitLinesMy("05, 34.5, 2021-99-20")));
+//        [05, 34.5, 2021-99-20]
+//        Code: 8, Line no: 5
+//        DATE_ERROR
+
+    }
 
 
 }
