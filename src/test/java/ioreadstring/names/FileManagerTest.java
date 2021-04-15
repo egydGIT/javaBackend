@@ -1,4 +1,4 @@
-package ioreadstring;
+package ioreadstring.names;
 
 import ioreadstring.names.FileManager;
 import org.junit.jupiter.api.Test;
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class FileManagerTest {
-    private FileManager fm = new FileManager("names.txt");
+    private FileManager fm = new FileManager("src/test/resources/names.txt");
 
     @Test
     public void createClassTest() {
@@ -19,7 +19,7 @@ class FileManagerTest {
     public void readFromFileTest() {
         fm.readFromFile();
         assertEquals(4, fm.getHumans().size());
-        assertEquals("Anybody", fm.getHumans().get(1).getFirsName());
+        assertEquals("Anybody", fm.getHumans().get(1).getFirstName());
     }
 
 }

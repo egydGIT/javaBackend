@@ -2,17 +2,17 @@ package ioreadstring.names;
 
 public class Human {
 
-    private String firsName;
+    private String firstName;
 
     private String lastName;
 
-    public Human(String firsName, String lastName) {
-        this.firsName = firsName;
+    public Human(String firstName, String lastName) {
+        this.firstName = firstName;
         this.lastName = lastName;
     }
 
-    public String getFirsName() {
-        return firsName;
+    public String getFirstName() {
+        return firstName;
     }
 
     public String getLastName() {
@@ -20,6 +20,6 @@ public class Human {
     }
 
     public String getName() {
-        return firsName + " " + lastName;
+        return firstName + " " + lastName;
     }
 }
