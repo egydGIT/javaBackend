@@ -15,6 +15,14 @@ public class Temperatures {
         return sum / 365;
     }
 
+    public double getYearAverage2() {
+        double average = 0;
+        for (byte temperature : data) {
+            average += temperature;
+        }
+        return average / 365;
+    }
+
     public double getMonthAverage() {
         double sum = 0.0;
         for (int i = data.length-1; i > data.length - 31; i--) {
