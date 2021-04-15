@@ -75,7 +75,7 @@ public class CityOperations {
     }
 
     public static void main(String[] args) {
-        try (BufferedReader bufferedReader = Files.newBufferedReader(Path.of("src/test/resources/iranyitoszamok-varosok-2021.csv"))) {  // try-with-resources
+        try (BufferedReader bufferedReader = Files.newBufferedReader(Path.of("src/main/resources/iranyitoszamok-varosok-2021.csv"))) {  // try-with-resources
             String city = new CityOperations().findCityWithMaxLength(bufferedReader);
             // System.out.println("***************");                       // e.printStackTrace();
         } catch (IOException e) {
