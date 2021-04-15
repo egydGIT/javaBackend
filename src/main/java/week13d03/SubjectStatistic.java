@@ -123,7 +123,7 @@ public class SubjectStatistic {
     public static void main(String[] args) {
         // 1. VERZIÓ:
         SubjectStatistic st = new SubjectStatistic();
-        Path file = Path.of("beosztas.txt");
+        Path file = Path.of("src/test/resources/beosztas.txt");
         try {
             BufferedReader br = Files.newBufferedReader(file);
             st.teachersReadFromFile(br);
@@ -136,14 +136,14 @@ public class SubjectStatistic {
 
 
         // 2. VERZIÓ
-        st.readFromFile("beosztas.txt");
+        st.readFromFile("src/test/resources/beosztas.txt");
         // System.out.println(st.list2);
         System.out.println("Albatrosz Aladin: " + st.sumNumberOfLessons("Albatrosz Aladin") + " óra/hét");
 
 
         // 3. VERZIÓ
         System.out.println("Albatrosz Aladin: " +
-                st.sumLessonsOfTeacherFromFile("beosztas.txt", "Albatrosz Aladin") + " óra/hét");
+                st.sumLessonsOfTeacherFromFile("src/test/resources/beosztas.txt", "Albatrosz Aladin") + " óra/hét");
 
     }
 
