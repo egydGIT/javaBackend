@@ -11,9 +11,9 @@ public class SchoolRecordsManager {
 
     private Student student;
 
-    //private List<Student> studentClass = new ArrayList<>();
+    private List<Student> studentClass = new ArrayList<>();
 
-    public void readGradesFromFile(String filePath) {
+    public void readGradesFromFileMy(String filePath) {
         Path file = Path.of(filePath);
         try (BufferedReader br = Files.newBufferedReader(file)) {
             String line;
@@ -37,18 +37,45 @@ public class SchoolRecordsManager {
         }
     }
 
+    public void readGradesFromFile(String fileName) {
+        Path file = Path.of("src/main/resources/" + fileName);
+        try (BufferedReader br = Files.newBufferedReader(file)) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] temp = line.split(" ");
+                List<Integer> grades = new ArrayList<>();
+                for (int i = 1; i < temp.length-1; i++) {
+                    grades.add(Integer.parseInt(temp[i]));
+                }
+                Student s = new Student(temp[0], grades);
+                studentClass.add(s);
+            }
+        } catch (IOException e) {
+            throw new IllegalStateException("Can't read file!", e);
+        }
+    }
+
+    public double classAverage(){
+        double sum = 0.0;
+        for(Student s: studentClass){
+            sum += s.average();
+        }
+        return sum / studentClass.size();
+
+    }
+
     public Student getStudent() {
         return student;
     }
 
-//    public List<Student> getStudentClass() {
-//        return studentClass;
-//    }
+    public List<Student> getStudentClass() {
+        return new ArrayList<>(studentClass);
+    }
 
     public static void main(String[] args) {
         SchoolRecordsManager sr = new SchoolRecordsManager();
 
-        sr.readGradesFromFile("grades.txt");
+        sr.readGradesFromFileMy("src/main/resources/grades.txt");
         System.out.println(sr.getStudent().getName());
         System.out.println(sr.getStudent().getMarks());
 

@@ -18,13 +18,13 @@ public class Student {
         this.marks = marks;
     }
 
-    public int average() {
+    public double average() {
         double sum = 0;
         for (Integer m : marks) {
             sum += m;
         }
-        int average = (int) (Math.round(sum / marks.size()));
-        return average;
+        //double average = Math.round(sum / marks.size());
+        return sum  / marks.size();
     }
 
     public boolean isIncrease() {
