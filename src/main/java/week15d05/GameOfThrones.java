@@ -67,7 +67,7 @@ public class GameOfThrones {
     }
 
     public static void main(String[] args) {
-        try (BufferedReader reader = Files.newBufferedReader(Path.of("battles.csv"))) {
+        try (BufferedReader reader = Files.newBufferedReader(Path.of("src/test/resources/battles.csv"))) {
             String house = new GameOfThrones().getHouse(reader);
             System.out.println(house);
         } catch (IOException ioe) {
