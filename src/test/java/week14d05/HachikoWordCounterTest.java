@@ -14,7 +14,7 @@ class HachikoWordCounterTest {
 
     @Test
     void countWords() throws IOException {
-        try (BufferedReader reader = Files.newBufferedReader(Path.of("hachiko.srt"))) {     // Charset.forName("windows-1250")
+        try (BufferedReader reader = Files.newBufferedReader(Path.of("src/main/resources/hachiko.srt"))) {     // Charset.forName("windows-1250")
             Map<String, Integer> result = new HachikoWordCounter().countWords(reader, "Hach", "haza", "pályaudvar", "jó");
 
             assertEquals(16, result.get("haza"));
