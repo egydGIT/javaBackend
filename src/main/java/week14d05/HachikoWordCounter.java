@@ -63,7 +63,7 @@ public class HachikoWordCounter {
 
 
     public static void main(String[] args) {
-        try (BufferedReader reader = Files.newBufferedReader(Path.of("src/test/resources/hachiko.srt"))) {     // Charset.forName("windows-1250")
+        try (BufferedReader reader = Files.newBufferedReader(Path.of("src/main/resources/hachiko.srt"))) {     // Charset.forName("windows-1250")
             System.out.println(new HachikoWordCounter().countWords(reader, "Hach", "haza", "pályaudvar", "jó"));
 
         } catch (IOException e) {
