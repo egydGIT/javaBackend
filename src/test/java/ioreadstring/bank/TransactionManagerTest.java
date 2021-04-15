@@ -10,40 +10,39 @@ class TransactionManagerTest {
 
 
     @Test
-    void testDataFromAccountFile() {
+    void testDataFromAccountFileMy() {
         assertEquals(0, tm.getAccounts().size());
 
-        tm.dataFromTransactionFile("src/test/resources/accounts.txt");
+        tm.dataFromAccountFileMy("src/test/resources/accounts.txt");
 
         assertEquals(2, tm.getAccounts().size());
         assertEquals("11111111-00000000-11111111", tm.getAccounts().get(0).getAccountNumber());
     }
 
-    /*
-    private TransactionManager tm = new TransactionManager();
+
+    TransactionManager tm2 = new TransactionManager();
 
     @Test
     public void testUploadAccounts() {
-        assertEquals(0, tm.getAccountList().size());
+        assertEquals(0, tm.getAccounts().size());
 
-        tm.uploadListFromFile("src/test/resources/accounts.txt");
+        tm.uploadListFromFile("src/test/resources/accounts2.txt");
 
-        assertEquals(5, tm.getAccountList().size());
-        assertEquals("Jack Doe", tm.getAccountList().get(3).getName());
-        assertEquals(234050200, tm.getAccountList().get(1).getBalance(), 0.0000001);
+        assertEquals(5, tm.getAccounts().size());
+        assertEquals("Jack Doe", tm.getAccounts().get(3).getName());
+        assertEquals(234050200, tm.getAccounts().get(1).getBalance(), 0.0000001);
 
     }
 
     @Test
     public void makeTransactionsTest() {
-        tm.uploadListFromFile("src/test/resources/accounts.txt");
+        tm.uploadListFromFile("src/test/resources/accounts2.txt");
 
-        tm.makeTransactions("src/test/resources/transactions.txt");
+        tm.makeTransactions("src/test/resources/transactions2.txt");
 
-        assertEquals(1201000, tm.getAccountList().get(0).getBalance(), 0.0000001);
-        assertEquals(721220, tm.getAccountList().get(3).getBalance(), 0.00001);
+        assertEquals(1201000, tm.getAccounts().get(0).getBalance(), 0.0000001);
+        assertEquals(721220, tm.getAccounts().get(3).getBalance(), 0.00001);
 
     }
 
-     */
 }

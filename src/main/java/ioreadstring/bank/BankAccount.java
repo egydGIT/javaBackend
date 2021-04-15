@@ -29,14 +29,22 @@ public class BankAccount {
     }
 
     public void setBalance(int balance) {
-        this.balance = balance;
+        this.balance += balance;
     }
 
-    public int add(int amount) {
-        return this.getBalance() + amount;
+    public void addAmount(int amount) {
+        this.balance += amount;
     }
 
-    public int substract(int amount) {
-        return this.getBalance() - amount;
+    public void substract(int amount) {
+        this.balance -= amount;
+    }
+
+    @Override
+    public String toString() {
+        return "BankAccount{" +
+                "accountNumber='" + accountNumber + '\'' +
+                ", balance=" + balance +
+                '}';
     }
 }
