@@ -60,7 +60,7 @@ public class Decoder {
         //new Decoder().decode(Path.of("secret.dat"));        // Path interfész, .of() statikus metódus
         //new Decoder().decodeBigData(Path.of("secret.dat"));
 
-        String result = new Decoder().decodeBigData(Path.of("secret.dat"));
+        String result = new Decoder().decodeBigData(Path.of("src/main/resources/secret.dat"));
         System.out.println(result);
 
 
