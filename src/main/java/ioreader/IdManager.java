@@ -31,7 +31,7 @@ public class IdManager {
 
     public static void main(String[] args) {
         IdManager idManager = new IdManager();
-        idManager.readIdsFromFile("idnumbers.txt");
+        idManager.readIdsFromFile("src/main/resources/idnumbers.txt");
         System.out.println(idManager.getIds());
 
 
