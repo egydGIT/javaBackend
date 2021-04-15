@@ -41,7 +41,7 @@ public class TemplateMerger {
     }
 
     public static void main(String[] args) {
-        Path path = Path.of("src/test/resources/employee-template.txt");
+        Path path = Path.of("src/main/resources/employee-template.txt");
         List<Employee> employees = List.of(
                 new Employee("John Doe", 1980),
                 new Employee("Jack Doe", 1990));
