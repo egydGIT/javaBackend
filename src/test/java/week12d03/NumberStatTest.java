@@ -12,14 +12,14 @@ class NumberStatTest {
     @Test
     void testReadFromFile() {
         NumberStat ns = new NumberStat();
-        ns.readFromFile("numberstat.txt");
+        ns.readFromFile("src/main/resources/numberstat.txt");
         assertEquals(Arrays.asList(1, 1, 4, 2, 3, 5, 2, 2, 5), ns.getNumbers());
     }
 
     @Test
     void testFindSmallestUnique() {
         NumberStat ns = new NumberStat();
-        ns.readFromFile("numberstat.txt");
+        ns.readFromFile("src/main/resources/numberstat.txt");
         List<Integer> numbers = ns.getNumbers();
         // ??
     }

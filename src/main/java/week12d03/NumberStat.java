@@ -109,7 +109,7 @@ public class NumberStat {
 
     public static void main(String[] args) {
         NumberStat ns = new NumberStat();
-        ns.readFromFile("numberstat.txt");
+        ns.readFromFile("src/main/resources/numberstat.txt");
         System.out.println(ns.getNumbers());                            // [1, 1, 4, 2, 3, 5, 2, 2, 5]
         System.out.println(ns.findSmallestUnique());                    // 3
         System.out.println(ns.findSmallestUniqueWithFrequency());       // 3
