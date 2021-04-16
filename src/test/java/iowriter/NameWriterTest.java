@@ -1,6 +1,7 @@
 package iowriter;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -11,19 +12,34 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class NameWriterTest {
 
-    @Test
-    void testAddAndWrite() {
-        NameWriter nameWriter = new NameWriter("namewriter.txt");
-        nameWriter.addAndWrite("Kovács Emese");
+    @TempDir
+    public Path temporaryFolder;
 
-        List<String> content = null;
-        try {
-            content = Files.readAllLines(Path.of("namewriter.txt"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        assertEquals(List.of("Kovács Emese"), content);
-        assertEquals(1, content.size());
+    private NameWriter nameWriter;
+
+    @Test
+    public void testWrite() throws IOException {
+        Path file = Files.createFile(temporaryFolder.resolve("test.txt"));
+        System.out.println(file);
+        nameWriter = new NameWriter(file);
+        nameWriter.addAndWrite("John Smith");
+
+        List<String> actual = Files.readAllLines(file);
+
+        assertEquals(List.of("John Smith"), actual);
+    }
+
+    @Test
+    public void testAppend() throws IOException {
+        Path file = Files.createFile(temporaryFolder.resolve("test.txt"));
+
+        nameWriter = new NameWriter(file);
+        nameWriter.addAndWrite("John Smith");
+        nameWriter.addAndWrite("John Doe");
+
+        List<String> actual = Files.readAllLines(file);
+
+        assertEquals(List.of("John Smith", "John Doe"), actual);
     }
 
 }
