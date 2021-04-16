@@ -130,7 +130,7 @@ java with Training360
 - [x] [interfacestaticmethods](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/interfacestaticmethods) - Statikus interfész metódusok
 - [x] [interfaceextends]() - Interfészek és az öröklődés viszonya
 - [x] [enumabstract](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/enumabstract) - Absztrakt metódusok implementálása felsorolásos típusokban
-- [x] [statemachine](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/statemachine) - Állapotgép
+- [ ] [statemachine](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/statemachine) - Állapotgép
 
 ### Haladó OO elvek
 
@@ -143,18 +143,18 @@ java with Training360
 
 ### Kivételkezelés
 
-- [ ] [exceptions](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exceptions) - Kivételkezelés
+- [x] [exceptions](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exceptions) - Kivételkezelés
 - [ ] [exceptionclass](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exceptionclass) - Saját kivétel
 - [ ] [exceptionmulticatch](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exceptionmulticatch) - Multi catch
 - [ ] [exceptionresource](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exceptionresource) - Try-With-Resources szerkezet
 
 ### Fájlkezelés
 
-- [ ] [ioreadstring](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/ioreadstring) - Szöveges állomány beolvasása
-- [ ] [iowritestring](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/iowritestring) - String kiírása szöveges állományba
-- [ ] [ioreadwritebytes](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/ioreadwritebytes) - Bájtos beolvasása fájlból és kiírása fájlba
-- [ ] [ioreader](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/ioreader) - String olvasása Readerrel
-- [ ] [iowriter](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/iowriter) - String írása Writerrel
+- [x] [ioreadstring](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/ioreadstring) - Szöveges állomány beolvasása
+- [x] [iowritestring](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/iowritestring) - String kiírása szöveges állományba
+- [x] [ioreadwritebytes](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/ioreadwritebytes) - Bájtos beolvasása fájlból és kiírása fájlba
+- [x] [ioreader](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/ioreader) - String olvasása Readerrel
+- [x] [iowriter](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/iowriter) - String írása Writerrel
 - [ ] [ioprintwriter](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/ioprintwriter) - Különböző típusok írása PrintWriterrel
 - [ ] [iostringwriter](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/iostringwriter) - Kiírás Stringbe StringWriterrel
 - [ ] [ioreadbytes](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/ioreadbytes) - Bájtok olvasása InputStreammel
@@ -171,46 +171,46 @@ java with Training360
 
 Kollekció típusok
 
-- .genericsusage - Generikusok használata, diamond operátor
-- .collectionsequalshash - equals, hashCode
-- ,collectionslist - List, ArrayList kontra LinkedList
-- .collectionsset - Set
-- .collectionsqueue - Queue
-- .collectionsmap - Map
-- ,collectionsautoboxing - Autoboxing használata kollekcióknál
+- [ ] [genericsusage]() - Generikusok használata, diamond operátor
+- [ ] [collectionsequalshash]() - equals, hashCode
+- [ ] [collectionslist]() - List, ArrayList kontra LinkedList
+- [ ] [collectionsset]() - Set
+- [ ] [collectionsqueue]() - Queue
+- [ ] [collectionsmap]() - Map
+- [ ] [collectionsautoboxing]() - Autoboxing használata kollekcióknál
 
 Alapvető algoritmusok
 
-- .collectionsiterator - Bejárás
-- .collectionscomp - Comparable és Comparator
-- ,searching - Keresés
-- ,sorting - Rendezés
-- ,collectionsclass - Collections osztály (keresésen, rendezésen felüli metódusok)
-- ,clone - A clone() metódus, deep clone
-- properties - Properties állományok
+- [ ] [collectionsiterator]() - Bejárás
+- [ ] [collectionscomp]() - Comparable és Comparator
+- [ ] [searching]() - Keresés
+- [ ] [sorting]() - Rendezés
+- [ ] [collectionsclass]() - Collections osztály (keresésen, rendezésen felüli metódusok)
+- [ ] [clone]() - A clone() metódus, deep clone
+- [ ] [properties]() - Properties állományok
 
 Lambda kifejezések
 
-- lambdaintro - Bevezetés a lambda kifejezések használatába
-- lambdaoptional - Optional használata
-- lambdacomparator - Comparator módosítások
+- [ ] lambdaintro - Bevezetés a lambda kifejezések használatába
+- [ ] lambdaoptional - Optional használata
+- [ ] lambdacomparator - Comparator módosítások
 
 Streamek
 
-- lambdastreams - Streamek
-- lambdaintermediate - Intermediate műveletek
-- lambdaprimitives - Primitívek használata streamekben
-- lambdacollectors - Collectors
+- [ ] lambdastreams - Streamek
+- [ ] lambdaintermediate - Intermediate műveletek
+- [ ] lambdaprimitives - Primitívek használata streamekben
+- [ ] lambdacollectors - Collectors
 
 Dátum és időkezelés
 
-- datenewtypes - Új típusok, LocalDate, LocalTime, parse
-- dateoldtypes - Régi dátum- és időkezeléssel kapcsolatos típusok
+- [ ] datenewtypes - Új típusok, LocalDate, LocalTime, parse
+- [ ] dateoldtypes - Régi dátum- és időkezeléssel kapcsolatos típusok
 
 Architektúrák
 
-- jvm - JVM
-- thirdparty - Third party library-k
+- [ ] jvm - JVM
+- [ ] thirdparty - Third party library-k
 
 
 
@@ -235,7 +235,12 @@ Architektúrák
 # Egyéb
 
 ### Napi feladatok
+- [ ] [week02 - week16](https://github.com/egydGIT/training-solutions/tree/master/src/main/java)
 
 ### Projekt feladatok
 
 ### Vizsgák
+- [x] [exam 02](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam02)
+- [x] [exam 03](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam03)
+- [ ] [exam 03 uv1](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam03retake01) - gyakorlás
+- [ ] [exam 03 uv2]() - gyakorlás
