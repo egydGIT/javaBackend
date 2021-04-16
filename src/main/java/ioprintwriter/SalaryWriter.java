@@ -19,7 +19,7 @@ public class SalaryWriter {
         try (PrintWriter pw = new PrintWriter(Files.newBufferedWriter(file))) {
             for(String name: names) {
                 pw.print(name);
-                pw.print(" : ");
+                pw.print(": ");
 //                if (name.contains("Dr")) {                                // külön metódusba ki lehet szervezni
 //                    pw.println(500_000);
 //                }
@@ -55,6 +55,6 @@ public class SalaryWriter {
 
     public static void main(String[] args) {
         SalaryWriter salaryWriter = new SalaryWriter(List.of("Dr John Doe", "Mrs Jane Doe", "Jack"));
-        salaryWriter.writeNamesAndSalaries(Path.of("salarywriter.txt"));
+        salaryWriter.writeNamesAndSalaries(Path.of("src/main/resources/salarywriter.txt"));
     }
 }
