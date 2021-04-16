@@ -29,7 +29,7 @@ public class FilesSum {
     public int sumNumbers() {
         int sum = 0;
         for (int i = 0; i < 100; i++) {
-            String fileName = "number" + ( i < 10 ? "0"+i : i ) + ".txt";
+            String fileName = "src/main/resources/number" + ( i < 10 ? "0"+i : i ) + ".txt";
             // String fileName = String.format("number%02d.txt", i);  // 2 karakteren ábrázolja a számot, 0-val töltse fel
             // System.out.println(fileName);
 
@@ -44,8 +44,8 @@ public class FilesSum {
 
 
     public static void main(String[] args) {
-        System.out.println(new FilesSum().readFile("number20.txt"));
-        System.out.println(new FilesSum().readFile("number71.txt"));
+        System.out.println(new FilesSum().readFile("src/main/resources/number20.txt"));
+        System.out.println(new FilesSum().readFile("src/main/resources/number71.txt"));
 
         System.out.println(new FilesSum().sumNumbers());
 
