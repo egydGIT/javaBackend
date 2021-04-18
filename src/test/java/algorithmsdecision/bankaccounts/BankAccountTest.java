@@ -1,9 +1,6 @@
 package algorithmsdecision.bankaccounts;
 
-import algorithmsdecision.BankAccount;
-import algorithmsdecision.FindAccountLowerThanAmount;
 import org.junit.jupiter.api.Test;
-
 
 import java.util.Arrays;
 import java.util.List;
@@ -49,7 +46,7 @@ public class BankAccountTest {
     @Test
     public void testContainsBalanceGreaterThan() {
 
-        FindAccountLowerThanAmount test = new FindAccountLowerThanAmount();
+        BankAccountDecisionMaker test = new BankAccountDecisionMaker();
 
         assertTrue(test.containsBalanceGreaterThan(accounts, 150));
         assertFalse(test.containsBalanceGreaterThan(accounts, 250));
@@ -59,7 +56,7 @@ public class BankAccountTest {
     @Test
     public void testFindAccountLargerThanAmountMy() {
 
-        FindAccountLowerThanAmount test = new FindAccountLowerThanAmount();
+        BankAccountDecisionMaker test = new BankAccountDecisionMaker();
 
         assertTrue(test.findAccountLargerThanAmountMy(accounts, 150));
         assertFalse(test.findAccountLargerThanAmountMy(accounts, 250));

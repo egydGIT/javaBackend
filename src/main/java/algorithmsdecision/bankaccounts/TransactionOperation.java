@@ -1,4 +1,4 @@
-package algorithmsdecision;
+package algorithmsdecision.bankaccounts;
 
 public enum TransactionOperation {
 //    WITHDRAW,

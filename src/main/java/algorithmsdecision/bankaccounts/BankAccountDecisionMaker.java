@@ -1,9 +1,9 @@
-package algorithmsdecision;
+package algorithmsdecision.bankaccounts;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class FindAccountLowerThanAmount {
+public class BankAccountDecisionMaker {
 
     public boolean findAccountLargerThanAmountMy(List<BankAccount> bankAccounts, int amount) {
         boolean contains = false;
@@ -37,6 +37,6 @@ public class FindAccountLowerThanAmount {
         bankAccounts.add(bankAccount2);
         bankAccounts.add(bankAccount3);
 
-        System.out.println(new FindAccountLowerThanAmount().findAccountLargerThanAmountMy(bankAccounts, 450_000));
+        System.out.println(new BankAccountDecisionMaker().findAccountLargerThanAmountMy(bankAccounts, 450_000));
     }
 }

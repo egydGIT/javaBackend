@@ -1,6 +1,4 @@
-package algorithmsdecision;
-
-import algorithmsdecision.Transaction;
+package algorithmsdecision.bankaccounts;
 
 import java.time.LocalDateTime;
 import java.util.List;

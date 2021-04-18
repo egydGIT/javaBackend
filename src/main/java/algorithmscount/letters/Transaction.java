@@ -1,4 +1,4 @@
-package algorithmscount;
+package algorithmscount.letters;
 
 public class Transaction {
     private String accountNumber;

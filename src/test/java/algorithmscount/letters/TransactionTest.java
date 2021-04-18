@@ -1,8 +1,5 @@
-package algorithmscount.bankaccounts;
+package algorithmscount.letters;
 
-import algorithmscount.Transaction;
-import algorithmscount.TransactionCounter;
-import algorithmscount.TransactionType;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

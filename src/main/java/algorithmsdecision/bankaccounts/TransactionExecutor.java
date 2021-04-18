@@ -1,4 +1,7 @@
-package algorithmsdecision;
+package algorithmsdecision.bankaccounts;
+
+import algorithmsdecision.bankaccounts.BankAccount;
+import algorithmsdecision.bankaccounts.Transaction;
 
 import java.util.List;
 

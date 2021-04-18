@@ -1,4 +1,4 @@
-package algorithmsdecision;
+package algorithmsdecision.bankaccounts;
 
 public class BankAccount {
     private String nameOfOwner;

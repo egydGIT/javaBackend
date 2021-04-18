@@ -1,4 +1,4 @@
-package algorithmscount;
+package algorithmscount.bankaccounts;
 
 public class BankAccount {
     private String nameOfOwner;

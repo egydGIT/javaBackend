@@ -1,4 +1,4 @@
-package algorithmsdecision;
+package algorithmsdecision.bankaccounts;
 
 import org.junit.jupiter.api.Test;
 
