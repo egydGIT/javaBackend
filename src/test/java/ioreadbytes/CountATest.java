@@ -10,7 +10,7 @@ class CountATest {
 
     @Test
     public void readBytesAndFindAsTest() {
-        assertEquals(116, countA.countA("data.dat"));
+        assertEquals(116, countA.countA("src/test/resources/data.dat"));
     }
 
 }
