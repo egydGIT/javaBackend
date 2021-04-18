@@ -1,9 +1,7 @@
 package iostringwriter;
 
-import ioprintwriter.SalaryWriter;
 import org.junit.jupiter.api.Test;
 
-import java.io.Writer;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -13,7 +11,7 @@ class LongWordsTest {
     LongWords longWords = new LongWords();
 
     @Test
-    public void testUseMethod() {
+    public void testUseMethodMy() {
         List<String> testWords = List.of("MacroglossumStellatarum",
                 "PalingeniaLongicauda");
         String s = longWords.useMethod(testWords);

@@ -9,21 +9,15 @@ import java.util.List;
 public class LongWords {
 
     public void writeTo(List<String> longWords, Writer writer) {
-        try {
-            for (String w: longWords) {
-                writer.write(w);
-                writer.write(": ");
-                writer.write(w.length());
-                writer.write("\n");
-            }
-        } catch (IOException e) {
-            throw new IllegalArgumentException("List is not found. ", e);
+        PrintWriter pw = new PrintWriter(writer);
+        for (String w: longWords) {
+            pw.print(w + ": ");
+            pw.println(w.length());
         }
     }
 
     public String useMethod(List<String> longWords) {
-        StringWriter stringWriter = new StringWriter();
-        try (stringWriter) {
+        try (StringWriter stringWriter = new StringWriter()) {
             writeTo(longWords, stringWriter);
             return stringWriter.toString();
         } catch (IOException e) {
