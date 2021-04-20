@@ -1,4 +1,4 @@
-package collectionslist;
+package collectionslist.first;
 
 import java.util.*;
 

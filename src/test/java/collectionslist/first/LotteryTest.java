@@ -1,5 +1,6 @@
-package collectionslist;
+package collectionslist.first;
 
+import collectionslist.first.Lottery;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
