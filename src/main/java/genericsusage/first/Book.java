@@ -1,4 +1,4 @@
-package genericsusage;
+package genericsusage.first;
 
 public class Book {
 
