@@ -1,52 +1,53 @@
 package genericsusage;
 
-import genericsusage.first.Book;
-import genericsusage.first.Library;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
+import java.util.Collections;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
 
     @Test
-    void testGetFirstBook() {
+    public void shouldThrowExceptionIfArgumentIsNull() {
+        assertThrows(NullPointerException.class, () -> new Library().getFirstBookWithGenerics(null));
+    }
+
+    @Test
+    public void shouldThrowExceptionIfArgumentIsEmptyList() {
+        Exception ex = assertThrows(IllegalArgumentException.class, () -> new Library().getFirstBookWithGenerics(Collections.emptyList()));
+        assertEquals("Argument should not be empty!", ex.getMessage());
+    }
+
+    @Test
+    public void shouldReturnFirst() {
+        assertEquals("Egri Csillagok", new Library().getFirstBookWithGenerics(Arrays.asList(new Book("Egri Csillagok"))).getTitle());
+    }
+
+
+
+    @Test
+    public void shouldThrowExceptionIfArgumentIsNull2() {
+        assertThrows(NullPointerException.class, () -> new Library().getFirstBookWithOutGenerics(null));
+    }
+
+    @Test
+    public void shouldThrowExceptionIfArgumentIsEmptyList2() {
+        Exception ex = assertThrows(IllegalArgumentException.class, () -> new Library().getFirstBookWithOutGenerics(new ArrayList()));
+        assertEquals("Argument should not be empty!", ex.getMessage());
+    }
+
+    @Test
+    public void shouldThrowExceptionAddingDifferentObjects2() {
         Library library = new Library();
-        Book libraryBook = library.getFirstBook(List.of(new Book("Title1", "Somebody", 1529763),
-                new Book("Title2", "Somebody Else", 1458796)));
-
-        assertEquals(1529763, libraryBook.getRegNumber());
-        assertEquals("Somebody", libraryBook.getAuthor());
-
+        Exception ex = assertThrows(ClassCastException.class, () -> library.getFirstBookWithOutGenerics(Arrays.asList("", "", "")));
+        assertEquals("Not a book", ex.getMessage());
     }
 
     @Test
-    void testIllegalArgumentException() {
-        assertThrows(IllegalArgumentException.class, () -> new Library().getFirstBook(List.of()));
+    public void shouldReturnFirst2() {
+        assertEquals("Egri Csillagok", new Library().getFirstBookWithOutGenerics(Arrays.asList(new Book("Egri Csillagok"), new Book("Antigoné"))).getTitle());
     }
-
-    @Test
-    void testNullPointerException() {
-        assertThrows(NullPointerException.class, () -> new Library().getFirstBook(null));
-    }
-
-    @Test
-    void testGetFirstBookWithoutGenerics() {
-        Object book1 = new Book("Title1", "Somebody", 1529763);
-        Object book2 = new Book("Title2", "Somebody Else", 1458796);
-        List booksWithoutGenerics = new ArrayList();
-        booksWithoutGenerics.add(book1);
-        booksWithoutGenerics.add(book2);
-        booksWithoutGenerics.add("Just title");
-        booksWithoutGenerics.add(1584616);
-
-        Book bookWG = (Book) new Library().getFirstBookWithoutGenerics(booksWithoutGenerics);
-        assertEquals("Title1", bookWG.getTitle());
-        assertEquals(1529763, bookWG.getRegNumber());
-
-        assertEquals(1584616, booksWithoutGenerics.get(3));
-    }
-
 }

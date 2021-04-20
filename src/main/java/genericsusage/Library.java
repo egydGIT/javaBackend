@@ -1,4 +1,6 @@
-package genericsusage.tutorial;
+package genericsusage;
+
+import genericsusage.Book;
 
 import java.util.List;
 

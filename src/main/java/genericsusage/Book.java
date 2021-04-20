@@ -1,4 +1,4 @@
-package genericsusage.tutorial;
+package genericsusage;
 
 public class Book {
 
