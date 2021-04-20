@@ -155,16 +155,16 @@ java with Training360
 - [x] [ioreadwritebytes](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/ioreadwritebytes) - Bájtos beolvasása fájlból és kiírása fájlba
 - [x] [ioreader](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/ioreader) - String olvasása Readerrel
 - [x] [iowriter](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/iowriter) - String írása Writerrel
-- [ ] [ioprintwriter](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/ioprintwriter) - Különböző típusok írása PrintWriterrel
-- [ ] [iostringwriter](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/iostringwriter) - Kiírás Stringbe StringWriterrel
-- [ ] [ioreadbytes](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/ioreadbytes) - Bájtok olvasása InputStreammel
-- [ ] ioreaderclasspath - String olvasása classpath-ról
-- [ ] iowritebytes - Bájtok írása OutputStreammel
-- [ ] iodatastream - Adatok írása OutputStreamre, és olvasás
-- [ ] iozip - Bájtok írása tömörítéssel
-- [ ] ioconvert - Konvertálás a típusok között
-- [ ] iofiles - Files osztály használata
-- [ ] iofilestest - Fájlkezelés tesztelése
+- [x] [ioprintwriter](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/ioprintwriter) - Különböző típusok írása PrintWriterrel
+- [x] [iostringwriter](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/iostringwriter) - Kiírás Stringbe StringWriterrel
+- [x] [ioreadbytes](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/ioreadbytes) - Bájtok olvasása InputStreammel
+- [x] [ioreaderclasspath](https://github.com/egydGIT/training-solutions/tree/3be67dde55deaacc8eff598cea5d56169a08e191/src/main/java/ioreaderclasspath) - String olvasása classpath-ról
+- [x] [iowritebytes](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/iowritebytes) - Bájtok írása OutputStreammel
+- [x] [iodatastream](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/iodatastream) - Adatok írása OutputStreamre, és olvasás
+- [x] [iozip](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/iozip) - Bájtok írása tömörítéssel
+- [x] [ioconvert](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/ioconvert) - Konvertálás a típusok között
+- [ ] [iofiles]() - Files osztály használata
+- [ ] [iofilestest]() - Fájlkezelés tesztelése
 
 
 # Kollekciók és osztálykönyvtárak
@@ -240,7 +240,7 @@ Architektúrák
 ### Projekt feladatok
 
 ### Vizsgák
-- [x] [exam 02](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam02)
-- [x] [exam 03](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam03)
+- [x] [exam 02](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam02) - gyakorlati vizsga 2
+- [x] [exam 03](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam03) - gyakorlati vizsga 3
 - [ ] [exam 03 uv1](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam03retake01) - gyakorlás
 - [ ] [exam 03 uv2]() - gyakorlás
