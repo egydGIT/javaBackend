@@ -2,59 +2,78 @@ package collectionsequalshash;
 
 import org.junit.jupiter.api.Test;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class BookCatalogTest {
 
-    @Test
-    void testFindBookByTitleAuthor() {
-        BookCatalog bc = new BookCatalog();
+public class BookCatalogTest {
 
-        assertEquals(new Book("Title1", "Author1"), bc.findBookByTitleAuthor(
-                List.of(new Book("Title1", "Author1"), new Book("Title2", "Author2")),
-                "Title1", "Author1"));
-    }
+    private static final Book[] books = new Book[]{
+            new Book("1212", "Egri Csillagok", "Gárdonyi Géza"),
+            new Book("2121", "Vuk", "Fekete István"),
+            new Book("4545", "Rab Ráby", "Jókai Mór")
+    };
 
     @Test
-    void testFindBook() {
-        BookCatalog bc = new BookCatalog();
-        assertEquals(null, bc.findBook(List.of(new Book("Title1", "Author1"), new Book("Title2", "Author2")),
-                new Book("Title3", "Author3")));
+    public void findSelectedBookInBookList() {
+        //When
+        Book foundBook = new BookCatalog().findBookByTitleAuthor(Arrays.asList(books), "Vuk", "Fekete István");
+        //Then
+        assertEquals("2121", foundBook.getRegNumber());
+        assertEquals("Fekete István", foundBook.getAuthor());
+        assertEquals("Vuk", foundBook.getTitle());
+        assertEquals("Book{regNumber='2121', title='Vuk', author='Fekete István'}", foundBook.toString());
     }
 
     @Test
-    void testAddBooksToSet() {
-        BookCatalog bc = new BookCatalog();
-        Book[] books = {new Book("Title1", "Author1"),
-                new Book("Title1", "Author1"),
-                new Book("Title1", "Author1")};
+    public void bookIsNotInBookList() {
+        Book foundBook = new BookCatalog().findBookByTitleAuthor(Arrays.asList(books), "Vuk", "");
 
-//        assertEquals(Arrays.asList(new Book("Title1", "Author1")), bc.addBooksToSet(books));
-//              Expected :[Book{title='Title1', author='Author1'}]
-//              Actual   :[Book{title='Title1', author='Author1'}]                  // ??
-
-        assertEquals(1, bc.addBooksToSet(books).size());
+        assertEquals(null, foundBook);
     }
 
-
-    /*
-    Szerintem, ha kikommentelem az equals() és hashCode() override-okat,
-    akkor az Objects-ben deklarlt metódusokat fogja használni.
-    Ami az objektiumokat referencia egyezőség szerint hasonlítja össze és nem a vizsgált attributumok alapján.
-
-    public boolean equals(Object o) {
-        return super.equals(o);
+    @Test
+    public void findSelectedBookInSearchableBookList() {
+        //Given
+        Book searchingFor = new Book("2121", "Vuk", "Fekete István");
+        //When
+        Book foundBook = new BookCatalog().findBook(Arrays.asList(books), searchingFor);
+        //Then
+        assertTrue(searchingFor.equals(foundBook));
     }
 
-    public int hashCode() {
-        return super.hashCode();
+    @Test
+    public void selectedBookIsNotInBookList() {
+        Book searchingFor = new Book("2121", "Vuk", "István");
+
+        Book foundBook = new BookCatalog().findBook(Arrays.asList(books), searchingFor);
+
+        assertEquals(null, foundBook);
     }
 
-     */
+    @Test
+    public void findBookByTitleAndAuthor() {
+        //Given
+        Book searchingFor = new Book("Vuk", "Fekete István");
+        //When
+        Book foundBook = new BookCatalog().findBook(Arrays.asList(books), searchingFor);
+        //Then
+        assertTrue(searchingFor.equals(foundBook));
+    }
+
+    @Test
+    public void addSameBooksToSet() {
+        //Given
+        Book[] sameBooks = new Book[]{
+                new Book("1212", "Egri Csillagok", "Gárdonyi Géza"),
+                new Book("1212", "Egri Csillagok", "Gárdonyi Géza"),
+                new Book("1212", "Egri Csillagok", "Gárdonyi Géza")
+        };
+        //When
+        Set<Book> bookSet = new BookCatalog().addBooksToSet(sameBooks);
+        //Then
+        assertEquals(1, bookSet.size());
+    }
 }
