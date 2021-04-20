@@ -1,6 +1,6 @@
 package collectionsqueue;
 
-public class Job implements Comparable {
+public class Job implements Comparable<Job> {
 
     private final int priority;                            // 1 - 10 skálán osztályozzuk a prioritást
     private final String jobDescription;
@@ -26,6 +26,6 @@ public class Job implements Comparable {
 
     @Override
     public int compareTo(Job o) {
-        return this.getPriority() - o.getPriority();
+        return this.priority - o.getPriority();
     }
 }
