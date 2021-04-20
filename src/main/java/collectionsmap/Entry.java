@@ -8,7 +8,7 @@ public class Entry {
     private LocalDate date;
     private String login;
 
-    public Entry(String ipAddress, LocalDate date, String login) {
+    public Entry(String ipAddress, String login, LocalDate date) {
         this.ipAddress = ipAddress;
         this.date = date;
         this.login = login;
