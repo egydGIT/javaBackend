@@ -5,9 +5,8 @@ import java.util.List;
 
 public class IntegerOperations {
 
-    private List<Integer> numbersList = new ArrayList<>();
-
     public List<Integer> createList(int... numbers) {
+        List<Integer> numbersList = new ArrayList<>();
         for (int n: numbers) {
             numbersList.add(n);
         }
@@ -28,13 +27,6 @@ public class IntegerOperations {
             sum += i;
         }
         return sum;
-    }
-
-    @Override
-    public String toString() {
-        return "IntegerOperations{" +
-                "numbersList=" + numbersList +
-                '}';
     }
 
 
