@@ -27,7 +27,7 @@ class LibraryManagerTest {
         Exception ex = assertThrows(MissingBookException.class, () -> {
             manager.findBookByRegNumber(1212);
         });
-//        assertEquals("No books found with regnumber: " + 1212, ex.getMessage());
+        assertEquals("No books found with regnumber: " + 1212, ex.getMessage());
     }
 
     @Test
@@ -46,7 +46,7 @@ class LibraryManagerTest {
             manager.removeBookByRegNumber(1212);
 
         });
-//        assertEquals("No books found with regnumber: " + 1212, ex.getMessage());
+        assertEquals("No books found with regnumber: " + 1212, ex.getMessage());
     }
 
     @Test
@@ -64,7 +64,7 @@ class LibraryManagerTest {
         Exception ex = assertThrows(MissingBookException.class, () -> {
             manager.selectBooksByAuthor("Tolkien");
         });
-//        assertEquals("No books found by Tolkien", ex.getMessage());
+        assertEquals("No books found by Tolkien", ex.getMessage());
 
 
     }

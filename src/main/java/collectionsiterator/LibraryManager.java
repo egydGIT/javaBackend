@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class LibraryManager {
 
-    private Set<Book> libraryBooks;
+    private Set<Book> libraryBooks = new HashSet<>();
 
     public LibraryManager(Set<Book> libraryBooks) {
         this.libraryBooks = libraryBooks;
@@ -22,7 +22,8 @@ public class LibraryManager {
                 return find;
             }
         }
-        throw new MissingBookException("Can not find book with regnumber: " + regNumber);
+        //throw new MissingBookException("Can not find book with regnumber: " + regNumber);
+        throw new MissingBookException("No books found with regnumber: " + regNumber);
     }
 
     public int removeBookByRegNumber(int regNumber) {
@@ -35,7 +36,8 @@ public class LibraryManager {
                 return find.getRegNumber();
             }
         }
-        throw new MissingBookException("Can not find book with regnumber: " + regNumber);
+        // throw new MissingBookException("Can not find book with regnumber: " + regNumber);
+        throw new MissingBookException("No books found with regnumber: " + regNumber);
     }
 
     public Set<Book> selectBooksByAuthor(String author) {
@@ -51,7 +53,8 @@ public class LibraryManager {
         }
 
         if (foundBooksWithSameAuthor.isEmpty()) {
-            throw new MissingBookException("With " + author + " there's no book found.");
+            // throw new MissingBookException("With " + author + " there's no book found.");
+            throw new MissingBookException("No books found by " + author);
         }
         return foundBooksWithSameAuthor;
     }
