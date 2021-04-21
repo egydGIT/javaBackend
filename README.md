@@ -171,22 +171,22 @@ java with Training360
 
 Kollekció típusok
 
-- [ ] [genericsusage]() - Generikusok használata, diamond operátor
-- [ ] [collectionsequalshash]() - equals, hashCode
-- [ ] [collectionslist]() - List, ArrayList kontra LinkedList
-- [ ] [collectionsset]() - Set
-- [ ] [collectionsqueue]() - Queue
-- [ ] [collectionsmap]() - Map
-- [ ] [collectionsautoboxing]() - Autoboxing használata kollekcióknál
+- [x] [genericsusage](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/genericsusage) - Generikusok használata, diamond operátor
+- [x] [collectionsequalshash](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/collectionsequalshash) - equals, hashCode
+- [x] [collectionslist](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/collectionslist) - List, ArrayList kontra LinkedList
+- [x] [collectionsset](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/collectionsset) - Set
+- [x] [collectionsqueue](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/collectionsqueue) - Queue
+- [x] [collectionsmap](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/collectionsmap) - Map
+- [x] [collectionsautoboxing](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/collectionsautoboxing) - Autoboxing használata kollekcióknál
 
 Alapvető algoritmusok
 
-- [ ] [collectionsiterator]() - Bejárás
-- [ ] [collectionscomp]() - Comparable és Comparator
-- [ ] [searching]() - Keresés
-- [ ] [sorting]() - Rendezés
-- [ ] [collectionsclass]() - Collections osztály (keresésen, rendezésen felüli metódusok)
-- [ ] [clone]() - A clone() metódus, deep clone
+- [ ] [collectionsiterator](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/collectionsiterator) - Bejárás
+- [ ] [collectionscomp](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/collectionscomp) - Comparable és Comparator
+- [ ] [searching](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/searching) - Keresés
+- [ ] [sorting](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/sorting) - Rendezés
+- [ ] [collectionsclass](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/collectionsclass) - Collections osztály (keresésen, rendezésen felüli metódusok)
+- [ ] [clone](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/clone) - A clone() metódus, deep clone
 - [ ] [properties]() - Properties állományok
 
 Lambda kifejezések
