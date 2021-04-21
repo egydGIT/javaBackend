@@ -11,13 +11,20 @@ public class OrderedArrayLibrary {
         this.bookArray = bookArray;
     }
 
-    public Book[] sortingById() {
+    public Book[] sortingByIdMy() {
         Book[] bookArrayCopy = Arrays.copyOf(bookArray, bookArray.length);
         Arrays.sort(bookArrayCopy);
         return bookArrayCopy;
     }
 
-    public Book[] sortingByTitle() {
+    public Book[] sortingById(){
+        Book[] books = new Book[bookArray.length];
+        System.arraycopy(bookArray, 0, books, 0, bookArray.length);
+        Arrays.sort(books);
+        return books;
+    }
+
+    public Book[] sortingByTitleMy() {
         Book[] bookArrayCopy = Arrays.copyOf(bookArray, bookArray.length);
         Arrays.sort(bookArrayCopy, new Comparator<Book>() {
             @Override
@@ -28,6 +35,19 @@ public class OrderedArrayLibrary {
         return bookArrayCopy;
     }
 
+    public Book[] sortingByTitle() {
+        Comparator<Book> titleComparator = new Comparator<Book>() {
+
+            public int compare(Book bookA, Book bookB) {
+                return bookA.getTitle().compareTo(bookB.getTitle());
+            }
+        };
+
+        Book[] books = new Book[bookArray.length];
+        System.arraycopy(bookArray, 0, books, 0, bookArray.length);
+        Arrays.sort(books, titleComparator);
+        return books;
+    }
 
     public static void main(String[] args) {
         Book[] bookArray = {new Book(1, "B_Title", "Author1"),
