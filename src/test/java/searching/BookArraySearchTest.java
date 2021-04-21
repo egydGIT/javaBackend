@@ -37,7 +37,7 @@ class BookArraySearchTest {
         Book[] bookArray = new Book[bookList.size()];
 
         Exception ex = assertThrows(IllegalArgumentException.class, () -> new BookArraySearch(bookList.toArray(bookArray)).findBookByAuthorTitle("", ""));
-//        assertEquals("Author or title must not be empty!", ex.getMessage());
+        assertEquals("Author or title must not be empty!", ex.getMessage());
 
     }
 
@@ -49,7 +49,7 @@ class BookArraySearchTest {
         Exception ex = assertThrows(IllegalArgumentException.class, () -> {
             new BookArraySearch(bookList.toArray(bookArray)).findBookByAuthorTitle(null, null);
         });
-//        assertEquals("Author or title must not be empty!", ex.getMessage());
+        assertEquals("Author or title must not be empty!", ex.getMessage());
 
     }
 

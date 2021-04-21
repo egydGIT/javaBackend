@@ -3,27 +3,35 @@ package searching;
 public class Book implements Comparable<Book> {
 
     private int id;
-    private String title;
     private String author;
+    private String title;
 
-    public Book(int id, String title, String author) {
+    public Book(int id, String author, String title) {
         this.id = id;
-        this.title = title;
         this.author = author;
+        this.title = title;
     }
 
-    public Book(String title, String author) {
-        this.title = title;
+    public Book(String author, String title) {
         this.author = author;
-        this.id = 0;
+        this.title = title;
     }
+
+    //    @Override
+//    public int compareTo(Book o) {
+//        if (this.getAuthor().equals(o.getAuthor())) {
+//            return this.getTitle().compareTo(o.getTitle());
+//        }
+//        else return this.getAuthor().compareTo(o.getAuthor());
+//    }
 
     @Override
     public int compareTo(Book o) {
-        if (this.getAuthor().equals(o.getAuthor())) {
-            return this.getTitle().compareTo(o.getTitle());
+        if (author.compareTo(o.author) != 0) {
+            return author.compareTo(o.author);
+        } else {
+            return title.compareTo(o.title);
         }
-        else return this.getAuthor().compareTo(o.getAuthor());
     }
 
     public int getId() {
@@ -52,10 +60,6 @@ public class Book implements Comparable<Book> {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                '}';
+        return id + " " + author + " " + title;
     }
 }

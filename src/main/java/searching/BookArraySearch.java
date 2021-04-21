@@ -11,17 +11,20 @@ public class BookArraySearch {
     }
 
     public Book findBookByAuthorTitle(String author, String title) {
-        if (author.isEmpty() || title.isEmpty()) {
-            throw new IllegalArgumentException("Searching parameters are missing. Author: " + author + " or Title: " + title);
+        if (isEmpty(author) || isEmpty(title)) {
+            // throw new IllegalArgumentException("Searching parameters are missing. Author: " + author + " or Title: " + title);
+            throw new IllegalArgumentException("Author or title must not be empty!");
         }
-        // String[] searchParam = {author, title};
-        Book searchBook = new Book(author, title);
-        Arrays.sort(bookArray);
-        int index = Arrays.binarySearch(bookArray, searchBook);
-        if (index < 0) {
-            throw new IllegalArgumentException("There's no matching book");
+        Book searchBook = new Book(author, title);                  // paraméterek alapján új Book obj. példányosítás
+        Arrays.sort(bookArray);                                     // keresés csak rendezett listán működik -> sort
+        int index = Arrays.binarySearch(bookArray, searchBook);     // bináris keresés natural ordering alapján
+                                                                    // mert Comparable if-t Book oszt. implementáljaja
+                                                                    // compareTo met. talált elem indexével tér vissza
+        if (index < 0) {                                            // és negatív értékkel, ha nincs egyezés
+            // throw new IllegalArgumentException("There's no matching book");
+            throw new IllegalArgumentException("No book found by " + author + " with title " + title);
         }
-        return bookArray[index];
+        return bookArray[index];               // met. a tömb azon indexen lévő elemével tér vissza, amit keresés adott
     }
 
     public Book[] getBookArray() {
@@ -30,6 +33,10 @@ public class BookArraySearch {
 
     public void setBookArray(Book[] bookArray) {
         this.bookArray = bookArray;
+    }
+
+    private boolean isEmpty(String str){
+        return str == null || "".equals(str.trim());
     }
 
 
