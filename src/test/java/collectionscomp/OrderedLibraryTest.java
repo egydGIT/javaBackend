@@ -41,11 +41,11 @@ class OrderedLibraryTest {
         assertEquals("Utasy Kristóf", orderedBookList.get(0).getAuthor());
     }
 
-//    @Test
-//    public void testOrderedByTitleLocale() {
-//        // Given
-//        List<String> orderedTitleList = library.orderedByTitleLocale(new Locale("hu", "HU"));
-//        //Then
-//        assertEquals("Államhatár", orderedTitleList.get(0));
-//    }
+    @Test
+    public void testOrderedByTitleLocale() {
+        // Given
+        List<String> orderedTitleList = library.orderedByTitleLocale(new Locale("hu", "HU"));
+        //Then
+        assertEquals("Államhatár", orderedTitleList.get(0));
+    }
 }

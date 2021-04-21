@@ -5,7 +5,7 @@ import java.util.*;
 
 public class OrderedLibrary {
 
-    List<Book> libraryBooks;
+    private List<Book> libraryBooks = new LinkedList<>();
 
     public OrderedLibrary(List<Book> libraryBooks) {
         this.libraryBooks = libraryBooks;
@@ -42,18 +42,22 @@ public class OrderedLibrary {
         return libraryBooksCopy;
     }
 
-//    public List<Book> orderedByTitleLocale(Locale locale) {       // ékezetes karaktereket is figyelembe vevő String rendezés
-//        List<Book> libraryBooksCopy = new ArrayList<>(libraryBooks);
-//        Collections.sort(libraryBooksCopy, Collator.getInstance(new Locale("hu", "HU")));
-//        return libraryBooksCopy;
-//    }
+    public List<String> orderedByTitleLocale(Locale locale) {       // ékezetes karaktereket is figyelembe vevő String rendezés
+        List<String> libraryBooksTitles = new ArrayList<>();
+        for (Book book : libraryBooks) {
+            libraryBooksTitles.add(book.getTitle());
+        }
+        // Collections.sort(libraryBooksTitles, Collator.getInstance(new Locale("hu", "HU")));
+
+        Collator hungarianCollator = Collator.getInstance(locale);
+        hungarianCollator.setStrength(Collator.PRIMARY);                // ??
+        Collections.sort(libraryBooksTitles, hungarianCollator);
+
+        return libraryBooksTitles;
+    }
 
     public List<Book> getLibraryBooks() {
         return libraryBooks;
-    }
-
-    public void setLibraryBooks(List<Book> libraryBooks) {
-        this.libraryBooks = libraryBooks;
     }
 
     public List<String> getLibraryBookTitles(List<Book> libraryBooks) {
