@@ -5,13 +5,13 @@ import java.util.Objects;
 public class Book implements Comparable<Book> {
 
     private int id;
-    private String title;
     private String author;
+    private String title;
 
-    public Book(int id, String title, String author) {
+    public Book(int id, String author, String title) {
         this.id = id;
-        this.title = title;
         this.author = author;
+        this.title = title;
     }
 
     @Override
@@ -29,16 +29,13 @@ public class Book implements Comparable<Book> {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        //return Objects.hash(id);
+        return id;                                          // ?
     }
 
     @Override
     public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                '}';
+        return id + " " + author + " " + title;
     }
 
     public int getId() {

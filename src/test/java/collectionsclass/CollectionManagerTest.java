@@ -62,7 +62,7 @@ public class CollectionManagerTest {
         assertEquals(1001, book.getId());
     }
 
-    /*
+
     @Test
     public void testGetLastBook() {
         // Given
@@ -88,5 +88,5 @@ public class CollectionManagerTest {
 
     }
 
-     */
+
 }

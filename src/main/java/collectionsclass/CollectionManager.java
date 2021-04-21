@@ -26,13 +26,11 @@ public class CollectionManager {
     }
 
     public Book getFirstBook() {                        //a legrégebbi (legkisebb id) könyvet adja vissza
-        List<Book> copyLibrary = new ArrayList<>(library);
-        return Collections.min(copyLibrary);
+        return Collections.min(library);
     }
 
     public Book getLastBook() {                         // a legújabb (legnagyobb id) könyvet adja vissza
-        List<Book> copyLibrary = new ArrayList<>(library);
-        return Collections.max(copyLibrary);
+        return Collections.max(library);
     }
 
     public List<Book> getLibrary() {
