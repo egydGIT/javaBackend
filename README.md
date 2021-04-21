@@ -1,5 +1,5 @@
 ## training-solutions
-java with Training360
+![java](https://github.com/egydGIT/training-solutions/commit/6ec305f64f9403ae9d9a0450d660d1892d228d2b) with **Training360**
 
 
 # Bevezetés a nyelvi eszközökbe
