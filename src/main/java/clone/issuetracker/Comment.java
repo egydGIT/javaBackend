@@ -12,9 +12,9 @@ public class Comment {
         this.time = time;
     }
 
-    public Comment(Comment another) {
-        text = another.text;
-        time = another.time;
+    public Comment(Comment primary) {
+        text = primary.text;
+        time = primary.time;
     }
 
     public String getText() {
