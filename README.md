@@ -1,5 +1,5 @@
 ## training-solutions
-![java](https://github.com/egydGIT/training-solutions/commit/6ec305f64f9403ae9d9a0450d660d1892d228d2b) with **Training360**
+java with **Training360**
 
 
 # Bevezetés a nyelvi eszközökbe
@@ -181,12 +181,12 @@ Kollekció típusok
 
 Alapvető algoritmusok
 
-- [ ] [collectionsiterator](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/collectionsiterator) - Bejárás
-- [ ] [collectionscomp](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/collectionscomp) - Comparable és Comparator
-- [ ] [searching](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/searching) - Keresés
-- [ ] [sorting](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/sorting) - Rendezés
-- [ ] [collectionsclass](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/collectionsclass) - Collections osztály (keresésen, rendezésen felüli metódusok)
-- [ ] [clone](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/clone) - A clone() metódus, deep clone
+- [x] [collectionsiterator](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/collectionsiterator) - Bejárás
+- [x] [collectionscomp](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/collectionscomp) - Comparable és Comparator
+- [x] [searching](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/searching) - Keresés
+- [x] [sorting](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/sorting) - Rendezés
+- [x] [collectionsclass](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/collectionsclass) - Collections osztály (keresésen, rendezésen felüli metódusok)
+- [x] [clone](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/clone) - A clone() metódus, deep clone
 - [ ] [properties]() - Properties állományok
 
 Lambda kifejezések
