@@ -5,12 +5,13 @@ import java.time.LocalDateTime;
 
 public class TimeSheetItem {
 
-    private Employee employee;          // referencia tipusú
+//    private Employee employee;          // referencia tipusú
+    private String employee;
     private String project;             // immutable
     private LocalDateTime from;
     private LocalDateTime to;
 
-    public TimeSheetItem(Employee employee, String project, LocalDateTime from, LocalDateTime to) {
+    public TimeSheetItem(String employee, String project, LocalDateTime from, LocalDateTime to) {
         this.employee = employee;
         this.project = project;
         this.from = from;
@@ -34,14 +35,21 @@ public class TimeSheetItem {
 
      */
 
-    private static TimeSheetItem withDifferentDay(TimeSheetItem timeSheetItem, LocalDate localDate) {
-        TimeSheetItem copyTimeSheetItem = new TimeSheetItem(timeSheetItem);
-        copyTimeSheetItem.from = LocalDateTime.of(localDate, copyTimeSheetItem.from.toLocalTime());
+    public static TimeSheetItem withDifferentDay(TimeSheetItem timeSheetItem, LocalDate localDate) {
+        TimeSheetItem copyTimeSheetItem = new TimeSheetItem(timeSheetItem);                        // copy konstrukrorral másolat példányosítása
+        copyTimeSheetItem.from = LocalDateTime.of(localDate, copyTimeSheetItem.from.toLocalTime());// másolat from attr-nak átállítása
         copyTimeSheetItem.to = LocalDateTime.of(localDate, copyTimeSheetItem.to.toLocalTime());
+        // from és to attr-ban szereplő dátumokat kicseréli a másodikként megadott napra, de az időket érintetlenül hagyja.
+        // toLocalTime(): Gets the LocalTime part of this date-time. This returns a LocalTime with the same hour, minute.. as this date-time.
         return copyTimeSheetItem;
     }
 
-    public Employee getEmployee() {
+//    public Employee getEmployee() {
+//        return employee;
+//    }
+
+
+    public String getEmployee() {
         return employee;
     }
 
