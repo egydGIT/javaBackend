@@ -1,9 +1,8 @@
-package jdbc.employees.architecture;
+package jdbc_gyak.employees.architecture;
 
 import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class EmployeesDao {         // DAO = Data Access Object, olyan obj, ami az adatokhoz fér hozzá

@@ -1,13 +1,10 @@
-package jdbc.activitytracker;
+package jdbc_gyak.activitytracker;
 
 import org.flywaydb.core.Flyway;
 import org.mariadb.jdbc.MariaDbDataSource;
 
-import javax.sql.DataSource;
 import java.sql.*;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 public class ActivityTrackerMain {
 

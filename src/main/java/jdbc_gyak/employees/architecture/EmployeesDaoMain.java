@@ -1,4 +1,4 @@
-package jdbc.employees.architecture;
+package jdbc_gyak.employees.architecture;
 
 import org.flywaydb.core.Flyway;
 import org.mariadb.jdbc.MariaDbDataSource;

@@ -1,4 +1,4 @@
-package jdbc.activitytracker;
+package jdbc_gyak.activitytracker;
 
 import org.flywaydb.core.Flyway;
 import org.junit.jupiter.api.BeforeEach;
