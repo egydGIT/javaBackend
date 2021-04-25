@@ -1,5 +1,5 @@
 ## training-solutions
-![java](https://github.com/egydGIT/training-solutions/commit/6ec305f64f9403ae9d9a0450d660d1892d228d2b) with **Training360**
+java with **Training360**
 
 
 # Bevezetés a nyelvi eszközökbe
@@ -130,7 +130,7 @@
 - [x] [interfacestaticmethods](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/interfacestaticmethods) - Statikus interfész metódusok
 - [x] [interfaceextends]() - Interfészek és az öröklődés viszonya
 - [x] [enumabstract](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/enumabstract) - Absztrakt metódusok implementálása felsorolásos típusokban
-- [ ] [statemachine](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/statemachine) - Állapotgép
+- [x] [statemachine](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/statemachine) - Állapotgép
 
 ### Haladó OO elvek
 
@@ -181,13 +181,13 @@ Kollekció típusok
 
 Alapvető algoritmusok
 
-- [ ] [collectionsiterator](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/collectionsiterator) - Bejárás
-- [ ] [collectionscomp](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/collectionscomp) - Comparable és Comparator
-- [ ] [searching](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/searching) - Keresés
-- [ ] [sorting](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/sorting) - Rendezés
-- [ ] [collectionsclass](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/collectionsclass) - Collections osztály (keresésen, rendezésen felüli metódusok)
-- [ ] [clone](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/clone) - A clone() metódus, deep clone
-- [ ] [properties]() - Properties állományok
+- [x] [collectionsiterator](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/collectionsiterator) - Bejárás
+- [x] [collectionscomp](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/collectionscomp) - Comparable és Comparator
+- [x] [searching](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/searching) - Keresés
+- [x] [sorting](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/sorting) - Rendezés
+- [x] [collectionsclass](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/collectionsclass) - Collections osztály (keresésen, rendezésen felüli metódusok)
+- [x] [clone](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/clone) - A clone() metódus, deep clone
+- [ ] [properties](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/properties) - Properties állományok
 
 Lambda kifejezések
 
@@ -216,19 +216,22 @@ Architektúrák
 
 # Perzisztencia, adatbázis programozás
 
-### [MariaDB](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/mariadb)
+### MariaDB
+- [ ] [konzultáció](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/mariadb) - Gyakorlati anyag
 
-### [JDBC](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc)
+### JDBC
 
-- [ ] Egyszerű JDBC adatmódosítás (simpleupdate)
-- [ ] Egyszerű JDBC lekérdezés (simplequery)
-- [ ] Alkalmazás architektúra (architecture)
-- [ ] Generált azonosító lekérdezése (generatedid)
-- [ ] Tranzakciókezelés (transaction)
-- [ ] Blob (blob)
-- [ ] Adatbázis metaadatok (metadata)
-- [ ] Haladó ResultSet (advancedrs)
-- [ ] Spring JdbcTemplate (spring)
+- [ ] [simpleupdate]() - Egyszerű JDBC adatmódosítás
+- [ ] [simplequery]() - Egyszerű JDBC lekérdezés
+- [ ] [architecture]() - Alkalmazás architektúra
+- [ ] [generatedid]() - Generált azonosító lekérdezése
+- [ ] [transaction]() - Tranzakciókezelés
+- [ ] blob - Blob
+- [ ] metadata - Adatbázis metaadatok
+- [ ] advancedrs - Haladó ResultSet
+- [ ] spring - Spring JdbcTemplate
+- [ ] [konzultáció](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc) - Gyakorlati anyag
+
 
 
 
@@ -238,6 +241,11 @@ Architektúrák
 - [ ] [week02 - week16](https://github.com/egydGIT/training-solutions/tree/master/src/main/java)
 
 ### Projekt feladatok
+- [ ] [modul 1]() - Tárgyalók
+- [ ] [modul 2]() - Enapló
+- [ ] [modul 3]() - Könyvtárkatalógus
+- [ ] [modul 4]() - Activity Tracker
+- [ ] [modul 5]() - Timesheet
 
 ### Vizsgák
 - [x] [exam 02](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam02) - gyakorlati vizsga 2
