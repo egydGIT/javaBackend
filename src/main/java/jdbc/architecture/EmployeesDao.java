@@ -1,4 +1,4 @@
-package architecture;
+package jdbc.architecture;
 
 import javax.sql.DataSource;
 import java.sql.*;

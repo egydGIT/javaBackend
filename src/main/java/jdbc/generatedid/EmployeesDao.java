@@ -1,4 +1,4 @@
-package generatedid;
+package jdbc.generatedid;
 
 import javax.sql.DataSource;
 import java.sql.*;

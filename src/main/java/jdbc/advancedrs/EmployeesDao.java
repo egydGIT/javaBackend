@@ -1,4 +1,4 @@
-package advancedrs;
+package jdbc.advancedrs;
 
 import javax.sql.DataSource;
 import java.sql.*;

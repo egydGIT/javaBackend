@@ -1,6 +1,6 @@
-package simplequery;
+package jdbc.simplequery;
 
-import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+import org.mariadb.jdbc.MariaDbDataSource;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -11,10 +11,14 @@ import java.sql.SQLException;
 public class EmployeesMainRefactored {
 
     public static void main(String[] args) {
-        MysqlDataSource dataSource = new MysqlDataSource();
-        dataSource.setUrl("jdbc:mysql://localhost:3306/employees?useUnicode=true");
-        dataSource.setUser("employees");
-        dataSource.setPassword("employees");
+        MariaDbDataSource dataSource = new MariaDbDataSource();
+        try {
+            dataSource.setUrl("jdbc:mariadb://localhost:3306/activitytracker?useUnicode=true");
+            dataSource.setUser("employees");
+            dataSource.setPassword("employees");
+        } catch (SQLException throwables) {
+            throw new IllegalStateException("Can not connect", throwables);
+        }
 
         new EmployeesMainRefactored().selectNameById(dataSource, 1L);
     }

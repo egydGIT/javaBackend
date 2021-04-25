@@ -1,4 +1,4 @@
-package transaction;
+package jdbc.transaction;
 
 import javax.sql.DataSource;
 import java.sql.*;
