@@ -130,7 +130,7 @@ java with **Training360**
 - [x] [interfacestaticmethods](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/interfacestaticmethods) - Statikus interfész metódusok
 - [x] [interfaceextends]() - Interfészek és az öröklődés viszonya
 - [x] [enumabstract](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/enumabstract) - Absztrakt metódusok implementálása felsorolásos típusokban
-- [ ] [statemachine](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/statemachine) - Állapotgép
+- [x] [statemachine](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/statemachine) - Állapotgép
 
 ### Haladó OO elvek
 
@@ -187,7 +187,7 @@ Alapvető algoritmusok
 - [x] [sorting](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/sorting) - Rendezés
 - [x] [collectionsclass](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/collectionsclass) - Collections osztály (keresésen, rendezésen felüli metódusok)
 - [x] [clone](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/clone) - A clone() metódus, deep clone
-- [ ] [properties]() - Properties állományok
+- [ ] [properties](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/properties) - Properties állományok
 
 Lambda kifejezések
 
@@ -216,19 +216,22 @@ Architektúrák
 
 # Perzisztencia, adatbázis programozás
 
-### [MariaDB](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/mariadb)
+### MariaDB
+- [ ] [konzultáció](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/mariadb) - Gyakorlati anyag
 
-### [JDBC](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc)
+### JDBC
 
-- [ ] Egyszerű JDBC adatmódosítás (simpleupdate)
-- [ ] Egyszerű JDBC lekérdezés (simplequery)
-- [ ] Alkalmazás architektúra (architecture)
-- [ ] Generált azonosító lekérdezése (generatedid)
-- [ ] Tranzakciókezelés (transaction)
-- [ ] Blob (blob)
-- [ ] Adatbázis metaadatok (metadata)
-- [ ] Haladó ResultSet (advancedrs)
-- [ ] Spring JdbcTemplate (spring)
+- [ ] [simpleupdate]() - Egyszerű JDBC adatmódosítás
+- [ ] [simplequery]() - Egyszerű JDBC lekérdezés
+- [ ] [architecture]() - Alkalmazás architektúra
+- [ ] [generatedid]() - Generált azonosító lekérdezése
+- [ ] [transaction]() - Tranzakciókezelés
+- [ ] blob - Blob
+- [ ] metadata - Adatbázis metaadatok
+- [ ] advancedrs - Haladó ResultSet
+- [ ] spring - Spring JdbcTemplate
+- [ ] [konzultáció](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc) - Gyakorlati anyag
+
 
 
 
@@ -238,6 +241,11 @@ Architektúrák
 - [ ] [week02 - week16](https://github.com/egydGIT/training-solutions/tree/master/src/main/java)
 
 ### Projekt feladatok
+- [ ] [modul 1]() - Tárgyalók
+- [ ] [modul 2]() - Enapló
+- [ ] [modul 3]() - Könyvtárkatalógus
+- [ ] [modul 4]() - Activity Tracker
+- [ ] [modul 5]() - Timesheet
 
 ### Vizsgák
 - [x] [exam 02](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam02) - gyakorlati vizsga 2
