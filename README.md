@@ -217,21 +217,22 @@ Architektúrák
 # Perzisztencia, adatbázis programozás
 
 ### MariaDB
+
 - [ ] [konzultáció](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/mariadb) - Gyakorlati anyag
 
 ### JDBC
+- [ ] [konzultáció](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc_gyak) - Gyakorlati anyag
 
-- [ ] [simpleupdate]() - Egyszerű JDBC adatmódosítás
-- [ ] [simplequery]() - Egyszerű JDBC lekérdezés
-- [ ] [architecture]() - Alkalmazás architektúra
-- [ ] [generatedid]() - Generált azonosító lekérdezése
-- [ ] [transaction]() - Tranzakciókezelés
+- [ ] [advancedrs](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc/advancedrs)
+- [ ] [simpleupdate](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc/simpleupdate) - Egyszerű JDBC adatmódosítás
+- [ ] [simplequery](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc/simplequery) - Egyszerű JDBC lekérdezés
+- [ ] [architecture](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc/architecture) - Alkalmazás architektúra
+- [ ] [generatedid](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc/generatedid) - Generált azonosító lekérdezése
+- [ ] [transaction](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc/transaction) - Tranzakciókezelés
 - [ ] blob - Blob
 - [ ] metadata - Adatbázis metaadatok
 - [ ] advancedrs - Haladó ResultSet
 - [ ] spring - Spring JdbcTemplate
-- [ ] [konzultáció](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc) - Gyakorlati anyag
-
 
 
 
@@ -250,5 +251,6 @@ Architektúrák
 ### Vizsgák
 - [x] [exam 02](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam02) - gyakorlati vizsga 2
 - [x] [exam 03](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam03) - gyakorlati vizsga 3
-- [ ] [exam 03 uv1](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam03retake01) - gyakorlás
-- [ ] [exam 03 uv2]() - gyakorlás
+- [ ] [exam 03.1](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam03retake01) - gyakorlás
+- [ ] [exam 03.2]() - gyakorlás
+- [x] [finalExam](https://github.com/egydGIT/zarovizsga) - záróvizsga
