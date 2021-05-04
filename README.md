@@ -165,7 +165,7 @@ java with **Training360**
 - [x] [ioconvert](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/ioconvert) - Konvertálás a típusok között
 - [ ] [iofiles]() - Files osztály használata
 - [ ] [iofilestest]() - Fájlkezelés tesztelése
-- [x] [:file_folder:](https://github.com/egydGIT/training-solutions/blob/master/F%C3%A1jlkezel%C3%A9sEgyd.xlsx) - összesítő (saját) 
+- [x] [:file_folder:](https://github.com/egydGIT/training-solutions/blob/master/FileEgyd.xlsx) - összesítő (saját) 
 
 
 # Kollekciók és osztálykönyvtárak
@@ -260,4 +260,5 @@ Architektúrák
 - [x] [exam 03](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam03) - gyakorlati vizsga 3
 - [ ] [exam 03.1](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam03retake01) - gyakorlás
 - [ ] [exam 03.2]() - gyakorlás
-- [x] [finalExam](https://github.com/egydGIT/zarovizsga) - záróvizsga
+- [x] [final exam](https://github.com/egydGIT/zarovizsga) - záróvizsga
+- [ ] [qualifying exam](https://github.com/egydGIT/kepesitovizsga) - képesítő vizsga
