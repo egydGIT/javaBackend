@@ -165,6 +165,7 @@ java with **Training360**
 - [x] [ioconvert](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/ioconvert) - Konvertálás a típusok között
 - [ ] [iofiles]() - Files osztály használata
 - [ ] [iofilestest]() - Fájlkezelés tesztelése
+- [x] [:file_folder:](https://github.com/egydGIT/training-solutions/blob/master/F%C3%A1jlkezel%C3%A9sEgyd.xlsx) - összesítő (saját) 
 
 
 # Kollekciók és osztálykönyvtárak
@@ -216,13 +217,15 @@ Architektúrák
 
 # Perzisztencia, adatbázis programozás
 
+
 ### MariaDB
 
 - [ ] [konzultáció](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/mariadb) - Gyakorlati anyag
 
-### JDBC
-- [ ] [konzultáció](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc_gyak) - Gyakorlati anyag
 
+### JDBC
+
+- [ ] [konzultáció](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc_gyak) - Gyakorlati anyag
 - [ ] [advancedrs](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc/advancedrs)
 - [ ] [simpleupdate](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc/simpleupdate) - Egyszerű JDBC adatmódosítás
 - [ ] [simplequery](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc/simplequery) - Egyszerű JDBC lekérdezés
@@ -238,8 +241,11 @@ Architektúrák
 
 # Egyéb
 
+- [ ] [:memo:](https://github.com/egydGIT/training-solutions/blob/master/CheetSheet.txt) - Cheet Sheet
+
 ### Napi feladatok
 - [ ] [week02 - week16](https://github.com/egydGIT/training-solutions/tree/master/src/main/java)
+
 
 ### Projekt feladatok
 - [ ] [modul 1]() - Tárgyalók
@@ -247,6 +253,7 @@ Architektúrák
 - [ ] [modul 3]() - Könyvtárkatalógus
 - [ ] [modul 4]() - Activity Tracker
 - [ ] [modul 5]() - Timesheet
+
 
 ### Vizsgák
 - [x] [exam 02](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam02) - gyakorlati vizsga 2
