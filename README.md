@@ -220,12 +220,12 @@ Architektúrák
 
 ### MariaDB
 
-- [ ] [konzultáció](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/mariadb) - Gyakorlati anyag
+- [ ] [konzultáció](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/mariadb) - **Gyakorlati anyag**
 
 
 ### JDBC
 
-- [ ] [konzultáció](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc_gyak) - Gyakorlati anyag
+- [ ] [konzultáció](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc_gyak) - **Gyakorlati anyag**
 - [ ] [advancedrs](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc/advancedrs)
 - [ ] [simpleupdate](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc/simpleupdate) - Egyszerű JDBC adatmódosítás
 - [ ] [simplequery](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc/simplequery) - Egyszerű JDBC lekérdezés
@@ -244,7 +244,8 @@ Architektúrák
 - [ ] [:memo:](https://github.com/egydGIT/training-solutions/blob/master/CheetSheet.txt) - Cheet Sheet
 
 ### Napi feladatok
-- [ ] [week02 - week16](https://github.com/egydGIT/training-solutions/tree/master/src/main/java)
+- [ ] [week02 - week16](https://github.com/egydGIT/training-solutions/tree/master/src/main/java) - **Gyakorlati anyag**
+- [ ] [week02 - week16](https://github.com/egydGIT/dailyJava) - gyakorlás
 
 
 ### Projekt feladatok
@@ -256,9 +257,9 @@ Architektúrák
 
 
 ### Vizsgák
-- [x] [exam 02](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam02) - gyakorlati vizsga 2
-- [x] [exam 03](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam03) - gyakorlati vizsga 3
+- [x] [exam 02](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam02) - **Gyakorlati vizsga 2**
+- [x] [exam 03](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam03) - **Gyakorlati vizsga 3**
 - [ ] [exam 03.1](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam03retake01) - gyakorlás
 - [ ] [exam 03.2]() - gyakorlás
-- [x] [final exam](https://github.com/egydGIT/zarovizsga) - záróvizsga
-- [ ] [qualifying exam](https://github.com/egydGIT/kepesitovizsga) - képesítő vizsga
+- [x] [final exam](https://github.com/egydGIT/zarovizsga) - **Záróvizsga**
+- [ ] [qualifying exam](https://github.com/egydGIT/kepesitovizsga) - Képesítő vizsga
