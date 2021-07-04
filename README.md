@@ -262,4 +262,5 @@ Architektúrák
 - [ ] [exam 03.1](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam03retake01) - gyakorlás
 - [ ] [exam 03.2]() - gyakorlás
 - [x] [final exam](https://github.com/egydGIT/zarovizsga) - **Záróvizsga**
-- [ ] [qualifying exam](https://github.com/egydGIT/kepesitovizsga) - Képesítő vizsga
+- [ ] [qualifying exam](https://github.com/egydGIT/kepesitovizsga0) - Képesítő vizsga (hiányzás)
+- [x] [qualifying exam](https://github.com/egydGIT/kepesitovizsga) - **Képesítő vizsga uv**
