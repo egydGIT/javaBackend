@@ -244,22 +244,24 @@ Architektúrák
 
 ### Napi feladatok
 - [x] [week02 - week16](https://github.com/egydGIT/training-solutions/tree/master/src/main/java) - **Gyakorlati anyag**
-- [x] [week02 - week12](https://github.com/egydGIT/dailyJava) - gyakorlás.............................**dailyJava** subrepo
+- [x] week02 - week12 - gyakorlás.............................[**dailyJava**](https://github.com/egydGIT/dailyJava) subrepo
 
 
 ### Projekt feladatok
-- [ ] [modul 1]() - Tárgyalók
-- [ ] [modul 2]() - Enapló
-- [ ] [modul 3]() - Könyvtárkatalógus
-- [ ] [modul 4]() - Activity Tracker
-- [ ] [modul 5]() - Timesheet
+- [ ] modul 1 - Tárgyalók.............................................[**projects**](https://github.com/egydGIT/projects) subrepo
+- [ ] modul 2 - Enapló
+- [ ] modul 3 - Könyvtárkatalógus
+- [ ] modul 4 - Activity Tracker
+- [ ] modul 5 - Timesheet
 
 
 ### Vizsgák
 - [x] [exam 02](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam02) - **Gyakorlati vizsga 2**
 - [x] [exam 03](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam03) - **Gyakorlati vizsga 3**
-- [ ] [exam 03.1](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam03retake01) - gyakorlás
-- [ ] [exam 03.2]() - gyakorlás
-- [x] [final exam](https://github.com/egydGIT/zarovizsga) - **Záróvizsga** .....................................**zarovizsga** subrepo
+- [ ] exam 03.1 - gyakorlás.........................................[**practiceExams**](https://github.com/egydGIT/practiceExams) subrepo
+- [ ] exam 03.2 - gyakorlás
+- [x] [final exam](https://github.com/egydGIT/zarovizsga) - **Záróvizsga** .....................................[**zarovizsga**](https://github.com/egydGIT/zarovizsga) subrepo
+- [ ] final exam.1 - gyakorlás
+- [ ] final exam.2 - gyakorlás
 - [ ] [qualifying exam](https://github.com/egydGIT/kepesitovizsga0) - Képesítő vizsga (hiányzás)
-- [x] [qualifying exam](https://github.com/egydGIT/kepesitovizsga) - **Képesítő vizsga uv**................**kepesitovizsga** subrepo
+- [x] [qualifying exam](https://github.com/egydGIT/kepesitovizsga) - **Képesítő vizsga uv**................[**kepesitovizsga**](https://github.com/egydGIT/kepesitovizsga) subrepo
