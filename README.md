@@ -1,5 +1,4 @@
-## training-solutions
-java with **Training360**
+### TARTALOM
 
 
 # Bevezetés a nyelvi eszközökbe
@@ -37,7 +36,7 @@ java with **Training360**
 
 - [x] [array](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/array) - Tömbök
 - [x] cmdarguments - Parancssori paraméterek
-- [ ] [arrayofarrays](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/arrayofarrays) - Tömbök tömbje
+- [x] [arrayofarrays](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/arrayofarrays) - Tömbök tömbje
 - [x] [arrays](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/arrays) - Tömbök kezelése
 - [x] [arraylist](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/arraylist) - Lista
 - [x] [debug](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/debug) - Debug
@@ -58,7 +57,7 @@ java with **Training360**
 ### Típusok és operátorok
 
 - [x] [literals](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/literals) - Literálok
-- [ ] primitivetypes - Egyszerű típusok
+- [x] primitivetypes - Egyszerű típusok
 - [x] [enumtype](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/enumtype) - Felsorolásos típus
 - [x] [operators](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/operators) - Operátorok
 - [x] [typeconversion](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/typeconversion) - Típuskonverzió
@@ -89,7 +88,7 @@ java with **Training360**
 - [x] [algorithmscount](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/algorithmscount) - Számlálás tétele
 - [x] [algorithmsmax](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/algorithmsmax) - Szélsőérték keresés tétele
 - [x] [algorithmsdecision](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/algorithmsdecision) - Eldöntés tétele
-- [ ] [recursion](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/recursion) - Rekurzió
+- [x] [recursion](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/recursion) - Rekurzió
 
 
 # Objektumorientáltság
@@ -135,8 +134,8 @@ java with **Training360**
 ### Haladó OO elvek
 
 - [x] polymorphism - Polimorfizmus
-- [ ] [virtualmethod]() - Dinamikus kötés
-- [ ] [isahasa]() - is-a has-a kapcsolatok
+- [x] [virtualmethod]() - Dinamikus kötés
+- [x] [isahasa]() - is-a has-a kapcsolatok
 
 
 # Kivétel- és fájlkezelés
@@ -144,9 +143,9 @@ java with **Training360**
 ### Kivételkezelés
 
 - [x] [exceptions](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exceptions) - Kivételkezelés
-- [ ] [exceptionclass](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exceptionclass) - Saját kivétel
-- [ ] [exceptionmulticatch](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exceptionmulticatch) - Multi catch
-- [ ] [exceptionresource](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exceptionresource) - Try-With-Resources szerkezet
+- [x] [exceptionclass](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exceptionclass) - Saját kivétel
+- [x] [exceptionmulticatch](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exceptionmulticatch) - Multi catch
+- [x] [exceptionresource](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exceptionresource) - Try-With-Resources szerkezet
 
 ### Fájlkezelés
 
@@ -163,9 +162,9 @@ java with **Training360**
 - [x] [iodatastream](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/iodatastream) - Adatok írása OutputStreamre, és olvasás
 - [x] [iozip](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/iozip) - Bájtok írása tömörítéssel
 - [x] [ioconvert](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/ioconvert) - Konvertálás a típusok között
-- [ ] [iofiles]() - Files osztály használata
+- [x] [iofiles]() - Files osztály használata
 - [ ] [iofilestest]() - Fájlkezelés tesztelése
-- [x] [:file_folder:](https://github.com/egydGIT/training-solutions/blob/master/F%C3%A1jlkezel%C3%A9sEgyd.xlsx) - összesítő (saját) 
+- [x] [:file_folder:](https://github.com/egydGIT/training-solutions/blob/master/FileEgyd.xlsx) - összesítő (saját) 
 
 
 # Kollekciók és osztálykönyvtárak
@@ -220,44 +219,49 @@ Architektúrák
 
 ### MariaDB
 
-- [ ] [konzultáció](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/mariadb) - Gyakorlati anyag
+- [x] [konzultáció](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/mariadb) - **Gyakorlati anyag**
 
 
 ### JDBC
 
-- [ ] [konzultáció](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc_gyak) - Gyakorlati anyag
+- [x] [konzultáció](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc_gyak) - **Gyakorlati anyag**
 - [ ] [advancedrs](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc/advancedrs)
-- [ ] [simpleupdate](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc/simpleupdate) - Egyszerű JDBC adatmódosítás
-- [ ] [simplequery](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc/simplequery) - Egyszerű JDBC lekérdezés
-- [ ] [architecture](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc/architecture) - Alkalmazás architektúra
-- [ ] [generatedid](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc/generatedid) - Generált azonosító lekérdezése
-- [ ] [transaction](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc/transaction) - Tranzakciókezelés
-- [ ] blob - Blob
+- [x] [simpleupdate](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc/simpleupdate) - Egyszerű JDBC adatmódosítás
+- [x] [simplequery](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc/simplequery) - Egyszerű JDBC lekérdezés
+- [x] [architecture](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc/architecture) - Alkalmazás architektúra
+- [x] [generatedid](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc/generatedid) - Generált azonosító lekérdezése
+- [x] [transaction](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/jdbc/transaction) - Tranzakciókezelés
 - [ ] metadata - Adatbázis metaadatok
 - [ ] advancedrs - Haladó ResultSet
+- [ ] blob - Blob
 - [ ] spring - Spring JdbcTemplate
 
 
 
 # Egyéb
 
-- [ ] [:memo:](https://github.com/egydGIT/training-solutions/blob/master/CheetSheet.txt) - Cheet Sheet
+- [x] [:memo:](https://github.com/egydGIT/training-solutions/blob/master/CheetSheet.txt) - [Cheet Sheet](https://github.com/Training360/strukturavalto-java-public/blob/master/cheet-sheet/cheet-sheet.md)
 
 ### Napi feladatok
-- [ ] [week02 - week16](https://github.com/egydGIT/training-solutions/tree/master/src/main/java)
+- [x] [week02 - week16](https://github.com/egydGIT/training-solutions/tree/master/src/main/java) - **Gyakorlati anyag**
+- [x] week02 - week12 - gyakorlás.............................[**dailyJava**](https://github.com/egydGIT/dailyJava) subrepo
 
 
 ### Projekt feladatok
-- [ ] [modul 1]() - Tárgyalók
-- [ ] [modul 2]() - Enapló
-- [ ] [modul 3]() - Könyvtárkatalógus
-- [ ] [modul 4]() - Activity Tracker
-- [ ] [modul 5]() - Timesheet
+- [ ] modul 1 - Tárgyalók.............................................[**projects**](https://github.com/egydGIT/projects) subrepo
+- [ ] modul 2 - Enapló
+- [ ] modul 3 - Könyvtárkatalógus
+- [ ] modul 4 - Activity Tracker
+- [ ] modul 5 - Timesheet
 
 
 ### Vizsgák
-- [x] [exam 02](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam02) - gyakorlati vizsga 2
-- [x] [exam 03](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam03) - gyakorlati vizsga 3
-- [ ] [exam 03.1](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam03retake01) - gyakorlás
-- [ ] [exam 03.2]() - gyakorlás
-- [x] [finalExam](https://github.com/egydGIT/zarovizsga) - záróvizsga
+- [x] [exam 02](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam02) - **Gyakorlati vizsga 2**
+- [x] [exam 03](https://github.com/egydGIT/training-solutions/tree/master/src/main/java/exam03) - **Gyakorlati vizsga 3**
+- [ ] exam 03.1 - gyakorlás.........................................[**practiceExams**](https://github.com/egydGIT/practiceExams) subrepo
+- [ ] exam 03.2 - gyakorlás
+- [x] [final exam](https://github.com/egydGIT/zarovizsga) - **Záróvizsga** .....................................[**zarovizsga**](https://github.com/egydGIT/zarovizsga) subrepo
+- [ ] final exam.1 - gyakorlás
+- [ ] final exam.2 - gyakorlás
+- [ ] [qualifying exam](https://github.com/egydGIT/kepesitovizsga0) - Képesítő vizsga (hiányzás)
+- [x] [qualifying exam](https://github.com/egydGIT/kepesitovizsga) - **Képesítő vizsga uv**................[**kepesitovizsga**](https://github.com/egydGIT/kepesitovizsga) subrepo
