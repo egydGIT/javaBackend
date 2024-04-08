@@ -54,7 +54,7 @@ public class Diary {
     public void average(Path file) {
         try {
             List<String> myFile = Files.readAllLines(file);
-            double sum = 0;
+            double sum = 0.0;
             for (String s : myFile) {
                 sum += Double.parseDouble(s);
             }

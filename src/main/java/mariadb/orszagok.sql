@@ -67,7 +67,8 @@ SELECT `terulet` FROM `orszagok` WHERE `orszag` = 'Monaco';
 SELECT `nepesseg` FROM `orszagok` WHERE `orszag` = 'Málta'; 
 
 --      8.  Mennyi Japán népsűrűsége?
-SELECT `nepesseg` FROM `orszagok` WHERE `orszag` = 'Japán'; 
+SELECT `nepesseg` FROM `orszagok` WHERE `orszag` = 'Japán';
+SELECT SUM(`nepesseg`) * 1000 / SUM(`terulet`) AS 'nepsuruseg' FROM `orszagok` WHERE `orszag` = 'Japán';
 
 --      9.  Mely országok népsűrűsége nagyobb 500 fő/km2-nél? 										?
 SELECT `nepesseg`, `orszag` FROM `orszagok` WHERE `nepesseg` > 500;
@@ -76,7 +77,7 @@ SELECT `nepesseg`, `orszag` FROM `orszagok` WHERE `nepesseg` > 500;
 SELECT `orszag`, `foldr_hely` FROM `orszagok` where `foldr_hely` LIKE '%-sziget%';
 
 --     11.  Melyik a első hat legnagyobb területű ország?
-SELECT `terulet`, `orszag` FROM `orszagok` ORDER BY `terulet` DESC LIMIT 3;  
+SELECT `terulet`, `orszag` FROM `orszagok` ORDER BY `terulet` DESC LIMIT 6;
 
 --     12.  Melyik három ország területe a legkisebb?
 SELECT `terulet`, `orszag` FROM `orszagok` ORDER BY `terulet` ASC LIMIT 3;  
@@ -102,6 +103,7 @@ SELECT COUNT(*) `orszag` FROM `orszagok` WHERE `nepesseg` < 1000;
 -- 6.  Hány olyan ország van, aminek a területe kisebb, mint 10.000 km2, 
 --    vagy a lakossága kevesebb 1.000.000-nál?
 SELECT COUNT(orszag) FROM `orszagok` WHERE terulet < 10000;
+SELECT COUNT(orszag) FROM `orszagok` WHERE terulet < 10000 OR `nepesseg` < 1000000;
 
 -- 7.  Hány ország pénzneme a kelet-karib dollár?
 SELECT COUNT(orszag) FROM `orszagok` WHERE penznem = 'kelet-karib dollár';

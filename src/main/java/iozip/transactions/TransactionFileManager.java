@@ -17,7 +17,7 @@ public class TransactionFileManager {
         try (ZipOutputStream zos = new ZipOutputStream(new BufferedOutputStream(Files.newOutputStream(file)))) {
             for (Transaction t: transactions) {
                 String actualFilename = Long.toString(t.getId());
-                zos.putNextEntry(new ZipEntry(actualFilename));
+                zos.putNextEntry(new ZipEntry(actualFilename + ".dat"));
                 String content = t.getTime().toString() + "\n" + t.getAccount() + "\n" + Double.toString(t.getAmount());
                 zos.write(content.getBytes());
                 zos.closeEntry();

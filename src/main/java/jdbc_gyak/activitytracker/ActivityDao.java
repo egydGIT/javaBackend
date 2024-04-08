@@ -16,7 +16,7 @@ public class ActivityDao {      // DAO = Data Access Object
         this.dataSource = dataSource;
     }
 
-
+////
 //    public void insertActivity(Activity activity) {
 //        try(Connection conn = dataSource.getConnection();
 //            PreparedStatement stmt =
@@ -120,7 +120,7 @@ public class ActivityDao {      // DAO = Data Access Object
         }
         return sb.toString();
     }
-
+////
 //    public Activity selectById(long id) {
 //        try(Connection conn = dataSource.getConnection();
 //            PreparedStatement stmt = conn.prepareStatement("select * from activities where id = ?")
@@ -131,7 +131,7 @@ public class ActivityDao {      // DAO = Data Access Object
 //            throw new IllegalStateException("Can not contact.", se);
 //        }
 //    }
-//
+////
 //    private Activity selectByPreparedStatement(PreparedStatement stmt) {
 //        try (ResultSet rs = stmt.executeQuery()){
 //            if(rs.next()) {
@@ -148,7 +148,7 @@ public class ActivityDao {      // DAO = Data Access Object
 //            throw new IllegalArgumentException("Wrong statement.", se);
 //        }
 //    }
-//
+////
 //    public List<Activity> selectAllActivities() {
 //        List<Activity> activities = new ArrayList<>();
 //        try (Connection conn = dataSource.getConnection();
@@ -168,7 +168,7 @@ public class ActivityDao {      // DAO = Data Access Object
 //            throw new IllegalArgumentException("Can not connect", se);
 //        }
 //    }
-
+////
     public Activity selectById(long id) {        // csak a Statement-t állítja elő
         try(Connection conn = dataSource.getConnection();
             PreparedStatement stmt = conn.prepareStatement("select * from activities where id = ?")
@@ -202,7 +202,7 @@ public class ActivityDao {      // DAO = Data Access Object
             throw new IllegalStateException("Can not contact.", se);
         }
     }
-
+////
     private List<Activity> selectByPreparedStatement(PreparedStatement stmt) {      // select végrehajtása
         List<Activity> activities = new ArrayList<>();
         try (ResultSet rs = stmt.executeQuery()){
@@ -238,7 +238,7 @@ public class ActivityDao {      // DAO = Data Access Object
             throw new IllegalArgumentException("Wrong statement.", se);
         }
     }
-
+////
     public List<Activity> selectAllActivities() {      // csak a Statement-t állítja elő
 
         try (Connection conn = dataSource.getConnection();
@@ -251,18 +251,18 @@ public class ActivityDao {      // DAO = Data Access Object
     }
 
 
-
+////
     public List<Activity> selectActivitiesByType(ActivityType type) {
         try (Connection conn = dataSource.getConnection();
              PreparedStatement stmt = conn.prepareStatement("select * from activities where activity_type = ?")
         ) {
-            stmt.setString(1, type.toString());
+            stmt.setString(1, type.name());
             return selectByPreparedStatement(stmt);
         } catch (SQLException throwables) {
             throw new IllegalStateException("Connection failed", throwables);
         }
     }
-
+////
     public List<Activity> activitiesBeforeDate(LocalDate date) {   // par-ben kapott dátum előtti activity-ket adja vissza listában
        try (Connection conn = dataSource.getConnection();
             PreparedStatement stmt = conn.prepareStatement("select * from activities where start_time < ?")

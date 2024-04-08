@@ -16,10 +16,10 @@ public class DivisorFinder {
 
     public int findDivisors(int n) {
         int result = 0;
-        String numberToString = Integer.toString(n);
-        for (int i = 0; i < numberToString.length(); i++) {
-            int oneNumberFromNumberToString = Integer.parseInt(String.valueOf(numberToString.charAt(i)));
-            if( n % oneNumberFromNumberToString == 0 ) {
+        String number = Integer.toString(n);
+        for (int i = 0; i < number.length(); i++) {
+            int digit = Integer.parseInt(Character.toString(number.charAt(i)));
+            if( n % digit == 0 ) {
                 result++;
             }
         }

@@ -44,7 +44,7 @@ public class SchoolRecordsManager {
             while ((line = br.readLine()) != null) {
                 String[] temp = line.split(" ");
                 List<Integer> grades = new ArrayList<>();
-                for (int i = 1; i < temp.length-1; i++) {
+                for (int i = 1; i < temp.length; i++) {
                     grades.add(Integer.parseInt(temp[i]));
                 }
                 Student s = new Student(temp[0], grades);

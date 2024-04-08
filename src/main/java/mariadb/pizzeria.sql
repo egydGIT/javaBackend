@@ -4,12 +4,17 @@ USE `pizzeria`;
 
 
 
-CREATE TABLE `pizza` (
+CREATE TABLE `pizza` (                          -- megszorítások:
 	`pizza_id` INT NOT NULL,
-	`pizza_name` VARCHAR(100) NOT NULL,
-	`pizza_price` FLOAT NOT NULL, 
-	PRIMARY KEY (`pizza_id`)
+	`pizza_name` VARCHAR(100) NOT NULL UNIQUE,      -- nem lehet ismétlődés
+	`pizza_price` FLOAT NOT NULL,                   -- nem lehet null érték
+	PRIMARY KEY (`pizza_id`)                        -- elsődleges kulcs
 );
+-- AUTO_INCREMENT: db generál azonosítót
+-- DEFAULT: alapértelmezett érték
+-- CHECK: bevitt adat ellenőrzése
+-- INDEX: oszlopokra lehet tenni, gyorsítótáras kereséshez
+-- FOREIGN KEY:
 
 SELECT * FROM `pizza`;
 
@@ -102,14 +107,14 @@ SELECT * FROM `pizza` AS p
 
 SELECT * FROM `pizza` WHERE pizza_price > 1750
 	UNION 																		-- FULL OUTHER JOIN helyett
-		SELECT * FROM `pizza` WHERE pizza_name LIKE '%a%';
-
+		SELECT * FROM `pizza` WHERE pizza_name LIKE '%a%';                          -- mindkét táblában meglévő adatot egyszer
+                                                                                    -- csak az egyik táblában meglévőt is egyszer
 
 SELECT * FROM `pizza` AS p  
 	LEFT JOIN `order` AS o 
 		ON p.pizza_id = o.pizza_id 
-UNION ALL 
-SELECT * FROM `pizza` AS p  
+UNION ALL                                                                           -- mindkét táblában meglévő adatot kétszer is kiírja
+SELECT * FROM `pizza` AS p                                                          -- csak az egyik táblában meglévőt is egyszer
 	RIGHT JOIN `order` AS o 
 		ON p.pizza_id = o.pizza_id; 
 		
@@ -120,6 +125,7 @@ SELECT pizza_price, pizza_name FROM
 
 --Átlagosan mekkora értékben rendeltek az emberek? 
 SELECT AVG(p.pizza_price) FROM `pizza` AS p JOIN `order` AS o ON p.pizza_id = o.pizza_id;
+SELECT AVG(p.pizza_price) FROM `pizza` p , `order` o WHERE p.pizza_id = o.pizza_id;
 
 --Számold meg, mennyi vásárló van, akinek a nevében van ’a’ betű! 
 SELECT COUNT(`customer_name`)  FROM `customers` WHERE `customer_name` LIKE '%a%';
